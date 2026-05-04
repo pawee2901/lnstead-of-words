@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>พูดแทนใจ | Thai-Malay AAC</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="phone-shell">
+        <header class="app-header">
+            <div class="brand-row">
+                <button id="back-btn" class="icon-btn hidden" type="button" onclick="goBack()" aria-label="ย้อนกลับ">
+                    <span>‹</span>
+                </button>
+                <button id="home-btn" class="icon-btn hidden" type="button" onclick="goHome()" aria-label="หน้าหลัก">
+                    <span>⌂</span>
+                </button>
+
+                <div class="app-title-block">
+                    <div>
+                        <h1 id="screen-title">พูดแทนใจ</h1>
+                        <p id="screen-subtitle">ไทย - มลายู สำหรับผู้สูงอายุ</p>
+                    </div>
+                </div>
+
+                <div id="lang-switcher" class="lang-switcher" aria-label="เลือกภาษา">
+                    <button class="lang-btn active" type="button" data-lang="th" onclick="setLang('th')">ไทย</button>
+                    <button class="lang-btn" type="button" data-lang="ms" onclick="setLang('ms')">Melayu</button>
+                </div>
+            </div>
+        </header>
+
+        <main id="app-content" tabindex="-1"></main>
+
+        <nav class="bottom-tabs" aria-label="เมนูหลัก">
+            <button class="tab-btn active" id="tab-home" type="button" onclick="goHome()">
+                <span class="tab-icon">⌂</span>
+                <span>หน้าหลัก</span>
+            </button>
+            <button class="tab-btn" id="tab-feel" type="button" onclick="renderFeelingsCategory()">
+                <span class="tab-icon">♡</span>
+                <span>รู้สึก</span>
+            </button>
+            <button class="tab-btn" id="tab-need" type="button" onclick="renderNeedsCategory()">
+                <span class="tab-icon">＋</span>
+                <span>ต้องการ</span>
+            </button>
+            <button class="tab-btn" id="tab-write" type="button" onclick="renderTextInput()">
+                <span class="tab-icon">✎</span>
+                <span>เขียน</span>
+            </button>
+        </nav>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
