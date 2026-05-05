@@ -110,8 +110,17 @@ function remember(viewFn, replace = false) {
         return;
     }
 
-    if (historyStack[historyStack.length - 1] !== viewFn) {
-        historyStack.push(viewFn);
+    const last = historyStack[historyStack.length - 1];
+    // Check if we are trying to push the same view to prevent stack overflow/leak
+    if (last && last.toString() === viewFn.toString()) {
+        return;
+    }
+
+    historyStack.push(viewFn);
+    
+    // Limit history stack size to 50 items to prevent memory issues
+    if (historyStack.length > 50) {
+        historyStack.shift();
     }
 }
 
@@ -134,6 +143,11 @@ function goHome() {
 function chooseLanguage(lang) {
     currentLang = lang;
     hasSelectedLanguage = true;
+    
+    // Unlock audio for mobile browsers
+    const silent = new Audio('data:audio/wav;base64,UklGRigAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQQAAAAAAA==');
+    silent.play().catch(() => {});
+
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.classList.toggle('active', btn.dataset.lang === lang);
     });
@@ -265,10 +279,20 @@ function isPhotoImage(img) {
     return /\.(jpg|jpeg|png|webp)(\?|#|$)/i.test(img || '');
 }
 
+function getOptimizedImg(url) {
+    if (!url) return '';
+    if (url.includes('pexels.com')) {
+        const cleanUrl = url.split('?')[0];
+        // Reduced to 400px for better memory safety on all devices
+        return `${cleanUrl}?auto=compress&cs=tinysrgb&w=400`;
+    }
+    return url;
+}
+
 function mediaMarkup(img, icon, label) {
     if (img) {
         const mediaType = isPhotoImage(img) ? 'photo' : 'icon-image';
-        return `<span class="card-image-wrap ${mediaType}"><img class="card-image" src="${img}" alt="${label}" loading="lazy"></span>`;
+        return `<span class="card-image-wrap ${mediaType}"><img class="card-image" src="${getOptimizedImg(img)}" alt="${label}" loading="lazy"></span>`;
     }
 
     return `<span class="card-icon-wrap" aria-hidden="true"><span class="card-icon">${icon}</span></span>`;
@@ -344,7 +368,7 @@ function renderHome(replace = false) {
     setHeader(t('appName'), t('appSub'));
     remember(renderHome, replace);
 
-    const content = setContent(hero(t('categories'), t('homeHero'), t('homeCopy')));
+    const content = setContent(renderSummary() + hero(t('categories'), t('homeHero'), t('homeCopy')));
     content.appendChild(renderGrid([
         { th: 'ฉันรู้สึก', ms: 'Saya rasa', icon: '♡', tone: 'tone-rose', subTh: 'อารมณ์ / ความรู้สึก', subMs: 'Gejala / Perasaan', onClick: () => renderFeelingsCategory() },
         { th: 'ฉันต้องการ', ms: 'Saya nak', icon: '＋', tone: 'tone-teal', subTh: 'อาหาร / คน / สถานที่', subMs: 'Makanan / Orang / Tempat', onClick: () => renderNeedsCategory() },
@@ -358,7 +382,7 @@ function renderFeelingsCategory(replace = false) {
     setHeader(t('feel'), currentLang === 'th' ? 'เลือกหมวดความรู้สึกหรืออาการ' : 'Pilih kategori perasaan atau gejala');
     remember(renderFeelingsCategory, replace);
 
-    const content = setContent(hero(t('categories'), t('feel'), currentLang === 'th' ? 'แตะหมวด แล้วเลือกคำที่ต้องการพูด' : 'Tekan kategori, kemudian pilih perkataan', 'rose'));
+    const content = setContent(renderSummary() + hero(t('categories'), t('feel'), currentLang === 'th' ? 'แตะหมวด แล้วเลือกคำที่ต้องการพูด' : 'Tekan kategori, kemudian pilih perkataan', 'rose'));
     content.appendChild(renderGrid([
         { th: 'อาการเจ็บป่วย', ms: 'Gejala penyakit', icon: '✚', tone: 'tone-rose', onClick: () => renderItems('feelings', 'symptoms') },
         { th: 'อารมณ์ความรู้สึก', ms: 'Perasaan', icon: '♡', tone: 'tone-lilac', onClick: () => renderItems('feelings', 'emotions') }
@@ -371,7 +395,7 @@ function renderNeedsCategory(replace = false) {
     setHeader(t('need'), currentLang === 'th' ? 'เลือกสิ่งที่ต้องการสื่อสาร' : 'Pilih perkara yang diperlukan');
     remember(renderNeedsCategory, replace);
 
-    const content = setContent(hero(t('categories'), t('need'), currentLang === 'th' ? 'จัดหมวดใหญ่ ปุ่มใหญ่ เห็นชัด' : 'Kategori jelas dengan butang besar', 'teal'));
+    const content = setContent(renderSummary() + hero(t('categories'), t('need'), currentLang === 'th' ? 'จัดหมวดใหญ่ ปุ่มใหญ่ เห็นชัด' : 'Kategori jelas dengan butang besar', 'teal'));
     const categories = vocabularyData.needs?.categories || [];
     content.appendChild(renderGrid(categories.map(category => ({
         th: category.th,
@@ -398,7 +422,7 @@ function renderItems(group, categoryId, replace = false) {
     setHeader(currentLang === 'th' ? titleTh : titleMs, t('words'));
     remember(view, replace);
 
-    const content = setContent(hero(t('words'), currentLang === 'th' ? titleTh : titleMs, currentLang === 'th' ? 'แตะปุ่มเพื่อให้ระบบอ่านออกเสียง' : 'Tekan butang untuk mainkan suara'));
+    const content = setContent(renderSummary() + hero(t('words'), currentLang === 'th' ? titleTh : titleMs, currentLang === 'th' ? 'แตะปุ่มเพื่อให้ระบบอ่านออกเสียง' : 'Tekan butang untuk mainkan suara'));
     const grid = renderGrid(items.map((item, index) => ({
         ...defaultPhrase(group, item),
         th: item.th,
