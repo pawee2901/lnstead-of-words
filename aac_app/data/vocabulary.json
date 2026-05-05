@@ -5,23 +5,24 @@
                 "id": "symptoms",
                 "th": "อาการเจ็บป่วย",
                 "ms": "Gejala penyakit",
-                "icon": "✚",
+                "icon": "",
                 "tone": "tone-rose",
-                "img": "https://images.pexels.com/photos/3921418/pexels-photo-3921418.jpeg?auto=compress&cs=tinysrgb&w=900"
+                "img": ""
             },
             {
                 "id": "emotions",
                 "th": "อารมณ์ความรู้สึก",
                 "ms": "Perasaan",
-                "icon": "♡",
+                "icon": "",
                 "tone": "tone-lilac",
-                "img": "https://images.pexels.com/photos/3768114/pexels-photo-3768114.jpeg?auto=compress&cs=tinysrgb&w=900"
+                "img": ""
             }
         ],
         "symptoms": [
             {
                 "th": "ปวด",
                 "ms": "Sakit",
+                "img": "",
                 "icon": "✚",
                 "tone": "tone-rose",
                 "subTh": "เลือกตำแหน่งที่ปวด",
@@ -32,92 +33,91 @@
                         "ms": "Gigi",
                         "phraseTh": "ฉันรู้สึกปวดฟัน",
                         "phraseMs": "Saya rasa sakit gigi",
-                        "img": "https://images.pexels.com/photos/6502309/pexels-photo-6502309.jpeg?auto=compress&cs=tinysrgb&w=900"
+                        "img": "https://images.pexels.com/photos/5624170/pexels-photo-5624170.jpeg"
                     },
                     {
                         "th": "ตา",
                         "ms": "Mata",
                         "phraseTh": "ฉันรู้สึกปวดตา",
                         "phraseMs": "Saya rasa sakit mata",
-                        "img": "https://images.pexels.com/photos/5938368/pexels-photo-5938368.jpeg?auto=compress&cs=tinysrgb&w=900"
+                        "img": "https://images.pexels.com/photos/4491435/pexels-photo-4491435.jpeg"
                     },
                     {
                         "th": "ขา",
                         "ms": "Kaki",
                         "phraseTh": "ฉันรู้สึกปวดขา",
                         "phraseMs": "Saya rasa sakit kaki",
-                        "img": "https://images.pexels.com/photos/4506109/pexels-photo-4506109.jpeg?auto=compress&cs=tinysrgb&w=900"
+                        "img": "https://images.pexels.com/photos/11349880/pexels-photo-11349880.jpeg"
                     },
                     {
                         "th": "แขน",
                         "ms": "Tangan",
                         "phraseTh": "ฉันรู้สึกปวดแขน",
                         "phraseMs": "Saya rasa sakit tangan",
-                        "img": "https://images.pexels.com/photos/4506101/pexels-photo-4506101.jpeg?auto=compress&cs=tinysrgb&w=900"
+                        "img": "https://images.pexels.com/photos/8600449/pexels-photo-8600449.jpeg"
                     },
                     {
                         "th": "หลัง",
                         "ms": "Belakang",
                         "phraseTh": "ฉันรู้สึกปวดหลัง",
                         "phraseMs": "Saya rasa sakit belakang",
-                        "img": "https://images.pexels.com/photos/4506100/pexels-photo-4506100.jpeg?auto=compress&cs=tinysrgb&w=900"
+                        "img": "https://images.pexels.com/photos/7298677/pexels-photo-7298677.jpeg"
                     },
                     {
                         "th": "ไหล่",
                         "ms": "Bahu",
                         "phraseTh": "ฉันรู้สึกปวดไหล่",
                         "phraseMs": "Saya rasa sakit bahu",
-                        "img": "https://images.pexels.com/photos/4506106/pexels-photo-4506106.jpeg?auto=compress&cs=tinysrgb&w=900"
+                        "img": "https://images.pexels.com/photos/8182356/pexels-photo-8182356.jpeg"
                     },
                     {
                         "th": "หัว",
                         "ms": "Kepala",
                         "phraseTh": "ฉันรู้สึกปวดหัว",
                         "phraseMs": "Saya rasa sakit kepala",
-                        "img": "https://images.pexels.com/photos/3921418/pexels-photo-3921418.jpeg?auto=compress&cs=tinysrgb&w=900"
+                        "img": "https://images.pexels.com/photos/12955556/pexels-photo-12955556.jpeg"
                     },
                     {
                         "th": "คอ",
                         "ms": "Tekak",
                         "phraseTh": "ฉันรู้สึกปวดคอ",
                         "phraseMs": "Saya rasa sakit tekak",
-                        "img": "https://images.pexels.com/photos/6502309/pexels-photo-6502309.jpeg?auto=compress&cs=tinysrgb&w=900"
+                        "img": "https://images.pexels.com/photos/5712690/pexels-photo-5712690.jpeg"
                     },
                     {
                         "th": "เอว",
                         "ms": "Pinggang",
                         "phraseTh": "ฉันรู้สึกปวดเอว",
                         "phraseMs": "Saya rasa sakit pinggang",
-                        "img": "https://images.pexels.com/photos/4506100/pexels-photo-4506100.jpeg?auto=compress&cs=tinysrgb&w=900"
+                        "img": "https://images.pexels.com/photos/7298686/pexels-photo-7298686.jpeg"
                     },
                     {
                         "th": "ท้อง",
                         "ms": "Perut",
                         "phraseTh": "ฉันรู้สึกปวดท้อง",
                         "phraseMs": "Saya rasa sakit perut",
-                        "img": "https://images.pexels.com/photos/4498151/pexels-photo-4498151.jpeg?auto=compress&cs=tinysrgb&w=900"
+                        "img": "https://images.pexels.com/photos/5938366/pexels-photo-5938366.jpeg"
                     },
                     {
                         "th": "ข้อ",
                         "ms": "Sendi",
                         "phraseTh": "ฉันรู้สึกปวดข้อ",
                         "phraseMs": "Saya rasa sakit sendi",
-                        "img": "https://images.pexels.com/photos/4506101/pexels-photo-4506101.jpeg?auto=compress&cs=tinysrgb&w=900"
+                        "img": "https://images.pexels.com/photos/7298399/pexels-photo-7298399.jpeg"
                     },
                     {
                         "th": "เข่า",
                         "ms": "Lutut",
                         "phraseTh": "ฉันรู้สึกปวดเข่า",
                         "phraseMs": "Saya rasa sakit lutut",
-                        "img": "https://images.pexels.com/photos/4506109/pexels-photo-4506109.jpeg?auto=compress&cs=tinysrgb&w=900"
+                        "img": "https://images.pexels.com/photos/11969599/pexels-photo-11969599.jpeg"
                     }
-                ],
-                "img": "https://images.pexels.com/photos/3921418/pexels-photo-3921418.jpeg?auto=compress&cs=tinysrgb&w=900"
+                ]
             },
             {
                 "th": "เมื่อย",
                 "ms": "Lenguh",
-                "icon": "●",
+                "icon": "",
                 "tone": "tone-teal",
                 "subTh": "เลือกตำแหน่งที่เมื่อย",
                 "subMs": "Pilih tempat lenguh",
@@ -127,50 +127,50 @@
                         "ms": "Tangan",
                         "phraseTh": "ฉันรู้สึกเมื่อยแขน",
                         "phraseMs": "Saya rasa lenguh tangan",
-                        "img": "https://images.pexels.com/photos/4506101/pexels-photo-4506101.jpeg?auto=compress&cs=tinysrgb&w=900"
+                        "img": "https://images.pexels.com/photos/9017032/pexels-photo-9017032.jpeg"
                     },
                     {
                         "th": "ขา",
                         "ms": "Kaki",
                         "phraseTh": "ฉันรู้สึกเมื่อยขา",
                         "phraseMs": "Saya rasa lenguh kaki",
-                        "img": "https://images.pexels.com/photos/4506109/pexels-photo-4506109.jpeg?auto=compress&cs=tinysrgb&w=900"
+                        "img": "https://images.pexels.com/photos/8462937/pexels-photo-8462937.jpeg"
                     },
                     {
                         "th": "หลัง",
                         "ms": "Belakang",
                         "phraseTh": "ฉันรู้สึกเมื่อยหลัง",
                         "phraseMs": "Saya rasa lenguh belakang",
-                        "img": "https://images.pexels.com/photos/4506100/pexels-photo-4506100.jpeg?auto=compress&cs=tinysrgb&w=900"
+                        "img": "https://images.pexels.com/photos/7298677/pexels-photo-7298677.jpeg"
                     },
                     {
                         "th": "เอว",
                         "ms": "Pinggang",
                         "phraseTh": "ฉันรู้สึกเมื่อยเอว",
                         "phraseMs": "Saya rasa lenguh pinggang",
-                        "img": "https://images.pexels.com/photos/4506100/pexels-photo-4506100.jpeg?auto=compress&cs=tinysrgb&w=900"
+                        "img": "https://images.pexels.com/photos/3958586/pexels-photo-3958586.jpeg"
                     },
                     {
                         "th": "ไหล่",
                         "ms": "Bahu",
                         "phraseTh": "ฉันรู้สึกเมื่อยไหล่",
                         "phraseMs": "Saya rasa lenguh bahu",
-                        "img": "https://images.pexels.com/photos/4506106/pexels-photo-4506106.jpeg?auto=compress&cs=tinysrgb&w=900"
+                        "img": "https://images.pexels.com/photos/7298853/pexels-photo-7298853.jpeg"
                     },
                     {
                         "th": "คอ",
                         "ms": "Leher",
                         "phraseTh": "ฉันรู้สึกเมื่อยคอ",
                         "phraseMs": "Saya rasa lenguh leher",
-                        "img": "https://images.pexels.com/photos/6502309/pexels-photo-6502309.jpeg?auto=compress&cs=tinysrgb&w=900"
+                        "img": "https://images.pexels.com/photos/11352535/pexels-photo-11352535.jpeg"
                     }
                 ],
-                "img": "https://images.pexels.com/photos/3921418/pexels-photo-3921418.jpeg?auto=compress&cs=tinysrgb&w=900"
+                "img": ""
             },
             {
                 "th": "ชา",
                 "ms": "Kebas",
-                "icon": "●",
+                "icon": "",
                 "tone": "tone-sky",
                 "subTh": "เลือกตำแหน่งที่ชา",
                 "subMs": "Pilih tempat kebas",
@@ -180,350 +180,350 @@
                         "ms": "Muka",
                         "phraseTh": "ฉันรู้สึกชาใบหน้า",
                         "phraseMs": "Saya rasa kebas muka",
-                        "img": "https://images.pexels.com/photos/3921418/pexels-photo-3921418.jpeg?auto=compress&cs=tinysrgb&w=900"
+                        "img": "https://images.pexels.com/photos/32197366/pexels-photo-32197366.jpeg"
                     },
                     {
                         "th": "ปาก",
                         "ms": "Mulut",
                         "phraseTh": "ฉันรู้สึกชาปาก",
                         "phraseMs": "Saya rasa kebas mulut",
-                        "img": "https://images.pexels.com/photos/6502309/pexels-photo-6502309.jpeg?auto=compress&cs=tinysrgb&w=900"
+                        "img": "https://images.pexels.com/photos/3762436/pexels-photo-3762436.jpeg"
                     },
                     {
                         "th": "ลิ้น",
                         "ms": "Lidah",
                         "phraseTh": "ฉันรู้สึกชาลิ้น",
                         "phraseMs": "Saya rasa kebas lidah",
-                        "img": "https://images.pexels.com/photos/6502309/pexels-photo-6502309.jpeg?auto=compress&cs=tinysrgb&w=900"
+                        "img": "https://images.pexels.com/photos/27672363/pexels-photo-27672363.jpeg"
                     },
                     {
                         "th": "แขน",
                         "ms": "Tangan",
                         "phraseTh": "ฉันรู้สึกชาแขน",
                         "phraseMs": "Saya rasa kebas tangan",
-                        "img": "https://images.pexels.com/photos/4506101/pexels-photo-4506101.jpeg?auto=compress&cs=tinysrgb&w=900"
+                        "img": "https://images.pexels.com/photos/9017032/pexels-photo-9017032.jpeg"
                     },
                     {
                         "th": "ขา",
                         "ms": "Kaki",
                         "phraseTh": "ฉันรู้สึกชาขา",
                         "phraseMs": "Saya rasa kebas kaki",
-                        "img": "https://images.pexels.com/photos/4506109/pexels-photo-4506109.jpeg?auto=compress&cs=tinysrgb&w=900"
+                        "img": "https://images.pexels.com/photos/8462937/pexels-photo-8462937.jpeg"
                     },
                     {
                         "th": "ชาซีกซ้าย",
                         "ms": "Kebas Sebelah Kiri",
                         "phraseTh": "ฉันรู้สึกชาซีกซ้าย",
                         "phraseMs": "Saya rasa kebas sebelah kiri",
-                        "img": "https://images.pexels.com/photos/3921418/pexels-photo-3921418.jpeg?auto=compress&cs=tinysrgb&w=900"
+                        "img": "https://canva.link/5fvo6884rmacxk6"
                     },
                     {
                         "th": "ชาซีกขวา",
                         "ms": "Kebas Sebelah Kanan",
                         "phraseTh": "ฉันรู้สึกชาซีกขวา",
                         "phraseMs": "Saya rasa kebas sebelah kanan",
-                        "img": "https://images.pexels.com/photos/3921418/pexels-photo-3921418.jpeg?auto=compress&cs=tinysrgb&w=900"
+                        "img": ""
                     }
                 ],
-                "img": "https://images.pexels.com/photos/3921418/pexels-photo-3921418.jpeg?auto=compress&cs=tinysrgb&w=900"
+                "img": ""
             },
             {
                 "th": "อ่อนแรง",
                 "ms": "Lemah",
                 "icon": "●",
                 "tone": "tone-mint",
-                "subTh": "เลือกตำแหน่งที่อ่อนแรง",
-                "subMs": "Pilih tempat lemah",
+                "subTh": "เลือกตำแหน่งหรืออาการเพิ่มเติม",
+                "subMs": "Pilih tempat atau gejala tambahan",
                 "children": [
                     {
                         "th": "แขน",
                         "ms": "Tangan",
                         "phraseTh": "ฉันรู้สึกอ่อนแรงแขน",
                         "phraseMs": "Saya rasa lemah tangan",
-                        "img": "https://images.pexels.com/photos/4506101/pexels-photo-4506101.jpeg?auto=compress&cs=tinysrgb&w=900"
+                        "img": ""
                     },
                     {
                         "th": "ขา",
                         "ms": "Kaki",
                         "phraseTh": "ฉันรู้สึกอ่อนแรงขา",
                         "phraseMs": "Saya rasa lemah kaki",
-                        "img": "https://images.pexels.com/photos/4506109/pexels-photo-4506109.jpeg?auto=compress&cs=tinysrgb&w=900"
+                        "img": ""
                     },
                     {
                         "th": "ซีกซ้าย",
                         "ms": "Sebelah Kiri",
                         "phraseTh": "ฉันรู้สึกอ่อนแรงซีกซ้าย",
                         "phraseMs": "Saya rasa lemah sebelah kiri",
-                        "img": "https://images.pexels.com/photos/3921418/pexels-photo-3921418.jpeg?auto=compress&cs=tinysrgb&w=900"
+                        "img": ""
                     },
                     {
                         "th": "ซีกขวา",
                         "ms": "Sebelah Kanan",
                         "phraseTh": "ฉันรู้สึกอ่อนแรงซีกขวา",
                         "phraseMs": "Saya rasa lemah sebelah kanan",
-                        "img": "https://images.pexels.com/photos/3921418/pexels-photo-3921418.jpeg?auto=compress&cs=tinysrgb&w=900"
+                        "img": ""
+                    },
+                    {
+                        "th": "เบื่ออาหาร",
+                        "ms": "Hilang Selara makan",
+                        "icon": "○",
+                        "tone": "tone-cream",
+                        "phraseTh": "ฉันรู้สึกเบื่ออาหาร",
+                        "phraseMs": "Saya rasa hilang selara makan",
+                        "img": ""
+                    },
+                    {
+                        "th": "อาเจียน",
+                        "ms": "Muntah",
+                        "icon": "○",
+                        "tone": "tone-cream",
+                        "phraseTh": "ฉันรู้สึกอาเจียน",
+                        "phraseMs": "Saya rasa muntah",
+                        "img": ""
+                    },
+                    {
+                        "th": "ท้องเสีย",
+                        "ms": "Cirit-Birit",
+                        "icon": "○",
+                        "tone": "tone-cream",
+                        "phraseTh": "ฉันรู้สึกท้องเสีย",
+                        "phraseMs": "Saya rasa cirit-birit",
+                        "img": ""
+                    },
+                    {
+                        "th": "ท้องอืด",
+                        "ms": "Kembung Perut",
+                        "icon": "○",
+                        "tone": "tone-cream",
+                        "phraseTh": "ฉันรู้สึกท้องอืด",
+                        "phraseMs": "Saya rasa kembung perut",
+                        "img": ""
+                    },
+                    {
+                        "th": "ปัสสาวะมีเลือด",
+                        "ms": "Kencing Berdarah",
+                        "icon": "○",
+                        "tone": "tone-cream",
+                        "phraseTh": "ฉันรู้สึกปัสสาวะมีเลือด",
+                        "phraseMs": "Saya rasa kencing berdarah",
+                        "img": ""
+                    },
+                    {
+                        "th": "ปัสสาวะไม่สุด",
+                        "ms": "Kencing Tak Lawas",
+                        "icon": "○",
+                        "tone": "tone-cream",
+                        "phraseTh": "ฉันรู้สึกปัสสาวะไม่สุด",
+                        "phraseMs": "Saya rasa kencing tak lawas",
+                        "img": ""
+                    },
+                    {
+                        "th": "ใจสั่น",
+                        "ms": "Jantung Berdebar",
+                        "icon": "♡",
+                        "tone": "tone-rose",
+                        "phraseTh": "ฉันรู้สึกใจสั่น",
+                        "phraseMs": "Saya rasa jantung berdebar",
+                        "img": ""
+                    },
+                    {
+                        "th": "ปากเบี้ยว",
+                        "ms": "Mulut Sengat",
+                        "icon": "!",
+                        "tone": "tone-peach",
+                        "phraseTh": "ฉันรู้สึกปากเบี้ยว",
+                        "phraseMs": "Saya rasa mulut sengat",
+                        "img": ""
+                    },
+                    {
+                        "th": "พูดไม่ชัด",
+                        "ms": "Cakap Tak Jelus",
+                        "icon": "!",
+                        "tone": "tone-peach",
+                        "phraseTh": "ฉันรู้สึกพูดไม่ชัด",
+                        "phraseMs": "Saya rasa cakap tak jelus",
+                        "img": ""
+                    },
+                    {
+                        "th": "ลิ้นแข็ง",
+                        "ms": "Lidah Kaku",
+                        "icon": "!",
+                        "tone": "tone-peach",
+                        "phraseTh": "ฉันรู้สึกลิ้นแข็ง",
+                        "phraseMs": "Saya rasa lidah kaku",
+                        "img": ""
+                    },
+                    {
+                        "th": "เดินเซ",
+                        "ms": "Jalan Tak Stabil",
+                        "icon": "!",
+                        "tone": "tone-peach",
+                        "phraseTh": "ฉันรู้สึกเดินเซ",
+                        "phraseMs": "Saya rasa jalan tak stabil",
+                        "img": ""
+                    },
+                    {
+                        "th": "เห็นภาพซ้อน",
+                        "ms": "Nampak Berganda",
+                        "icon": "!",
+                        "tone": "tone-peach",
+                        "phraseTh": "ฉันรู้สึกเห็นภาพซ้อน",
+                        "phraseMs": "Saya rasa nampak berganda",
+                        "img": ""
+                    },
+                    {
+                        "th": "ตาพร่ามัว",
+                        "ms": "Nampak Kabur",
+                        "icon": "!",
+                        "tone": "tone-peach",
+                        "phraseTh": "ฉันรู้สึกตาพร่ามัว",
+                        "phraseMs": "Saya rasa nampak kabur",
+                        "img": ""
+                    },
+                    {
+                        "th": "หายใจเหนื่อย",
+                        "ms": "Sesak Nafas",
+                        "icon": "○",
+                        "tone": "tone-cream",
+                        "phraseTh": "ฉันรู้สึกหายใจเหนื่อย",
+                        "phraseMs": "Saya rasa sesak nafas",
+                        "img": ""
+                    },
+                    {
+                        "th": "เจ็บหน้าอก",
+                        "ms": "Sakit Dada",
+                        "icon": "♡",
+                        "tone": "tone-rose",
+                        "phraseTh": "ฉันรู้สึกเจ็บหน้าอก",
+                        "phraseMs": "Saya rasa sakit dada",
+                        "img": ""
+                    },
+                    {
+                        "th": "เวียนหัว",
+                        "ms": "Pening",
+                        "icon": "○",
+                        "tone": "tone-cream",
+                        "phraseTh": "ฉันรู้สึกเวียนหัว",
+                        "phraseMs": "Saya rasa pening",
+                        "img": ""
+                    },
+                    {
+                        "th": "กลืนลำบาก",
+                        "ms": "Susah Telan",
+                        "icon": "○",
+                        "tone": "tone-cream",
+                        "phraseTh": "ฉันรู้สึกกลืนลำบาก",
+                        "phraseMs": "Saya rasa susah telan",
+                        "img": ""
+                    },
+                    {
+                        "th": "มีไข้",
+                        "ms": "Demam",
+                        "icon": "○",
+                        "tone": "tone-cream",
+                        "phraseTh": "ฉันรู้สึกมีไข้",
+                        "phraseMs": "Saya rasa demam",
+                        "img": ""
+                    },
+                    {
+                        "th": "คลื่นไส้",
+                        "ms": "Loya",
+                        "icon": "○",
+                        "tone": "tone-cream",
+                        "phraseTh": "ฉันรู้สึกคลื่นไส้",
+                        "phraseMs": "Saya rasa loya",
+                        "img": ""
+                    },
+                    {
+                        "th": "ไอ",
+                        "ms": "Batuk",
+                        "icon": "○",
+                        "tone": "tone-cream",
+                        "phraseTh": "ฉันรู้สึกไอ",
+                        "phraseMs": "Saya rasa batuk",
+                        "img": ""
+                    },
+                    {
+                        "th": "เจ็บคอ",
+                        "ms": "Sakit Tekak",
+                        "icon": "○",
+                        "tone": "tone-cream",
+                        "phraseTh": "ฉันรู้สึกเจ็บคอ",
+                        "phraseMs": "Saya rasa sakit tekak",
+                        "img": ""
+                    },
+                    {
+                        "th": "เป็นหวัด",
+                        "ms": "Selesema",
+                        "icon": "○",
+                        "tone": "tone-cream",
+                        "phraseTh": "ฉันรู้สึกเป็นหวัด",
+                        "phraseMs": "Saya rasa selesema",
+                        "img": ""
+                    },
+                    {
+                        "th": "ง่วงนอน",
+                        "ms": "Mengantuk",
+                        "icon": "○",
+                        "tone": "tone-cream",
+                        "phraseTh": "ฉันรู้สึกง่วงนอน",
+                        "phraseMs": "Saya rasa mengantuk",
+                        "img": ""
+                    },
+                    {
+                        "th": "หนาว",
+                        "ms": "Sejuk",
+                        "icon": "○",
+                        "tone": "tone-cream",
+                        "phraseTh": "ฉันรู้สึกหนาว",
+                        "phraseMs": "Saya rasa sejuk",
+                        "img": ""
+                    },
+                    {
+                        "th": "ร้อน",
+                        "ms": "Panas",
+                        "icon": "○",
+                        "tone": "tone-cream",
+                        "phraseTh": "ฉันรู้สึกร้อน",
+                        "phraseMs": "Saya rasa panas",
+                        "img": ""
+                    },
+                    {
+                        "th": "เหนื่อย",
+                        "ms": "Letih",
+                        "icon": "○",
+                        "tone": "tone-cream",
+                        "phraseTh": "ฉันรู้สึกเหนื่อย",
+                        "phraseMs": "Saya rasa letih",
+                        "img": ""
+                    },
+                    {
+                        "th": "นอนไม่หลับ",
+                        "ms": "Susah Tidur",
+                        "icon": "○",
+                        "tone": "tone-cream",
+                        "phraseTh": "ฉันรู้สึกนอนไม่หลับ",
+                        "phraseMs": "Saya rasa susah tidur",
+                        "img": ""
+                    },
+                    {
+                        "th": "หิว",
+                        "ms": "Lapar",
+                        "icon": "○",
+                        "tone": "tone-cream",
+                        "phraseTh": "ฉันรู้สึกหิว",
+                        "phraseMs": "Saya rasa lapar",
+                        "img": ""
                     }
                 ],
-                "img": "https://images.pexels.com/photos/935777/pexels-photo-935777.jpeg?auto=compress&cs=tinysrgb&w=900"
-            },
-            {
-                "th": "เบื่ออาหาร",
-                "ms": "Hilang Selara makan",
-                "icon": "○",
-                "tone": "tone-cream",
-                "phraseTh": "ฉันรู้สึกเบื่ออาหาร",
-                "phraseMs": "Saya rasa hilang selara makan",
-                "img": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=900"
-            },
-            {
-                "th": "อาเจียน",
-                "ms": "Muntah",
-                "icon": "○",
-                "tone": "tone-cream",
-                "phraseTh": "ฉันรู้สึกอาเจียน",
-                "phraseMs": "Saya rasa muntah",
-                "img": "https://images.pexels.com/photos/4498151/pexels-photo-4498151.jpeg?auto=compress&cs=tinysrgb&w=900"
-            },
-            {
-                "th": "ท้องเสีย",
-                "ms": "Cirit-Birit",
-                "icon": "○",
-                "tone": "tone-cream",
-                "phraseTh": "ฉันรู้สึกท้องเสีย",
-                "phraseMs": "Saya rasa cirit-birit",
-                "img": "https://images.pexels.com/photos/4498151/pexels-photo-4498151.jpeg?auto=compress&cs=tinysrgb&w=900"
-            },
-            {
-                "th": "ท้องอืด",
-                "ms": "Kembung Perut",
-                "icon": "○",
-                "tone": "tone-cream",
-                "phraseTh": "ฉันรู้สึกท้องอืด",
-                "phraseMs": "Saya rasa kembung perut",
-                "img": "https://images.pexels.com/photos/4498151/pexels-photo-4498151.jpeg?auto=compress&cs=tinysrgb&w=900"
-            },
-            {
-                "th": "ปัสสาวะมีเลือด",
-                "ms": "Kencing Berdarah",
-                "icon": "○",
-                "tone": "tone-cream",
-                "phraseTh": "ฉันรู้สึกปัสสาวะมีเลือด",
-                "phraseMs": "Saya rasa kencing berdarah",
-                "img": "https://images.pexels.com/photos/7516417/pexels-photo-7516417.jpeg?auto=compress&cs=tinysrgb&w=900"
-            },
-            {
-                "th": "ปัสสาวะไม่สุด",
-                "ms": "Kencing Tak Lawas",
-                "icon": "○",
-                "tone": "tone-cream",
-                "phraseTh": "ฉันรู้สึกปัสสาวะไม่สุด",
-                "phraseMs": "Saya rasa kencing tak lawas",
-                "img": "https://images.pexels.com/photos/7516417/pexels-photo-7516417.jpeg?auto=compress&cs=tinysrgb&w=900"
-            },
-            {
-                "th": "ใจสั่น",
-                "ms": "Jantung Berdebar",
-                "icon": "♡",
-                "tone": "tone-rose",
-                "phraseTh": "ฉันรู้สึกใจสั่น",
-                "phraseMs": "Saya rasa jantung berdebar",
-                "img": "https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=900"
-            },
-            {
-                "th": "ปากเบี้ยว",
-                "ms": "Mulut Sengat",
-                "icon": "!",
-                "tone": "tone-peach",
-                "phraseTh": "ฉันรู้สึกปากเบี้ยว",
-                "phraseMs": "Saya rasa mulut sengat",
-                "img": "https://images.pexels.com/photos/6502309/pexels-photo-6502309.jpeg?auto=compress&cs=tinysrgb&w=900"
-            },
-            {
-                "th": "พูดไม่ชัด",
-                "ms": "Cakap Tak Jelus",
-                "icon": "!",
-                "tone": "tone-peach",
-                "phraseTh": "ฉันรู้สึกพูดไม่ชัด",
-                "phraseMs": "Saya rasa cakap tak jelus",
-                "img": "https://images.pexels.com/photos/6502309/pexels-photo-6502309.jpeg?auto=compress&cs=tinysrgb&w=900"
-            },
-            {
-                "th": "ลิ้นแข็ง",
-                "ms": "Lidah Kaku",
-                "icon": "!",
-                "tone": "tone-peach",
-                "phraseTh": "ฉันรู้สึกลิ้นแข็ง",
-                "phraseMs": "Saya rasa lidah kaku",
-                "img": "https://images.pexels.com/photos/6502309/pexels-photo-6502309.jpeg?auto=compress&cs=tinysrgb&w=900"
-            },
-            {
-                "th": "เดินเซ",
-                "ms": "Jalan Tak Stabil",
-                "icon": "!",
-                "tone": "tone-peach",
-                "phraseTh": "ฉันรู้สึกเดินเซ",
-                "phraseMs": "Saya rasa jalan tak stabil",
-                "img": "https://images.pexels.com/photos/4506109/pexels-photo-4506109.jpeg?auto=compress&cs=tinysrgb&w=900"
-            },
-            {
-                "th": "เห็นภาพซ้อน",
-                "ms": "Nampak Berganda",
-                "icon": "!",
-                "tone": "tone-peach",
-                "phraseTh": "ฉันรู้สึกเห็นภาพซ้อน",
-                "phraseMs": "Saya rasa nampak berganda",
-                "img": "https://images.pexels.com/photos/5938368/pexels-photo-5938368.jpeg?auto=compress&cs=tinysrgb&w=900"
-            },
-            {
-                "th": "ตาพร่ามัว",
-                "ms": "Nampak Kabur",
-                "icon": "!",
-                "tone": "tone-peach",
-                "phraseTh": "ฉันรู้สึกตาพร่ามัว",
-                "phraseMs": "Saya rasa nampak kabur",
-                "img": "https://images.pexels.com/photos/5938368/pexels-photo-5938368.jpeg?auto=compress&cs=tinysrgb&w=900"
-            },
-            {
-                "th": "หายใจเหนื่อย",
-                "ms": "Sesak Nafas",
-                "icon": "○",
-                "tone": "tone-cream",
-                "phraseTh": "ฉันรู้สึกหายใจเหนื่อย",
-                "phraseMs": "Saya rasa sesak nafas",
-                "img": "https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=900"
-            },
-            {
-                "th": "เจ็บหน้าอก",
-                "ms": "Sakit Dada",
-                "icon": "♡",
-                "tone": "tone-rose",
-                "phraseTh": "ฉันรู้สึกเจ็บหน้าอก",
-                "phraseMs": "Saya rasa sakit dada",
-                "img": "https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=900"
-            },
-            {
-                "th": "เวียนหัว",
-                "ms": "Pening",
-                "icon": "○",
-                "tone": "tone-cream",
-                "phraseTh": "ฉันรู้สึกเวียนหัว",
-                "phraseMs": "Saya rasa pening",
-                "img": "https://images.pexels.com/photos/3921418/pexels-photo-3921418.jpeg?auto=compress&cs=tinysrgb&w=900"
-            },
-            {
-                "th": "กลืนลำบาก",
-                "ms": "Susah Telan",
-                "icon": "○",
-                "tone": "tone-cream",
-                "phraseTh": "ฉันรู้สึกกลืนลำบาก",
-                "phraseMs": "Saya rasa susah telan",
-                "img": "https://images.pexels.com/photos/6502309/pexels-photo-6502309.jpeg?auto=compress&cs=tinysrgb&w=900"
-            },
-            {
-                "th": "มีไข้",
-                "ms": "Demam",
-                "icon": "○",
-                "tone": "tone-cream",
-                "phraseTh": "ฉันรู้สึกมีไข้",
-                "phraseMs": "Saya rasa demam",
-                "img": "https://images.pexels.com/photos/3873193/pexels-photo-3873193.jpeg?auto=compress&cs=tinysrgb&w=900"
-            },
-            {
-                "th": "คลื่นไส้",
-                "ms": "Loya",
-                "icon": "○",
-                "tone": "tone-cream",
-                "phraseTh": "ฉันรู้สึกคลื่นไส้",
-                "phraseMs": "Saya rasa loya",
-                "img": "https://images.pexels.com/photos/4498151/pexels-photo-4498151.jpeg?auto=compress&cs=tinysrgb&w=900"
-            },
-            {
-                "th": "ไอ",
-                "ms": "Batuk",
-                "icon": "○",
-                "tone": "tone-cream",
-                "phraseTh": "ฉันรู้สึกไอ",
-                "phraseMs": "Saya rasa batuk",
-                "img": "https://images.pexels.com/photos/3873193/pexels-photo-3873193.jpeg?auto=compress&cs=tinysrgb&w=900"
-            },
-            {
-                "th": "เจ็บคอ",
-                "ms": "Sakit Tekak",
-                "icon": "○",
-                "tone": "tone-cream",
-                "phraseTh": "ฉันรู้สึกเจ็บคอ",
-                "phraseMs": "Saya rasa sakit tekak",
-                "img": "https://images.pexels.com/photos/6502309/pexels-photo-6502309.jpeg?auto=compress&cs=tinysrgb&w=900"
-            },
-            {
-                "th": "เป็นหวัด",
-                "ms": "Selesema",
-                "icon": "○",
-                "tone": "tone-cream",
-                "phraseTh": "ฉันรู้สึกเป็นหวัด",
-                "phraseMs": "Saya rasa selesema",
-                "img": "https://images.pexels.com/photos/3873193/pexels-photo-3873193.jpeg?auto=compress&cs=tinysrgb&w=900"
-            },
-            {
-                "th": "ง่วงนอน",
-                "ms": "Mengantuk",
-                "icon": "○",
-                "tone": "tone-cream",
-                "phraseTh": "ฉันรู้สึกง่วงนอน",
-                "phraseMs": "Saya rasa mengantuk",
-                "img": "https://images.pexels.com/photos/935777/pexels-photo-935777.jpeg?auto=compress&cs=tinysrgb&w=900"
-            },
-            {
-                "th": "หนาว",
-                "ms": "Sejuk",
-                "icon": "○",
-                "tone": "tone-cream",
-                "phraseTh": "ฉันรู้สึกหนาว",
-                "phraseMs": "Saya rasa sejuk",
-                "img": "https://images.pexels.com/photos/4056535/pexels-photo-4056535.jpeg?auto=compress&cs=tinysrgb&w=900"
-            },
-            {
-                "th": "ร้อน",
-                "ms": "Panas",
-                "icon": "○",
-                "tone": "tone-cream",
-                "phraseTh": "ฉันรู้สึกร้อน",
-                "phraseMs": "Saya rasa panas",
-                "img": "https://images.pexels.com/photos/3768911/pexels-photo-3768911.jpeg?auto=compress&cs=tinysrgb&w=900"
-            },
-            {
-                "th": "เหนื่อย",
-                "ms": "Letih",
-                "icon": "○",
-                "tone": "tone-cream",
-                "phraseTh": "ฉันรู้สึกเหนื่อย",
-                "phraseMs": "Saya rasa letih",
-                "img": "https://images.pexels.com/photos/935777/pexels-photo-935777.jpeg?auto=compress&cs=tinysrgb&w=900"
-            },
-            {
-                "th": "นอนไม่หลับ",
-                "ms": "Susah Tidur",
-                "icon": "○",
-                "tone": "tone-cream",
-                "phraseTh": "ฉันรู้สึกนอนไม่หลับ",
-                "phraseMs": "Saya rasa susah tidur",
-                "img": "https://images.pexels.com/photos/935777/pexels-photo-935777.jpeg?auto=compress&cs=tinysrgb&w=900"
-            },
-            {
-                "th": "หิว",
-                "ms": "Lapar",
-                "icon": "○",
-                "tone": "tone-cream",
-                "phraseTh": "ฉันรู้สึกหิว",
-                "phraseMs": "Saya rasa lapar",
-                "img": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=900"
+                "img": ""
             }
         ],
         "emotions": [
             {
                 "th": "เครียด",
                 "ms": "Stres",
-                "img": "https://images.pexels.com/photos/3768114/pexels-photo-3768114.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "♡",
                 "phraseTh": "ฉันรู้สึกเครียด",
                 "phraseMs": "Saya rasa stres"
@@ -531,7 +531,7 @@
             {
                 "th": "ดีใจ",
                 "ms": "Gembira",
-                "img": "https://images.pexels.com/photos/3768112/pexels-photo-3768112.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "♡",
                 "phraseTh": "ฉันรู้สึกดีใจ",
                 "phraseMs": "Saya rasa gembira"
@@ -539,7 +539,7 @@
             {
                 "th": "โกรธ",
                 "ms": "Marah",
-                "img": "https://images.pexels.com/photos/3768126/pexels-photo-3768126.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "♡",
                 "phraseTh": "ฉันรู้สึกโกรธ",
                 "phraseMs": "Saya rasa marah"
@@ -547,7 +547,7 @@
             {
                 "th": "คิดถึง",
                 "ms": "Rindu",
-                "img": "https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "♡",
                 "tone": "tone-rose",
                 "subTh": "เลือกคนที่คิดถึง",
@@ -556,7 +556,7 @@
                     {
                         "th": "พ่อ",
                         "ms": "Ayah",
-                        "img": "https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "♡",
                         "phraseTh": "ฉันคิดถึงพ่อ",
                         "phraseMs": "Saya rindu ayah"
@@ -564,7 +564,7 @@
                     {
                         "th": "แม่",
                         "ms": "Ibu",
-                        "img": "https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "♡",
                         "phraseTh": "ฉันคิดถึงแม่",
                         "phraseMs": "Saya rindu ibu"
@@ -572,7 +572,7 @@
                     {
                         "th": "ลูก",
                         "ms": "Anak",
-                        "img": "https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "♡",
                         "phraseTh": "ฉันคิดถึงลูก",
                         "phraseMs": "Saya rindu anak"
@@ -580,7 +580,7 @@
                     {
                         "th": "หลาน",
                         "ms": "Cucu",
-                        "img": "https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "♡",
                         "phraseTh": "ฉันคิดถึงหลาน",
                         "phraseMs": "Saya rindu cucu"
@@ -588,7 +588,7 @@
                     {
                         "th": "พี่น้อง",
                         "ms": "Saudara-Mara",
-                        "img": "https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "♡",
                         "phraseTh": "ฉันคิดถึงพี่น้อง",
                         "phraseMs": "Saya rindu saudara-mara"
@@ -596,7 +596,7 @@
                     {
                         "th": "ลุง",
                         "ms": "Pakcik",
-                        "img": "https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "♡",
                         "phraseTh": "ฉันคิดถึงลุง",
                         "phraseMs": "Saya rindu pakcik"
@@ -604,7 +604,7 @@
                     {
                         "th": "น้า",
                         "ms": "Makcik",
-                        "img": "https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "♡",
                         "phraseTh": "ฉันคิดถึงน้า",
                         "phraseMs": "Saya rindu makcik"
@@ -612,7 +612,7 @@
                     {
                         "th": "สามี",
                         "ms": "Suami",
-                        "img": "https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "♡",
                         "phraseTh": "ฉันคิดถึงสามี",
                         "phraseMs": "Saya rindu suami"
@@ -620,7 +620,7 @@
                     {
                         "th": "ภรรยา",
                         "ms": "Isteri",
-                        "img": "https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "♡",
                         "phraseTh": "ฉันคิดถึงภรรยา",
                         "phraseMs": "Saya rindu isteri"
@@ -628,7 +628,7 @@
                     {
                         "th": "ปู่/ตา",
                         "ms": "Datuk",
-                        "img": "https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "♡",
                         "phraseTh": "ฉันคิดถึงปู่/ตา",
                         "phraseMs": "Saya rindu datuk"
@@ -636,7 +636,7 @@
                     {
                         "th": "ย่า/ยาย",
                         "ms": "Nenek",
-                        "img": "https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "♡",
                         "phraseTh": "ฉันคิดถึงย่า/ยาย",
                         "phraseMs": "Saya rindu nenek"
@@ -644,7 +644,7 @@
                     {
                         "th": "เพื่อน",
                         "ms": "Kawan",
-                        "img": "https://images.pexels.com/photos/3184398/pexels-photo-3184398.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "♡",
                         "phraseTh": "ฉันคิดถึงเพื่อน",
                         "phraseMs": "Saya rindu kawan"
@@ -654,7 +654,7 @@
             {
                 "th": "เหงา",
                 "ms": "Sunyi",
-                "img": "https://images.pexels.com/photos/3807738/pexels-photo-3807738.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "♡",
                 "phraseTh": "ฉันรู้สึกเหงา",
                 "phraseMs": "Saya rasa sunyi"
@@ -662,7 +662,7 @@
             {
                 "th": "เศร้า",
                 "ms": "Sedih",
-                "img": "https://images.pexels.com/photos/3807738/pexels-photo-3807738.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "♡",
                 "phraseTh": "ฉันรู้สึกเศร้า",
                 "phraseMs": "Saya rasa sedih"
@@ -670,7 +670,7 @@
             {
                 "th": "หมดกำลังใจ",
                 "ms": "Hilang Semangat",
-                "img": "https://images.pexels.com/photos/3807738/pexels-photo-3807738.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "♡",
                 "phraseTh": "ฉันรู้สึกหมดกำลังใจ",
                 "phraseMs": "Saya rasa hilang semangat"
@@ -685,7 +685,7 @@
                 "ms": "Makanan/Minuman",
                 "icon": "◐",
                 "tone": "tone-gold",
-                "img": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=900"
+                "img": ""
             },
             {
                 "id": "entertainment",
@@ -693,7 +693,7 @@
                 "ms": "Hiburan",
                 "icon": "▶",
                 "tone": "tone-lilac",
-                "img": "https://images.pexels.com/photos/5721908/pexels-photo-5721908.jpeg?auto=compress&cs=tinysrgb&w=900"
+                "img": ""
             },
             {
                 "id": "people",
@@ -701,7 +701,7 @@
                 "ms": "Jumpa",
                 "icon": "♡",
                 "tone": "tone-rose",
-                "img": "https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=900"
+                "img": ""
             },
             {
                 "id": "places",
@@ -709,7 +709,7 @@
                 "ms": "Pergi Ke",
                 "icon": "⌂",
                 "tone": "tone-teal",
-                "img": "https://images.pexels.com/photos/842711/pexels-photo-842711.jpeg?auto=compress&cs=tinysrgb&w=900"
+                "img": ""
             },
             {
                 "id": "personal",
@@ -717,14 +717,14 @@
                 "ms": "Urusan Diri",
                 "icon": "✓",
                 "tone": "tone-cream",
-                "img": "https://images.pexels.com/photos/10421674/pexels-photo-10421674.jpeg?auto=compress&cs=tinysrgb&w=900"
+                "img": ""
             }
         ],
         "food_drink": [
             {
                 "th": "อาหาร",
                 "ms": "Makanan",
-                "img": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "◐",
                 "tone": "tone-gold",
                 "subTh": "เลือกอาหาร",
@@ -733,7 +733,7 @@
                     {
                         "th": "ข้าวผัด",
                         "ms": "Nasi Goreng",
-                        "img": "https://images.pexels.com/photos/4940832/pexels-photo-4940832.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการข้าวผัด",
                         "phraseMs": "Saya nak nasi goreng"
@@ -741,7 +741,7 @@
                     {
                         "th": "ข้าวยำ",
                         "ms": "Nasi Kerabu",
-                        "img": "https://images.pexels.com/photos/4940832/pexels-photo-4940832.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการข้าวยำ",
                         "phraseMs": "Saya nak nasi kerabu"
@@ -749,7 +749,7 @@
                     {
                         "th": "ข้าวบูดู",
                         "ms": "Nasi Budu",
-                        "img": "https://images.pexels.com/photos/4940832/pexels-photo-4940832.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการข้าวบูดู",
                         "phraseMs": "Saya nak nasi budu"
@@ -757,7 +757,7 @@
                     {
                         "th": "ข้าวต้ม",
                         "ms": "Bubur",
-                        "img": "https://images.pexels.com/photos/8601392/pexels-photo-8601392.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการข้าวต้ม",
                         "phraseMs": "Saya nak bubur"
@@ -765,7 +765,7 @@
                     {
                         "th": "ปลาย่าง",
                         "ms": "Ikan Bakar",
-                        "img": "https://images.pexels.com/photos/3296279/pexels-photo-3296279.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการปลาย่าง",
                         "phraseMs": "Saya nak ikan bakar"
@@ -773,7 +773,7 @@
                     {
                         "th": "เนื้อย่าง",
                         "ms": "Daging Bakar",
-                        "img": "https://images.pexels.com/photos/675951/pexels-photo-675951.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการเนื้อย่าง",
                         "phraseMs": "Saya nak daging bakar"
@@ -781,7 +781,7 @@
                     {
                         "th": "ข้าวหมก",
                         "ms": "Nasi Briyani",
-                        "img": "https://images.pexels.com/photos/2474661/pexels-photo-2474661.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการข้าวหมก",
                         "phraseMs": "Saya nak nasi briyani"
@@ -789,7 +789,7 @@
                     {
                         "th": "ข้าวมัน",
                         "ms": "Nasi Lemak",
-                        "img": "https://images.pexels.com/photos/4940832/pexels-photo-4940832.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการข้าวมัน",
                         "phraseMs": "Saya nak nasi lemak"
@@ -797,7 +797,7 @@
                     {
                         "th": "ไข่เจียว",
                         "ms": "Telur Dada",
-                        "img": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการไข่เจียว",
                         "phraseMs": "Saya nak telur dada"
@@ -805,7 +805,7 @@
                     {
                         "th": "ปลาทอด",
                         "ms": "Ikan Goreng",
-                        "img": "https://images.pexels.com/photos/3296279/pexels-photo-3296279.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการปลาทอด",
                         "phraseMs": "Saya nak ikan goreng"
@@ -813,7 +813,7 @@
                     {
                         "th": "เนื้อทอด",
                         "ms": "Daging Goreng",
-                        "img": "https://images.pexels.com/photos/675951/pexels-photo-675951.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการเนื้อทอด",
                         "phraseMs": "Saya nak daging goreng"
@@ -821,7 +821,7 @@
                     {
                         "th": "ซุป",
                         "ms": "Sup",
-                        "img": "https://images.pexels.com/photos/8601392/pexels-photo-8601392.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการซุป",
                         "phraseMs": "Saya nak sup"
@@ -829,7 +829,7 @@
                     {
                         "th": "แกงส้ม",
                         "ms": "Gulai Masam",
-                        "img": "https://images.pexels.com/photos/2474661/pexels-photo-2474661.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการแกงส้ม",
                         "phraseMs": "Saya nak gulai masam"
@@ -837,7 +837,7 @@
                     {
                         "th": "ต้มยำ",
                         "ms": "Tomyam",
-                        "img": "https://images.pexels.com/photos/8601392/pexels-photo-8601392.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการต้มยำ",
                         "phraseMs": "Saya nak tomyam"
@@ -845,7 +845,7 @@
                     {
                         "th": "ขนมจีน",
                         "ms": "Laksa",
-                        "img": "https://images.pexels.com/photos/699953/pexels-photo-699953.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการขนมจีน",
                         "phraseMs": "Saya nak laksa"
@@ -853,7 +853,7 @@
                     {
                         "th": "ยำ",
                         "ms": "Kerabu",
-                        "img": "https://images.pexels.com/photos/1351238/pexels-photo-1351238.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการยำ",
                         "phraseMs": "Saya nak kerabu"
@@ -861,7 +861,7 @@
                     {
                         "th": "แกงเขียวหวาน",
                         "ms": "Gulai Hijau Thai",
-                        "img": "https://images.pexels.com/photos/2474661/pexels-photo-2474661.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการแกงเขียวหวาน",
                         "phraseMs": "Saya nak gulai hijau thai"
@@ -869,7 +869,7 @@
                     {
                         "th": "ผัดไทย",
                         "ms": "Pad Thai",
-                        "img": "https://images.pexels.com/photos/699953/pexels-photo-699953.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการผัดไทย",
                         "phraseMs": "Saya nak pad thai"
@@ -877,7 +877,7 @@
                     {
                         "th": "ข้าวแกง",
                         "ms": "Gulai",
-                        "img": "https://images.pexels.com/photos/2474661/pexels-photo-2474661.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการข้าวแกง",
                         "phraseMs": "Saya nak gulai"
@@ -885,7 +885,7 @@
                     {
                         "th": "ผัดซีอิ๊ว",
                         "ms": "Mee Goreng",
-                        "img": "https://images.pexels.com/photos/699953/pexels-photo-699953.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการผัดซีอิ๊ว",
                         "phraseMs": "Saya nak mee goreng"
@@ -893,7 +893,7 @@
                     {
                         "th": "ต้มส้มปลา",
                         "ms": "Ikan Singgang",
-                        "img": "https://images.pexels.com/photos/3296279/pexels-photo-3296279.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการต้มส้มปลา",
                         "phraseMs": "Saya nak ikan singgang"
@@ -901,7 +901,7 @@
                     {
                         "th": "เบอร์เกอร์",
                         "ms": "Burger",
-                        "img": "https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการเบอร์เกอร์",
                         "phraseMs": "Saya nak burger"
@@ -909,7 +909,7 @@
                     {
                         "th": "ผักลวก",
                         "ms": "Sayur Celur",
-                        "img": "https://images.pexels.com/photos/1351238/pexels-photo-1351238.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการผักลวก",
                         "phraseMs": "Saya nak sayur celur"
@@ -919,7 +919,7 @@
             {
                 "th": "เครื่องดื่ม",
                 "ms": "Minuman",
-                "img": "https://images.pexels.com/photos/3371398/pexels-photo-3371398.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "∪",
                 "tone": "tone-sky",
                 "subTh": "เลือกเครื่องดื่ม",
@@ -928,7 +928,7 @@
                     {
                         "th": "น้ำเปล่า",
                         "ms": "Air Kosong",
-                        "img": "https://images.pexels.com/photos/3371398/pexels-photo-3371398.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการน้ำเปล่า",
                         "phraseMs": "Saya nak air kosong"
@@ -936,7 +936,7 @@
                     {
                         "th": "น้ำอุ่น",
                         "ms": "Air Suam",
-                        "img": "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการน้ำอุ่น",
                         "phraseMs": "Saya nak air suam"
@@ -944,7 +944,7 @@
                     {
                         "th": "น้ำร้อน",
                         "ms": "Air Panas",
-                        "img": "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการน้ำร้อน",
                         "phraseMs": "Saya nak air panas"
@@ -952,7 +952,7 @@
                     {
                         "th": "น้ำมะพร้าว",
                         "ms": "Air Kelapa",
-                        "img": "https://images.pexels.com/photos/5946080/pexels-photo-5946080.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการน้ำมะพร้าว",
                         "phraseMs": "Saya nak air kelapa"
@@ -960,7 +960,7 @@
                     {
                         "th": "น้ำหวาน",
                         "ms": "Air Manis",
-                        "img": "https://images.pexels.com/photos/96974/pexels-photo-96974.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการน้ำหวาน",
                         "phraseMs": "Saya nak air manis"
@@ -968,7 +968,7 @@
                     {
                         "th": "น้ำเต้าหู้",
                         "ms": "Susu Soya",
-                        "img": "https://images.pexels.com/photos/248412/pexels-photo-248412.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการน้ำเต้าหู้",
                         "phraseMs": "Saya nak susu soya"
@@ -976,7 +976,7 @@
                     {
                         "th": "น้ำอัดลม",
                         "ms": "Minuman Bergas",
-                        "img": "https://images.pexels.com/photos/96974/pexels-photo-96974.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการน้ำอัดลม",
                         "phraseMs": "Saya nak minuman bergas"
@@ -984,7 +984,7 @@
                     {
                         "th": "น้ำอ้อย",
                         "ms": "Air Tebu",
-                        "img": "https://images.pexels.com/photos/96974/pexels-photo-96974.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการน้ำอ้อย",
                         "phraseMs": "Saya nak air tebu"
@@ -992,7 +992,7 @@
                     {
                         "th": "น้ำผลไม้",
                         "ms": "Jus",
-                        "img": "https://images.pexels.com/photos/96974/pexels-photo-96974.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการน้ำผลไม้",
                         "phraseMs": "Saya nak jus"
@@ -1000,7 +1000,7 @@
                     {
                         "th": "นม",
                         "ms": "Susu",
-                        "img": "https://images.pexels.com/photos/248412/pexels-photo-248412.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการนม",
                         "phraseMs": "Saya nak susu"
@@ -1008,7 +1008,7 @@
                     {
                         "th": "ชา",
                         "ms": "Teh",
-                        "img": "https://images.pexels.com/photos/1417945/pexels-photo-1417945.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการชา",
                         "phraseMs": "Saya nak teh"
@@ -1016,7 +1016,7 @@
                     {
                         "th": "กาแฟ",
                         "ms": "Kopi",
-                        "img": "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการกาแฟ",
                         "phraseMs": "Saya nak kopi"
@@ -1024,7 +1024,7 @@
                     {
                         "th": "ชาเขียว",
                         "ms": "Teh Hijau",
-                        "img": "https://images.pexels.com/photos/1417945/pexels-photo-1417945.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการชาเขียว",
                         "phraseMs": "Saya nak teh hijau"
@@ -1032,7 +1032,7 @@
                     {
                         "th": "ชาเย็น",
                         "ms": "Teh Ais",
-                        "img": "https://images.pexels.com/photos/96974/pexels-photo-96974.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการชาเย็น",
                         "phraseMs": "Saya nak teh ais"
@@ -1042,7 +1042,7 @@
             {
                 "th": "ผลไม้",
                 "ms": "Buah-Buahan",
-                "img": "https://images.pexels.com/photos/6146107/pexels-photo-6146107.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "●",
                 "tone": "tone-mint",
                 "subTh": "เลือกผลไม้",
@@ -1051,7 +1051,7 @@
                     {
                         "th": "กล้วย",
                         "ms": "Pisang",
-                        "img": "https://images.pexels.com/photos/1093038/pexels-photo-1093038.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการกล้วย",
                         "phraseMs": "Saya nak pisang"
@@ -1059,7 +1059,7 @@
                     {
                         "th": "ส้ม",
                         "ms": "Oren",
-                        "img": "https://images.pexels.com/photos/42059/pexels-photo-42059.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการส้ม",
                         "phraseMs": "Saya nak oren"
@@ -1067,7 +1067,7 @@
                     {
                         "th": "ทุเรียน",
                         "ms": "Durian",
-                        "img": "https://images.pexels.com/photos/6146107/pexels-photo-6146107.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการทุเรียน",
                         "phraseMs": "Saya nak durian"
@@ -1075,7 +1075,7 @@
                     {
                         "th": "มะม่วง",
                         "ms": "Mangga",
-                        "img": "https://images.pexels.com/photos/2294471/pexels-photo-2294471.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการมะม่วง",
                         "phraseMs": "Saya nak mangga"
@@ -1083,7 +1083,7 @@
                     {
                         "th": "มะละกอ",
                         "ms": "Betik",
-                        "img": "https://images.pexels.com/photos/6146107/pexels-photo-6146107.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการมะละกอ",
                         "phraseMs": "Saya nak betik"
@@ -1091,7 +1091,7 @@
                     {
                         "th": "มังคุด",
                         "ms": "Manggis",
-                        "img": "https://images.pexels.com/photos/6146107/pexels-photo-6146107.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการมังคุด",
                         "phraseMs": "Saya nak manggis"
@@ -1099,7 +1099,7 @@
                     {
                         "th": "เงาะ",
                         "ms": "Rambutan",
-                        "img": "https://images.pexels.com/photos/6146107/pexels-photo-6146107.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการเงาะ",
                         "phraseMs": "Saya nak rambutan"
@@ -1107,7 +1107,7 @@
                     {
                         "th": "ลองกอง",
                         "ms": "Langsat",
-                        "img": "https://images.pexels.com/photos/6146107/pexels-photo-6146107.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการลองกอง",
                         "phraseMs": "Saya nak langsat"
@@ -1115,7 +1115,7 @@
                     {
                         "th": "ลำไย",
                         "ms": "Longan",
-                        "img": "https://images.pexels.com/photos/6146107/pexels-photo-6146107.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการลำไย",
                         "phraseMs": "Saya nak longan"
@@ -1123,7 +1123,7 @@
                     {
                         "th": "องุ่น",
                         "ms": "Anggur",
-                        "img": "https://images.pexels.com/photos/708777/pexels-photo-708777.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการองุ่น",
                         "phraseMs": "Saya nak anggur"
@@ -1131,7 +1131,7 @@
                     {
                         "th": "ส้มโอ",
                         "ms": "Limau Bali",
-                        "img": "https://images.pexels.com/photos/42059/pexels-photo-42059.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการส้มโอ",
                         "phraseMs": "Saya nak limau bali"
@@ -1139,7 +1139,7 @@
                     {
                         "th": "ชมพู่",
                         "ms": "Jambu Air",
-                        "img": "https://images.pexels.com/photos/102104/pexels-photo-102104.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการชมพู่",
                         "phraseMs": "Saya nak jambu air"
@@ -1147,7 +1147,7 @@
                     {
                         "th": "ทับทิม",
                         "ms": "Delima",
-                        "img": "https://images.pexels.com/photos/6146107/pexels-photo-6146107.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการทับทิม",
                         "phraseMs": "Saya nak delima"
@@ -1155,7 +1155,7 @@
                     {
                         "th": "ขนุน",
                         "ms": "Nangka",
-                        "img": "https://images.pexels.com/photos/6146107/pexels-photo-6146107.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการขนุน",
                         "phraseMs": "Saya nak nangka"
@@ -1163,7 +1163,7 @@
                     {
                         "th": "สตรอเบอรี่",
                         "ms": "Strawberi",
-                        "img": "https://images.pexels.com/photos/46174/pexels-photo-46174.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการสตรอเบอรี่",
                         "phraseMs": "Saya nak strawberi"
@@ -1171,7 +1171,7 @@
                     {
                         "th": "แตงโม",
                         "ms": "Tembikai",
-                        "img": "https://images.pexels.com/photos/1313267/pexels-photo-1313267.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการแตงโม",
                         "phraseMs": "Saya nak tembikai"
@@ -1179,7 +1179,7 @@
                     {
                         "th": "ลิ้นจี่",
                         "ms": "Laici",
-                        "img": "https://images.pexels.com/photos/6146107/pexels-photo-6146107.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการลิ้นจี่",
                         "phraseMs": "Saya nak laici"
@@ -1189,7 +1189,7 @@
             {
                 "th": "ขนม",
                 "ms": "Kuih",
-                "img": "https://images.pexels.com/photos/3026808/pexels-photo-3026808.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "◇",
                 "tone": "tone-peach",
                 "subTh": "เลือกขนม",
@@ -1198,7 +1198,7 @@
                     {
                         "th": "เค้ก",
                         "ms": "Kek",
-                        "img": "https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการเค้ก",
                         "phraseMs": "Saya nak kek"
@@ -1206,7 +1206,7 @@
                     {
                         "th": "คุกกี้",
                         "ms": "Kuki",
-                        "img": "https://images.pexels.com/photos/230325/pexels-photo-230325.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการคุกกี้",
                         "phraseMs": "Saya nak kuki"
@@ -1214,7 +1214,7 @@
                     {
                         "th": "โดนัท",
                         "ms": "Donat",
-                        "img": "https://images.pexels.com/photos/3026808/pexels-photo-3026808.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการโดนัท",
                         "phraseMs": "Saya nak donat"
@@ -1222,7 +1222,7 @@
                     {
                         "th": "วุ้น",
                         "ms": "Agar-Agar",
-                        "img": "https://images.pexels.com/photos/3026808/pexels-photo-3026808.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการวุ้น",
                         "phraseMs": "Saya nak agar-agar"
@@ -1230,7 +1230,7 @@
                     {
                         "th": "ขนมชั้น",
                         "ms": "Kuih Lapis",
-                        "img": "https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการขนมชั้น",
                         "phraseMs": "Saya nak kuih lapis"
@@ -1238,7 +1238,7 @@
                     {
                         "th": "บัวลอย",
                         "ms": "Bebola Pulut",
-                        "img": "https://images.pexels.com/photos/3026808/pexels-photo-3026808.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการบัวลอย",
                         "phraseMs": "Saya nak bebola pulut"
@@ -1246,7 +1246,7 @@
                     {
                         "th": "ข้าวเหนียวมะม่วง",
                         "ms": "Pulut Mangga",
-                        "img": "https://images.pexels.com/photos/2294471/pexels-photo-2294471.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการข้าวเหนียวมะม่วง",
                         "phraseMs": "Saya nak pulut mangga"
@@ -1254,7 +1254,7 @@
                     {
                         "th": "ขนมใส่ไส้",
                         "ms": "Kuih Koci",
-                        "img": "https://images.pexels.com/photos/3026808/pexels-photo-3026808.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการขนมใส่ไส้",
                         "phraseMs": "Saya nak kuih koci"
@@ -1262,7 +1262,7 @@
                     {
                         "th": "ลอดช่อง",
                         "ms": "Cendol",
-                        "img": "https://images.pexels.com/photos/96974/pexels-photo-96974.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการลอดช่อง",
                         "phraseMs": "Saya nak cendol"
@@ -1270,7 +1270,7 @@
                     {
                         "th": "ข้าวเหนียวดำ",
                         "ms": "Pulut Hitam",
-                        "img": "https://images.pexels.com/photos/4940832/pexels-photo-4940832.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการข้าวเหนียวดำ",
                         "phraseMs": "Saya nak pulut hitam"
@@ -1278,7 +1278,7 @@
                     {
                         "th": "วาฟเฟิล",
                         "ms": "Wafel",
-                        "img": "https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการวาฟเฟิล",
                         "phraseMs": "Saya nak wafel"
@@ -1286,7 +1286,7 @@
                     {
                         "th": "กล้วยทอด",
                         "ms": "Pisang Goreng",
-                        "img": "https://images.pexels.com/photos/1093038/pexels-photo-1093038.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการกล้วยทอด",
                         "phraseMs": "Saya nak pisang goreng"
@@ -1294,7 +1294,7 @@
                     {
                         "th": "ปอเป๊ยะทอด",
                         "ms": "Popia Goreng",
-                        "img": "https://images.pexels.com/photos/3026808/pexels-photo-3026808.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการปอเป๊ยะทอด",
                         "phraseMs": "Saya nak popia goreng"
@@ -1302,7 +1302,7 @@
                     {
                         "th": "กล้วยบวชชี",
                         "ms": "Pisang Santan",
-                        "img": "https://images.pexels.com/photos/1093038/pexels-photo-1093038.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการกล้วยบวชชี",
                         "phraseMs": "Saya nak pisang santan"
@@ -1310,7 +1310,7 @@
                     {
                         "th": "ทับทิมกรอบ",
                         "ms": "Delima Ais",
-                        "img": "https://images.pexels.com/photos/96974/pexels-photo-96974.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการทับทิมกรอบ",
                         "phraseMs": "Saya nak delima ais"
@@ -1318,7 +1318,7 @@
                     {
                         "th": "สาคูเปียก",
                         "ms": "Sagu Manis",
-                        "img": "https://images.pexels.com/photos/3026808/pexels-photo-3026808.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการสาคูเปียก",
                         "phraseMs": "Saya nak sagu manis"
@@ -1326,7 +1326,7 @@
                     {
                         "th": "ทาร์ตไข่",
                         "ms": "Tart Telur",
-                        "img": "https://images.pexels.com/photos/2693447/pexels-photo-2693447.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการทาร์ตไข่",
                         "phraseMs": "Saya nak tart telur"
@@ -1334,7 +1334,7 @@
                     {
                         "th": "ข้าวเหนียวหน้ากะทิ",
                         "ms": "Pulut Santan",
-                        "img": "https://images.pexels.com/photos/4940832/pexels-photo-4940832.jpeg?auto=compress&cs=tinysrgb&w=900",
+                        "img": "",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการข้าวเหนียวหน้ากะทิ",
                         "phraseMs": "Saya nak pulut santan"
@@ -1346,7 +1346,7 @@
             {
                 "th": "ดูทีวี",
                 "ms": "Tengok TV",
-                "img": "https://images.pexels.com/photos/5721908/pexels-photo-5721908.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "▶",
                 "phraseTh": "ฉันต้องการดูทีวี",
                 "phraseMs": "Saya nak tengok tv"
@@ -1354,7 +1354,7 @@
             {
                 "th": "ฟังเพลง",
                 "ms": "Dengar Lagu",
-                "img": "https://images.pexels.com/photos/164745/pexels-photo-164745.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "▶",
                 "phraseTh": "ฉันต้องการฟังเพลง",
                 "phraseMs": "Saya nak dengar lagu"
@@ -1362,7 +1362,7 @@
             {
                 "th": "อ่านหนังสือ",
                 "ms": "Baca Buku",
-                "img": "https://images.pexels.com/photos/46274/pexels-photo-46274.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "▶",
                 "phraseTh": "ฉันต้องการอ่านหนังสือ",
                 "phraseMs": "Saya nak baca buku"
@@ -1370,7 +1370,7 @@
             {
                 "th": "เล่นเกมส์",
                 "ms": "Main Permainan",
-                "img": "https://images.pexels.com/photos/1293261/pexels-photo-1293261.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "▶",
                 "phraseTh": "ฉันต้องการเล่นเกมส์",
                 "phraseMs": "Saya nak main permainan"
@@ -1378,7 +1378,7 @@
             {
                 "th": "ทำอาหาร",
                 "ms": "Masak",
-                "img": "https://images.pexels.com/photos/4252137/pexels-photo-4252137.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "▶",
                 "phraseTh": "ฉันต้องการทำอาหาร",
                 "phraseMs": "Saya nak masak"
@@ -1386,7 +1386,7 @@
             {
                 "th": "ออกกำลังกาย",
                 "ms": "Bersenam",
-                "img": "https://images.pexels.com/photos/3757376/pexels-photo-3757376.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "▶",
                 "phraseTh": "ฉันต้องการออกกำลังกาย",
                 "phraseMs": "Saya nak bersenam"
@@ -1396,7 +1396,7 @@
             {
                 "th": "พ่อ",
                 "ms": "Ayah",
-                "img": "https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "♡",
                 "phraseTh": "ฉันต้องการพบพ่อ",
                 "phraseMs": "Saya nak jumpa ayah"
@@ -1404,7 +1404,7 @@
             {
                 "th": "แม่",
                 "ms": "Ibu",
-                "img": "https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "♡",
                 "phraseTh": "ฉันต้องการพบแม่",
                 "phraseMs": "Saya nak jumpa ibu"
@@ -1412,7 +1412,7 @@
             {
                 "th": "ลูก",
                 "ms": "Anak",
-                "img": "https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "♡",
                 "phraseTh": "ฉันต้องการพบลูก",
                 "phraseMs": "Saya nak jumpa anak"
@@ -1420,7 +1420,7 @@
             {
                 "th": "หลาน",
                 "ms": "Cucu",
-                "img": "https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "♡",
                 "phraseTh": "ฉันต้องการพบหลาน",
                 "phraseMs": "Saya nak jumpa cucu"
@@ -1428,7 +1428,7 @@
             {
                 "th": "พี่น้อง",
                 "ms": "Saudara-Mara",
-                "img": "https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "♡",
                 "phraseTh": "ฉันต้องการพบพี่น้อง",
                 "phraseMs": "Saya nak jumpa saudara-mara"
@@ -1436,7 +1436,7 @@
             {
                 "th": "ลุง",
                 "ms": "Pakcik",
-                "img": "https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "♡",
                 "phraseTh": "ฉันต้องการพบลุง",
                 "phraseMs": "Saya nak jumpa pakcik"
@@ -1444,7 +1444,7 @@
             {
                 "th": "น้า",
                 "ms": "Makcik",
-                "img": "https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "♡",
                 "phraseTh": "ฉันต้องการพบน้า",
                 "phraseMs": "Saya nak jumpa makcik"
@@ -1452,7 +1452,7 @@
             {
                 "th": "สามี",
                 "ms": "Suami",
-                "img": "https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "♡",
                 "phraseTh": "ฉันต้องการพบสามี",
                 "phraseMs": "Saya nak jumpa suami"
@@ -1460,7 +1460,7 @@
             {
                 "th": "ภรรยา",
                 "ms": "Isteri",
-                "img": "https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "♡",
                 "phraseTh": "ฉันต้องการพบภรรยา",
                 "phraseMs": "Saya nak jumpa isteri"
@@ -1468,7 +1468,7 @@
             {
                 "th": "ปู่/ตา",
                 "ms": "Datuk",
-                "img": "https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "♡",
                 "phraseTh": "ฉันต้องการพบปู่/ตา",
                 "phraseMs": "Saya nak jumpa datuk"
@@ -1476,7 +1476,7 @@
             {
                 "th": "ย่า/ยาย",
                 "ms": "Nenek",
-                "img": "https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "♡",
                 "phraseTh": "ฉันต้องการพบย่า/ยาย",
                 "phraseMs": "Saya nak jumpa nenek"
@@ -1484,7 +1484,7 @@
             {
                 "th": "หมอ",
                 "ms": "Doktor",
-                "img": "https://images.pexels.com/photos/6129507/pexels-photo-6129507.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "♡",
                 "phraseTh": "ฉันต้องการพบหมอ",
                 "phraseMs": "Saya nak jumpa doktor"
@@ -1492,7 +1492,7 @@
             {
                 "th": "พยาบาล",
                 "ms": "Jururawat",
-                "img": "https://images.pexels.com/photos/6129502/pexels-photo-6129502.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "♡",
                 "phraseTh": "ฉันต้องการพบพยาบาล",
                 "phraseMs": "Saya nak jumpa jururawat"
@@ -1500,7 +1500,7 @@
             {
                 "th": "เพื่อน",
                 "ms": "Kawan",
-                "img": "https://images.pexels.com/photos/3184398/pexels-photo-3184398.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "♡",
                 "phraseTh": "ฉันต้องการพบเพื่อน",
                 "phraseMs": "Saya nak jumpa kawan"
@@ -1510,7 +1510,7 @@
             {
                 "th": "ธนาคาร",
                 "ms": "Bank",
-                "img": "https://images.pexels.com/photos/259200/pexels-photo-259200.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "⌂",
                 "phraseTh": "ฉันต้องการไปที่ธนาคาร",
                 "phraseMs": "Saya nak pergi ke bank"
@@ -1518,7 +1518,7 @@
             {
                 "th": "สถานีตำรวจ",
                 "ms": "Balai Polis",
-                "img": "https://images.pexels.com/photos/532001/pexels-photo-532001.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "⌂",
                 "phraseTh": "ฉันต้องการไปที่สถานีตำรวจ",
                 "phraseMs": "Saya nak pergi ke balai polis"
@@ -1526,7 +1526,7 @@
             {
                 "th": "โรงพยาบาล",
                 "ms": "Hospital",
-                "img": "https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "✚",
                 "phraseTh": "ฉันต้องการไปที่โรงพยาบาล",
                 "phraseMs": "Saya nak pergi ke hospital"
@@ -1534,7 +1534,7 @@
             {
                 "th": "ตลาด",
                 "ms": "Pasar",
-                "img": "https://images.pexels.com/photos/264636/pexels-photo-264636.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "⌂",
                 "phraseTh": "ฉันต้องการไปที่ตลาด",
                 "phraseMs": "Saya nak pergi ke pasar"
@@ -1542,7 +1542,7 @@
             {
                 "th": "มัสยิด",
                 "ms": "Masjid",
-                "img": "https://images.pexels.com/photos/326716/pexels-photo-326716.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "⌂",
                 "phraseTh": "ฉันต้องการไปที่มัสยิด",
                 "phraseMs": "Saya nak pergi ke masjid"
@@ -1550,7 +1550,7 @@
             {
                 "th": "วัด",
                 "ms": "Kuil",
-                "img": "https://images.pexels.com/photos/356966/pexels-photo-356966.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "⌂",
                 "phraseTh": "ฉันต้องการไปที่วัด",
                 "phraseMs": "Saya nak pergi ke kuil"
@@ -1558,7 +1558,7 @@
             {
                 "th": "บ้าน",
                 "ms": "Rumah",
-                "img": "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "⌂",
                 "phraseTh": "ฉันต้องการไปที่บ้าน",
                 "phraseMs": "Saya nak pergi ke rumah"
@@ -1566,7 +1566,7 @@
             {
                 "th": "ร้านอาหาร",
                 "ms": "Restoran",
-                "img": "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "⌂",
                 "phraseTh": "ฉันต้องการไปที่ร้านอาหาร",
                 "phraseMs": "Saya nak pergi ke restoran"
@@ -1574,7 +1574,7 @@
             {
                 "th": "ห้องน้ำ",
                 "ms": "Tandas",
-                "img": "https://images.pexels.com/photos/7516417/pexels-photo-7516417.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "⌂",
                 "phraseTh": "ฉันต้องการไปที่ห้องน้ำ",
                 "phraseMs": "Saya nak pergi ke tandas"
@@ -1582,7 +1582,7 @@
             {
                 "th": "เที่ยว",
                 "ms": "Jalan-Jalan",
-                "img": "https://images.pexels.com/photos/842711/pexels-photo-842711.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "⌂",
                 "phraseTh": "ฉันต้องการไปเที่ยว",
                 "phraseMs": "Saya nak jalan-jalan"
@@ -1590,7 +1590,7 @@
             {
                 "th": "สวนสาธารณะ",
                 "ms": "Taman",
-                "img": "https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "⌂",
                 "phraseTh": "ฉันต้องการไปที่สวนสาธารณะ",
                 "phraseMs": "Saya nak pergi ke taman"
@@ -1598,7 +1598,7 @@
             {
                 "th": "ทะเล",
                 "ms": "Pantai",
-                "img": "https://images.pexels.com/photos/457882/pexels-photo-457882.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "⌂",
                 "phraseTh": "ฉันต้องการไปที่ทะเล",
                 "phraseMs": "Saya nak pergi ke pantai"
@@ -1608,7 +1608,7 @@
             {
                 "th": "ปัสสาวะ",
                 "ms": "Buang Air Kecil",
-                "img": "https://images.pexels.com/photos/7516417/pexels-photo-7516417.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "✓",
                 "phraseTh": "ฉันต้องการปัสสาวะ",
                 "phraseMs": "Saya nak buang air kecil"
@@ -1616,7 +1616,7 @@
             {
                 "th": "อุจจาระ",
                 "ms": "Buang Air Besar",
-                "img": "https://images.pexels.com/photos/7516417/pexels-photo-7516417.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "✓",
                 "phraseTh": "ฉันต้องการอุจจาระ",
                 "phraseMs": "Saya nak buang air besar"
@@ -1624,7 +1624,7 @@
             {
                 "th": "ไปห้องน้ำ",
                 "ms": "Ke Tandas",
-                "img": "https://images.pexels.com/photos/7516417/pexels-photo-7516417.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "✓",
                 "phraseTh": "ฉันต้องการไปห้องน้ำ",
                 "phraseMs": "Saya nak ke tandas"
@@ -1632,7 +1632,7 @@
             {
                 "th": "อาบน้ำ",
                 "ms": "Mandi",
-                "img": "https://images.pexels.com/photos/10421674/pexels-photo-10421674.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "✓",
                 "phraseTh": "ฉันต้องการอาบน้ำ",
                 "phraseMs": "Saya nak mandi"
@@ -1640,7 +1640,7 @@
             {
                 "th": "แปรงฟัน",
                 "ms": "Gosok Gigi",
-                "img": "https://images.pexels.com/photos/6502309/pexels-photo-6502309.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "✓",
                 "phraseTh": "ฉันต้องการแปรงฟัน",
                 "phraseMs": "Saya nak gosok gigi"
@@ -1648,7 +1648,7 @@
             {
                 "th": "ละหมาด",
                 "ms": "Solat",
-                "img": "https://images.pexels.com/photos/6747805/pexels-photo-6747805.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "✓",
                 "phraseTh": "ฉันต้องการละหมาด",
                 "phraseMs": "Saya nak solat"
@@ -1656,7 +1656,7 @@
             {
                 "th": "เปลี่ยนเสื้อผ้า",
                 "ms": "Tukar Baju",
-                "img": "https://images.pexels.com/photos/5698851/pexels-photo-5698851.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "✓",
                 "phraseTh": "ฉันต้องการเปลี่ยนเสื้อผ้า",
                 "phraseMs": "Saya nak tukar baju"
@@ -1664,7 +1664,7 @@
             {
                 "th": "สวดมนต์",
                 "ms": "Berdoa",
-                "img": "https://images.pexels.com/photos/6747805/pexels-photo-6747805.jpeg?auto=compress&cs=tinysrgb&w=900",
+                "img": "",
                 "icon": "✓",
                 "phraseTh": "ฉันต้องการสวดมนต์",
                 "phraseMs": "Saya nak berdoa"

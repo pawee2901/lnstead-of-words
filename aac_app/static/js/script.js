@@ -168,32 +168,64 @@ function renderLanguageSelect() {
 function playAudio(text) {
     if (!text) return;
 
+    console.log('Attempting to play audio:', text);
+
     if (currentAudio) {
         currentAudio.pause();
         currentAudio.currentTime = 0;
         currentAudio = null;
     }
 
+    if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+    }
+
     isPlaying = true;
+    
+    // Try server-side TTS first
     const audio = new Audio(`/speak?text=${encodeURIComponent(text)}&lang=${currentLang}&v=${Date.now()}`);
     currentAudio = audio;
-    audio.onended = () => {
-        isPlaying = false;
+    
+    let didStart = false;
+    let didFallback = false;
+
+    const fallbackToBrowser = () => {
+        if (didFallback || didStart) return;
+        didFallback = true;
+        console.warn('Server TTS slow or failed, falling back to Browser TTS');
         if (currentAudio === audio) {
+            audio.pause();
             currentAudio = null;
         }
-    };
-    audio.onerror = () => {
         isPlaying = false;
-        currentAudio = null;
-        console.error('Audio play failed');
         playBrowserSpeech(text);
     };
+
+    // If server doesn't respond in 1.5s, fallback to browser TTS for better UX
+    const fallbackTimer = window.setTimeout(fallbackToBrowser, 1500);
+
+    audio.onplaying = () => {
+        didStart = true;
+        window.clearTimeout(fallbackTimer);
+        console.log('Server audio playing');
+    };
+    
+    audio.onended = () => {
+        window.clearTimeout(fallbackTimer);
+        isPlaying = false;
+        if (currentAudio === audio) currentAudio = null;
+    };
+    
+    audio.onerror = (err) => {
+        console.error('Server audio error:', err);
+        window.clearTimeout(fallbackTimer);
+        fallbackToBrowser();
+    };
+
     audio.play().catch(error => {
-        isPlaying = false;
-        currentAudio = null;
-        console.error('Audio play blocked/failed:', error);
-        playBrowserSpeech(text);
+        console.warn('Audio play blocked or failed:', error);
+        window.clearTimeout(fallbackTimer);
+        fallbackToBrowser();
     });
 }
 
