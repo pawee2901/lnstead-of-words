@@ -5,525 +5,425 @@
                 "id": "symptoms",
                 "th": "อาการเจ็บป่วย",
                 "ms": "Gejala penyakit",
-                "icon": "",
+                "icon": "✚",
                 "tone": "tone-rose",
-                "img": ""
+                "img": "/static/images/symptoms.png"
             },
             {
                 "id": "emotions",
                 "th": "อารมณ์ความรู้สึก",
                 "ms": "Perasaan",
-                "icon": "",
+                "icon": "♡",
                 "tone": "tone-lilac",
-                "img": ""
+                "img": "/static/images/emotions.png"
             }
         ],
         "symptoms": [
             {
-                "th": "ปวด",
-                "ms": "Sakit",
-                "img": "",
-                "icon": "✚",
-                "tone": "tone-rose",
-                "subTh": "เลือกตำแหน่งที่ปวด",
-                "subMs": "Pilih tempat sakit",
-                "children": [
-                    {
-                        "th": "ฟัน",
-                        "ms": "Gigi",
-                        "phraseTh": "ฉันรู้สึกปวดฟัน",
-                        "phraseMs": "Saya rasa sakit gigi",
-                        "img": "https://images.pexels.com/photos/5624170/pexels-photo-5624170.jpeg"
-                    },
-                    {
-                        "th": "ตา",
-                        "ms": "Mata",
-                        "phraseTh": "ฉันรู้สึกปวดตา",
-                        "phraseMs": "Saya rasa sakit mata",
-                        "img": "https://images.pexels.com/photos/4491435/pexels-photo-4491435.jpeg"
-                    },
-                    {
-                        "th": "ขา",
-                        "ms": "Kaki",
-                        "phraseTh": "ฉันรู้สึกปวดขา",
-                        "phraseMs": "Saya rasa sakit kaki",
-                        "img": "https://images.pexels.com/photos/11349880/pexels-photo-11349880.jpeg"
-                    },
-                    {
-                        "th": "แขน",
-                        "ms": "Tangan",
-                        "phraseTh": "ฉันรู้สึกปวดแขน",
-                        "phraseMs": "Saya rasa sakit tangan",
-                        "img": "https://images.pexels.com/photos/8600449/pexels-photo-8600449.jpeg"
-                    },
-                    {
-                        "th": "หลัง",
-                        "ms": "Belakang",
-                        "phraseTh": "ฉันรู้สึกปวดหลัง",
-                        "phraseMs": "Saya rasa sakit belakang",
-                        "img": "https://images.pexels.com/photos/7298677/pexels-photo-7298677.jpeg"
-                    },
-                    {
-                        "th": "ไหล่",
-                        "ms": "Bahu",
-                        "phraseTh": "ฉันรู้สึกปวดไหล่",
-                        "phraseMs": "Saya rasa sakit bahu",
-                        "img": "https://images.pexels.com/photos/8182356/pexels-photo-8182356.jpeg"
-                    },
-                    {
-                        "th": "หัว",
-                        "ms": "Kepala",
-                        "phraseTh": "ฉันรู้สึกปวดหัว",
-                        "phraseMs": "Saya rasa sakit kepala",
-                        "img": "https://images.pexels.com/photos/12955556/pexels-photo-12955556.jpeg"
-                    },
-                    {
-                        "th": "คอ",
-                        "ms": "Tekak",
-                        "phraseTh": "ฉันรู้สึกปวดคอ",
-                        "phraseMs": "Saya rasa sakit tekak",
-                        "img": "https://images.pexels.com/photos/5712690/pexels-photo-5712690.jpeg"
-                    },
-                    {
-                        "th": "เอว",
-                        "ms": "Pinggang",
-                        "phraseTh": "ฉันรู้สึกปวดเอว",
-                        "phraseMs": "Saya rasa sakit pinggang",
-                        "img": "https://images.pexels.com/photos/7298686/pexels-photo-7298686.jpeg"
-                    },
-                    {
-                        "th": "ท้อง",
-                        "ms": "Perut",
-                        "phraseTh": "ฉันรู้สึกปวดท้อง",
-                        "phraseMs": "Saya rasa sakit perut",
-                        "img": "https://images.pexels.com/photos/5938366/pexels-photo-5938366.jpeg"
-                    },
-                    {
-                        "th": "ข้อ",
-                        "ms": "Sendi",
-                        "phraseTh": "ฉันรู้สึกปวดข้อ",
-                        "phraseMs": "Saya rasa sakit sendi",
-                        "img": "https://images.pexels.com/photos/7298399/pexels-photo-7298399.jpeg"
-                    },
-                    {
-                        "th": "เข่า",
-                        "ms": "Lutut",
-                        "phraseTh": "ฉันรู้สึกปวดเข่า",
-                        "phraseMs": "Saya rasa sakit lutut",
-                        "img": "https://images.pexels.com/photos/11969599/pexels-photo-11969599.jpeg"
-                    }
-                ]
+                "th": "ปวดฟัน",
+                "ms": "Gigi Sakit",
+                "phraseTh": "ฉันรู้สึกปวดฟัน",
+                "phraseMs": "Saya rasa sakit gigi",
+                "img": "/static/images/tooth.png"
             },
             {
-                "th": "เมื่อย",
-                "ms": "Lenguh",
-                "icon": "",
-                "tone": "tone-teal",
-                "subTh": "เลือกตำแหน่งที่เมื่อย",
-                "subMs": "Pilih tempat lenguh",
-                "children": [
-                    {
-                        "th": "แขน",
-                        "ms": "Tangan",
-                        "phraseTh": "ฉันรู้สึกเมื่อยแขน",
-                        "phraseMs": "Saya rasa lenguh tangan",
-                        "img": "https://images.pexels.com/photos/9017032/pexels-photo-9017032.jpeg"
-                    },
-                    {
-                        "th": "ขา",
-                        "ms": "Kaki",
-                        "phraseTh": "ฉันรู้สึกเมื่อยขา",
-                        "phraseMs": "Saya rasa lenguh kaki",
-                        "img": "https://images.pexels.com/photos/8462937/pexels-photo-8462937.jpeg"
-                    },
-                    {
-                        "th": "หลัง",
-                        "ms": "Belakang",
-                        "phraseTh": "ฉันรู้สึกเมื่อยหลัง",
-                        "phraseMs": "Saya rasa lenguh belakang",
-                        "img": "https://images.pexels.com/photos/7298677/pexels-photo-7298677.jpeg"
-                    },
-                    {
-                        "th": "เอว",
-                        "ms": "Pinggang",
-                        "phraseTh": "ฉันรู้สึกเมื่อยเอว",
-                        "phraseMs": "Saya rasa lenguh pinggang",
-                        "img": "https://images.pexels.com/photos/3958586/pexels-photo-3958586.jpeg"
-                    },
-                    {
-                        "th": "ไหล่",
-                        "ms": "Bahu",
-                        "phraseTh": "ฉันรู้สึกเมื่อยไหล่",
-                        "phraseMs": "Saya rasa lenguh bahu",
-                        "img": "https://images.pexels.com/photos/7298853/pexels-photo-7298853.jpeg"
-                    },
-                    {
-                        "th": "คอ",
-                        "ms": "Leher",
-                        "phraseTh": "ฉันรู้สึกเมื่อยคอ",
-                        "phraseMs": "Saya rasa lenguh leher",
-                        "img": "https://images.pexels.com/photos/11352535/pexels-photo-11352535.jpeg"
-                    }
-                ],
-                "img": ""
+                "th": "ปวดตา",
+                "ms": "Mata Sakit",
+                "phraseTh": "ฉันรู้สึกปวดตา",
+                "phraseMs": "Saya rasa sakit mata",
+                "img": "/static/images/eye.png"
             },
             {
-                "th": "ชา",
-                "ms": "Kebas",
-                "icon": "",
-                "tone": "tone-sky",
-                "subTh": "เลือกตำแหน่งที่ชา",
-                "subMs": "Pilih tempat kebas",
-                "children": [
-                    {
-                        "th": "ใบหน้า",
-                        "ms": "Muka",
-                        "phraseTh": "ฉันรู้สึกชาใบหน้า",
-                        "phraseMs": "Saya rasa kebas muka",
-                        "img": "https://images.pexels.com/photos/32197366/pexels-photo-32197366.jpeg"
-                    },
-                    {
-                        "th": "ปาก",
-                        "ms": "Mulut",
-                        "phraseTh": "ฉันรู้สึกชาปาก",
-                        "phraseMs": "Saya rasa kebas mulut",
-                        "img": "https://images.pexels.com/photos/3762436/pexels-photo-3762436.jpeg"
-                    },
-                    {
-                        "th": "ลิ้น",
-                        "ms": "Lidah",
-                        "phraseTh": "ฉันรู้สึกชาลิ้น",
-                        "phraseMs": "Saya rasa kebas lidah",
-                        "img": "https://images.pexels.com/photos/27672363/pexels-photo-27672363.jpeg"
-                    },
-                    {
-                        "th": "แขน",
-                        "ms": "Tangan",
-                        "phraseTh": "ฉันรู้สึกชาแขน",
-                        "phraseMs": "Saya rasa kebas tangan",
-                        "img": "https://images.pexels.com/photos/9017032/pexels-photo-9017032.jpeg"
-                    },
-                    {
-                        "th": "ขา",
-                        "ms": "Kaki",
-                        "phraseTh": "ฉันรู้สึกชาขา",
-                        "phraseMs": "Saya rasa kebas kaki",
-                        "img": "https://images.pexels.com/photos/8462937/pexels-photo-8462937.jpeg"
-                    },
-                    {
-                        "th": "ชาซีกซ้าย",
-                        "ms": "Kebas Sebelah Kiri",
-                        "phraseTh": "ฉันรู้สึกชาซีกซ้าย",
-                        "phraseMs": "Saya rasa kebas sebelah kiri",
-                        "img": "https://canva.link/5fvo6884rmacxk6"
-                    },
-                    {
-                        "th": "ชาซีกขวา",
-                        "ms": "Kebas Sebelah Kanan",
-                        "phraseTh": "ฉันรู้สึกชาซีกขวา",
-                        "phraseMs": "Saya rasa kebas sebelah kanan",
-                        "img": ""
-                    }
-                ],
-                "img": ""
+                "th": "ปวดขา",
+                "ms": "Kaki Sakit",
+                "phraseTh": "ฉันรู้สึกปวดขา",
+                "phraseMs": "Saya rasa sakit kaki",
+                "img": "/static/images/leg.png"
             },
             {
-                "th": "อ่อนแรง",
-                "ms": "Lemah",
-                "icon": "●",
-                "tone": "tone-mint",
-                "subTh": "เลือกตำแหน่งหรืออาการเพิ่มเติม",
-                "subMs": "Pilih tempat atau gejala tambahan",
-                "children": [
-                    {
-                        "th": "แขน",
-                        "ms": "Tangan",
-                        "phraseTh": "ฉันรู้สึกอ่อนแรงแขน",
-                        "phraseMs": "Saya rasa lemah tangan",
-                        "img": ""
-                    },
-                    {
-                        "th": "ขา",
-                        "ms": "Kaki",
-                        "phraseTh": "ฉันรู้สึกอ่อนแรงขา",
-                        "phraseMs": "Saya rasa lemah kaki",
-                        "img": ""
-                    },
-                    {
-                        "th": "ซีกซ้าย",
-                        "ms": "Sebelah Kiri",
-                        "phraseTh": "ฉันรู้สึกอ่อนแรงซีกซ้าย",
-                        "phraseMs": "Saya rasa lemah sebelah kiri",
-                        "img": ""
-                    },
-                    {
-                        "th": "ซีกขวา",
-                        "ms": "Sebelah Kanan",
-                        "phraseTh": "ฉันรู้สึกอ่อนแรงซีกขวา",
-                        "phraseMs": "Saya rasa lemah sebelah kanan",
-                        "img": ""
-                    },
-                    {
-                        "th": "เบื่ออาหาร",
-                        "ms": "Hilang Selara makan",
-                        "icon": "○",
-                        "tone": "tone-cream",
-                        "phraseTh": "ฉันรู้สึกเบื่ออาหาร",
-                        "phraseMs": "Saya rasa hilang selara makan",
-                        "img": ""
-                    },
-                    {
-                        "th": "อาเจียน",
-                        "ms": "Muntah",
-                        "icon": "○",
-                        "tone": "tone-cream",
-                        "phraseTh": "ฉันรู้สึกอาเจียน",
-                        "phraseMs": "Saya rasa muntah",
-                        "img": ""
-                    },
-                    {
-                        "th": "ท้องเสีย",
-                        "ms": "Cirit-Birit",
-                        "icon": "○",
-                        "tone": "tone-cream",
-                        "phraseTh": "ฉันรู้สึกท้องเสีย",
-                        "phraseMs": "Saya rasa cirit-birit",
-                        "img": ""
-                    },
-                    {
-                        "th": "ท้องอืด",
-                        "ms": "Kembung Perut",
-                        "icon": "○",
-                        "tone": "tone-cream",
-                        "phraseTh": "ฉันรู้สึกท้องอืด",
-                        "phraseMs": "Saya rasa kembung perut",
-                        "img": ""
-                    },
-                    {
-                        "th": "ปัสสาวะมีเลือด",
-                        "ms": "Kencing Berdarah",
-                        "icon": "○",
-                        "tone": "tone-cream",
-                        "phraseTh": "ฉันรู้สึกปัสสาวะมีเลือด",
-                        "phraseMs": "Saya rasa kencing berdarah",
-                        "img": ""
-                    },
-                    {
-                        "th": "ปัสสาวะไม่สุด",
-                        "ms": "Kencing Tak Lawas",
-                        "icon": "○",
-                        "tone": "tone-cream",
-                        "phraseTh": "ฉันรู้สึกปัสสาวะไม่สุด",
-                        "phraseMs": "Saya rasa kencing tak lawas",
-                        "img": ""
-                    },
-                    {
-                        "th": "ใจสั่น",
-                        "ms": "Jantung Berdebar",
-                        "icon": "♡",
-                        "tone": "tone-rose",
-                        "phraseTh": "ฉันรู้สึกใจสั่น",
-                        "phraseMs": "Saya rasa jantung berdebar",
-                        "img": ""
-                    },
-                    {
-                        "th": "ปากเบี้ยว",
-                        "ms": "Mulut Sengat",
-                        "icon": "!",
-                        "tone": "tone-peach",
-                        "phraseTh": "ฉันรู้สึกปากเบี้ยว",
-                        "phraseMs": "Saya rasa mulut sengat",
-                        "img": ""
-                    },
-                    {
-                        "th": "พูดไม่ชัด",
-                        "ms": "Cakap Tak Jelus",
-                        "icon": "!",
-                        "tone": "tone-peach",
-                        "phraseTh": "ฉันรู้สึกพูดไม่ชัด",
-                        "phraseMs": "Saya rasa cakap tak jelus",
-                        "img": ""
-                    },
-                    {
-                        "th": "ลิ้นแข็ง",
-                        "ms": "Lidah Kaku",
-                        "icon": "!",
-                        "tone": "tone-peach",
-                        "phraseTh": "ฉันรู้สึกลิ้นแข็ง",
-                        "phraseMs": "Saya rasa lidah kaku",
-                        "img": ""
-                    },
-                    {
-                        "th": "เดินเซ",
-                        "ms": "Jalan Tak Stabil",
-                        "icon": "!",
-                        "tone": "tone-peach",
-                        "phraseTh": "ฉันรู้สึกเดินเซ",
-                        "phraseMs": "Saya rasa jalan tak stabil",
-                        "img": ""
-                    },
-                    {
-                        "th": "เห็นภาพซ้อน",
-                        "ms": "Nampak Berganda",
-                        "icon": "!",
-                        "tone": "tone-peach",
-                        "phraseTh": "ฉันรู้สึกเห็นภาพซ้อน",
-                        "phraseMs": "Saya rasa nampak berganda",
-                        "img": ""
-                    },
-                    {
-                        "th": "ตาพร่ามัว",
-                        "ms": "Nampak Kabur",
-                        "icon": "!",
-                        "tone": "tone-peach",
-                        "phraseTh": "ฉันรู้สึกตาพร่ามัว",
-                        "phraseMs": "Saya rasa nampak kabur",
-                        "img": ""
-                    },
-                    {
-                        "th": "หายใจเหนื่อย",
-                        "ms": "Sesak Nafas",
-                        "icon": "○",
-                        "tone": "tone-cream",
-                        "phraseTh": "ฉันรู้สึกหายใจเหนื่อย",
-                        "phraseMs": "Saya rasa sesak nafas",
-                        "img": ""
-                    },
-                    {
-                        "th": "เจ็บหน้าอก",
-                        "ms": "Sakit Dada",
-                        "icon": "♡",
-                        "tone": "tone-rose",
-                        "phraseTh": "ฉันรู้สึกเจ็บหน้าอก",
-                        "phraseMs": "Saya rasa sakit dada",
-                        "img": ""
-                    },
-                    {
-                        "th": "เวียนหัว",
-                        "ms": "Pening",
-                        "icon": "○",
-                        "tone": "tone-cream",
-                        "phraseTh": "ฉันรู้สึกเวียนหัว",
-                        "phraseMs": "Saya rasa pening",
-                        "img": ""
-                    },
-                    {
-                        "th": "กลืนลำบาก",
-                        "ms": "Susah Telan",
-                        "icon": "○",
-                        "tone": "tone-cream",
-                        "phraseTh": "ฉันรู้สึกกลืนลำบาก",
-                        "phraseMs": "Saya rasa susah telan",
-                        "img": ""
-                    },
-                    {
-                        "th": "มีไข้",
-                        "ms": "Demam",
-                        "icon": "○",
-                        "tone": "tone-cream",
-                        "phraseTh": "ฉันรู้สึกมีไข้",
-                        "phraseMs": "Saya rasa demam",
-                        "img": ""
-                    },
-                    {
-                        "th": "คลื่นไส้",
-                        "ms": "Loya",
-                        "icon": "○",
-                        "tone": "tone-cream",
-                        "phraseTh": "ฉันรู้สึกคลื่นไส้",
-                        "phraseMs": "Saya rasa loya",
-                        "img": ""
-                    },
-                    {
-                        "th": "ไอ",
-                        "ms": "Batuk",
-                        "icon": "○",
-                        "tone": "tone-cream",
-                        "phraseTh": "ฉันรู้สึกไอ",
-                        "phraseMs": "Saya rasa batuk",
-                        "img": ""
-                    },
-                    {
-                        "th": "เจ็บคอ",
-                        "ms": "Sakit Tekak",
-                        "icon": "○",
-                        "tone": "tone-cream",
-                        "phraseTh": "ฉันรู้สึกเจ็บคอ",
-                        "phraseMs": "Saya rasa sakit tekak",
-                        "img": ""
-                    },
-                    {
-                        "th": "เป็นหวัด",
-                        "ms": "Selesema",
-                        "icon": "○",
-                        "tone": "tone-cream",
-                        "phraseTh": "ฉันรู้สึกเป็นหวัด",
-                        "phraseMs": "Saya rasa selesema",
-                        "img": ""
-                    },
-                    {
-                        "th": "ง่วงนอน",
-                        "ms": "Mengantuk",
-                        "icon": "○",
-                        "tone": "tone-cream",
-                        "phraseTh": "ฉันรู้สึกง่วงนอน",
-                        "phraseMs": "Saya rasa mengantuk",
-                        "img": ""
-                    },
-                    {
-                        "th": "หนาว",
-                        "ms": "Sejuk",
-                        "icon": "○",
-                        "tone": "tone-cream",
-                        "phraseTh": "ฉันรู้สึกหนาว",
-                        "phraseMs": "Saya rasa sejuk",
-                        "img": ""
-                    },
-                    {
-                        "th": "ร้อน",
-                        "ms": "Panas",
-                        "icon": "○",
-                        "tone": "tone-cream",
-                        "phraseTh": "ฉันรู้สึกร้อน",
-                        "phraseMs": "Saya rasa panas",
-                        "img": ""
-                    },
-                    {
-                        "th": "เหนื่อย",
-                        "ms": "Letih",
-                        "icon": "○",
-                        "tone": "tone-cream",
-                        "phraseTh": "ฉันรู้สึกเหนื่อย",
-                        "phraseMs": "Saya rasa letih",
-                        "img": ""
-                    },
-                    {
-                        "th": "นอนไม่หลับ",
-                        "ms": "Susah Tidur",
-                        "icon": "○",
-                        "tone": "tone-cream",
-                        "phraseTh": "ฉันรู้สึกนอนไม่หลับ",
-                        "phraseMs": "Saya rasa susah tidur",
-                        "img": ""
-                    },
-                    {
-                        "th": "หิว",
-                        "ms": "Lapar",
-                        "icon": "○",
-                        "tone": "tone-cream",
-                        "phraseTh": "ฉันรู้สึกหิว",
-                        "phraseMs": "Saya rasa lapar",
-                        "img": ""
-                    }
-                ],
-                "img": ""
+                "th": "ปวดแขน",
+                "ms": "Tangan Sakit",
+                "phraseTh": "ฉันรู้สึกปวดแขน",
+                "phraseMs": "Saya rasa sakit tangan",
+                "img": "/static/images/arm.png"
+            },
+            {
+                "th": "ปวดหลัง",
+                "ms": "Belakang Sakit",
+                "phraseTh": "ฉันรู้สึกปวดหลัง",
+                "phraseMs": "Saya rasa sakit belakang",
+                "img": "/static/images/back.png"
+            },
+            {
+                "th": "ปวดไหล่",
+                "ms": "Bahu Sakit",
+                "phraseTh": "ฉันรู้สึกปวดไหล่",
+                "phraseMs": "Saya rasa sakit bahu",
+                "img": "/static/images/shoulder.png"
+            },
+            {
+                "th": "ปวดหัว",
+                "ms": "Kepala Sakit",
+                "phraseTh": "ฉันรู้สึกปวดหัว",
+                "phraseMs": "Saya rasa sakit kepala",
+                "img": "/static/images/head.png"
+            },
+            {
+                "th": "ปวดคอ",
+                "ms": "Leher Sakit",
+                "phraseTh": "ฉันรู้สึกปวดคอ",
+                "phraseMs": "Saya rasa sakit tekak",
+                "img": "/static/images/neck.png"
+            },
+            {
+                "th": "ปวดเอว",
+                "ms": "Pinggang Sakit",
+                "phraseTh": "ฉันรู้สึกปวดเอว",
+                "phraseMs": "Saya rasa sakit pinggang",
+                "img": "/static/images/waist.png"
+            },
+            {
+                "th": "ปวดท้อง",
+                "ms": "Perut Sakit",
+                "phraseTh": "ฉันรู้สึกปวดท้อง",
+                "phraseMs": "Saya rasa sakit perut",
+                "img": "/static/images/stomach.png"
+            },
+            {
+                "th": "ปวดข้อ",
+                "ms": "Sendi Sakit",
+                "phraseTh": "ฉันรู้สึกปวดข้อ",
+                "phraseMs": "Saya rasa sakit sendi",
+                "img": "/static/images/joint.png"
+            },
+            {
+                "th": "ปวดเข่า",
+                "ms": "Lutut Sakit",
+                "phraseTh": "ฉันรู้สึกปวดเข่า",
+                "phraseMs": "Saya rasa sakit lutut",
+                "img": "/static/images/knee.png"
+            },
+            {
+                "th": "เมื่อยแขน",
+                "ms": "Lengan Lenguh",
+                "phraseTh": "ฉันรู้สึกเมื่อยแขน",
+                "phraseMs": "Saya rasa lenguh tangan",
+                "img": "/static/images/arm.png"
+            },
+            {
+                "th": "เมื่อยขา",
+                "ms": "Kaki Lenguh",
+                "phraseTh": "ฉันรู้สึกเมื่อยขา",
+                "phraseMs": "Saya rasa lenguh kaki",
+                "img": "/static/images/leg.png"
+            },
+            {
+                "th": "เมื่อยหลัง",
+                "ms": "Belakang Lenguh",
+                "phraseTh": "ฉันรู้สึกเมื่อยหลัง",
+                "phraseMs": "Saya rasa lenguh belakang",
+                "img": "/static/images/back.png"
+            },
+            {
+                "th": "เมื่อยเอว",
+                "ms": "Pinggang Lenguh",
+                "phraseTh": "ฉันรู้สึกเมื่อยเอว",
+                "phraseMs": "Saya rasa lenguh pinggang",
+                "img": "/static/images/waist.png"
+            },
+            {
+                "th": "เมื่อยไหล่",
+                "ms": "Bahu Lenguh",
+                "phraseTh": "ฉันรู้สึกเมื่อยไหล่",
+                "phraseMs": "Saya rasa lenguh bahu",
+                "img": "/static/images/shoulder.png"
+            },
+            {
+                "th": "เมื่อยคอ",
+                "ms": "Leher Lenguh",
+                "phraseTh": "ฉันรู้สึกเมื่อยคอ",
+                "phraseMs": "Saya rasa lenguh leher",
+                "img": "/static/images/neck.png"
+            },
+            {
+                "th": "ชาใบหน้า",
+                "ms": "Muka Kebas",
+                "phraseTh": "ฉันรู้สึกชาใบหน้า",
+                "phraseMs": "Saya rasa kebas muka",
+                "img": "/static/images/ชาที่ใบหน้า.png"
+            },
+            {
+                "th": "ชาปาก",
+                "ms": "Mulut Kebas",
+                "phraseTh": "ฉันรู้สึกชาปาก",
+                "phraseMs": "Saya rasa kebas mulut",
+                "img": "/static/images/ปาก.png"
+            },
+            {
+                "th": "ชาลิ้น",
+                "ms": "Lidah Kebas",
+                "phraseTh": "ฉันรู้สึกชาลิ้น",
+                "phraseMs": "Saya rasa kebas lidah",
+                "img": "/static/images/ลิ้น.png"
+            },
+            {
+                "th": "ชาแขน",
+                "ms": "Tangan Kebas",
+                "phraseTh": "ฉันรู้สึกชาแขน",
+                "phraseMs": "Saya rasa kebas tangan",
+                "img": "/static/images/arm.png"
+            },
+            {
+                "th": "ชาขา",
+                "ms": "Kaki Kebas",
+                "phraseTh": "ฉันรู้สึกชาขา",
+                "phraseMs": "Saya rasa kebas kaki",
+                "img": "/static/images/leg.png"
+            },
+            {
+                "th": "ชาซีกซ้าย",
+                "ms": "Kebas Sebelah Kiri",
+                "phraseTh": "ฉันรู้สึกชาซีกซ้าย",
+                "phraseMs": "Saya rasa kebas sebelah kiri",
+                "img": "/static/images/สึกชาซีกซ้าย.png"
+            },
+            {
+                "th": "ชาซีกขวา",
+                "ms": "Kebas Sebelah Kanan",
+                "phraseTh": "ฉันรู้สึกชาซีกขวา",
+                "phraseMs": "Saya rasa kebas sebelah kanan",
+                "img": "/static/images/ฉันรู้สึกชาซีขวา.png"
+            },
+            {
+                "th": "แขนอ่อนแรง",
+                "ms": "Tangan",
+                "phraseTh": "ฉันรู้สึกอ่อนแรงแขน",
+                "phraseMs": "Saya rasa lemah tangan",
+                "img": "/static/images/arm.png"
+            },
+            {
+                "th": "ขาอ่อนแรง",
+                "ms": "Kaki",
+                "phraseTh": "ฉันรู้สึกอ่อนแรงขา",
+                "phraseMs": "Saya rasa lemah kaki",
+                "img": "/static/images/leg.png"
+            },
+            {
+                "th": "อ่อนแรงซีกซ้าย",
+                "ms": "Sebelah Kiri",
+                "phraseTh": "ฉันรู้สึกอ่อนแรงซีกซ้าย",
+                "phraseMs": "Saya rasa lemah sebelah kiri",
+                "img": "/static/images/สึกชาซีกซ้าย.png"
+            },
+            {
+                "th": "อ่อนแรงซีกขวา",
+                "ms": "Sebelah Kanan",
+                "phraseTh": "ฉันรู้สึกอ่อนแรงซีกขวา",
+                "phraseMs": "Saya rasa lemah sebelah kanan",
+                "img": "/static/images/ฉันรู้สึกชาซีขวา.png"
+            },
+            {
+                "th": "เบื่ออาหาร",
+                "ms": "Hilang Selara makan",
+                "phraseTh": "ฉันรู้สึกเบื่ออาหาร",
+                "phraseMs": "Saya rasa hilang selara makan",
+                "img": "/static/images/ฉันรู้สึกเบื่ออาหาร.png"
+            },
+            {
+                "th": "อาเจียน",
+                "ms": "Muntah",
+                "phraseTh": "ฉันรู้สึกอาเจียน",
+                "phraseMs": "Saya rasa muntah",
+                "img": "/static/images/ฉันรู้สึกอาเจียน.png"
+            },
+            {
+                "th": "ท้องเสีย",
+                "ms": "Cirit-Birit",
+                "phraseTh": "ฉันรู้สึกท้องเสีย",
+                "phraseMs": "Saya rasa cirit-birit",
+                "img": "/static/images/ฉันรู้สึกท้องเสีย.png"
+            },
+            {
+                "th": "ท้องอืด",
+                "ms": "Kembung Perut",
+                "phraseTh": "ฉันรู้สึกท้องอืด",
+                "phraseMs": "Saya rasa kembung perut",
+                "img": "/static/images/ฉันรู้สึกท้องอืด.png"
+            },
+            {
+                "th": "ปัสสาวะมีเลือด",
+                "ms": "Kencing Berdarah",
+                "phraseTh": "ฉันรู้สึกปัสสาวะมีเลือด",
+                "phraseMs": "Saya rasa kencing berdarah",
+                "img": "/static/images/ฉันรู้สึกปัสสาวะมีเลือด.png"
+            },
+            {
+                "th": "ปัสสาวะไม่สุด",
+                "ms": "Kencing Tak Lawas",
+                "phraseTh": "ฉันรู้สึกปัสสาวะไม่สุด",
+                "phraseMs": "Saya rasa kencing tak lawas",
+                "img": "/static/images/ฉันรู้สึกปัสสาวะไม่สุด.png"
+            },
+            {
+                "th": "ใจสั่น",
+                "ms": "Jantung Berdebar",
+                "phraseTh": "ฉันรู้สึกใจสั่น",
+                "phraseMs": "Saya rasa jantung berdebar",
+                "img": "/static/images/ฉันรู้สึกใจสั่น.png"
+            },
+            {
+                "th": "ปากเบี้ยว",
+                "ms": "Mulut Sengat",
+                "phraseTh": "ฉันรู้สึกปากเบี้ยว",
+                "phraseMs": "Saya rasa mulut sengat",
+                "img": "/static/images/ฉันรู้สึกปากเบี้ยว.png"
+            },
+            {
+                "th": "พูดไม่ชัด",
+                "ms": "Cakap Tak Jelus",
+                "phraseTh": "ฉันรู้สึกพูดไม่ชัด",
+                "phraseMs": "Saya rasa cakap tak jelus",
+                "img": "/static/images/ฉันรู้สึกพูดไม่ชัด.png"
+            },
+            {
+                "th": "ลิ้นแข็ง",
+                "ms": "Lidah Kaku",
+                "phraseTh": "ฉันรู้สึกลิ้นแข็ง",
+                "phraseMs": "Saya rasa lidah kaku",
+                "img": "/static/images/ฉันรู้สึกลิ้นแข็ง.png"
+            },
+            {
+                "th": "เดินเซ",
+                "ms": "Jalan Tak Stabil",
+                "phraseTh": "ฉันรู้สึกเดินเซ",
+                "phraseMs": "Saya rasa jalan tak stabil",
+                "img": "/static/images/ฉันรู้สึกเดินเซ.png"
+            },
+            {
+                "th": "เห็นภาพซ้อน",
+                "ms": "Nampak Berganda",
+                "phraseTh": "ฉันรู้สึกเห็นภาพซ้อน",
+                "phraseMs": "Saya rasa nampak berganda",
+                "img": "/static/images/ฉันรู้สึกเห็นภาพซ้อน.png"
+            },
+            {
+                "th": "ตาพร่ามัว",
+                "ms": "Nampak Kabur",
+                "phraseTh": "ฉันรู้สึกตาพร่ามัว",
+                "phraseMs": "Saya rasa nampak kabur",
+                "img": "/static/images/ฉันรู้สึกตาพร่ามัว.png"
+            },
+            {
+                "th": "หายใจเหนื่อย",
+                "ms": "Sesak Nafas",
+                "phraseTh": "ฉันรู้สึกหายใจเหนื่อย",
+                "phraseMs": "Saya rasa sesak nafas",
+                "img": "/static/images/ฉันรู้สึกหายใจเหนื่อย.png"
+            },
+            {
+                "th": "เจ็บหน้าอก",
+                "ms": "Sakit Dada",
+                "phraseTh": "ฉันรู้สึกเจ็บหน้าอก",
+                "phraseMs": "Saya rasa sakit dada",
+                "img": "/static/images/ฉันรู้สึกเจ็บหน้าอก.png"
+            },
+            {
+                "th": "เวียนหัว",
+                "ms": "Pening",
+                "phraseTh": "ฉันรู้สึกเวียนหัว",
+                "phraseMs": "Saya rasa pening",
+                "img": "/static/images/ฉันรู้สึกเวียนหัว.png"
+            },
+            {
+                "th": "กลืนลำบาก",
+                "ms": "Susah Telan",
+                "phraseTh": "ฉันรู้สึกกลืนลำบาก",
+                "phraseMs": "Saya rasa susah telan",
+                "img": "/static/images/ฉันรู้สึกกลืนลำบาก.png"
+            },
+            {
+                "th": "มีไข้",
+                "ms": "Demam",
+                "phraseTh": "ฉันรู้สึกมีไข้",
+                "phraseMs": "Saya rasa demam",
+                "img": "/static/images/ฉันรู้สึกมีไข้.png"
+            },
+            {
+                "th": "คลื่นไส้",
+                "ms": "Loya",
+                "phraseTh": "ฉันรู้สึกคลื่นไส้",
+                "phraseMs": "Saya rasa loya",
+                "img": "/static/images/ฉันรู้สึกคลื่นไส้.png"
+            },
+            {
+                "th": "ไอ",
+                "ms": "Batuk",
+                "phraseTh": "ฉันรู้สึกไอ",
+                "phraseMs": "Saya rasa batuk",
+                "img": "/static/images/ฉันรู้สึกไอ.png"
+            },
+            {
+                "th": "เจ็บคอ",
+                "ms": "Sakit Tekak",
+                "phraseTh": "ฉันรู้สึกเจ็บคอ",
+                "phraseMs": "Saya rasa sakit tekak",
+                "img": "/static/images/ฉันรู้สึกเจ็บคอ.png"
+            },
+            {
+                "th": "เป็นหวัด",
+                "ms": "Selesema",
+                "phraseTh": "ฉันรู้สึกเป็นหวัด",
+                "phraseMs": "Saya rasa selesema",
+                "img": "/static/images/ฉันรู้สึกเป็นหวัด.png"
+            },
+            {
+                "th": "ง่วงนอน",
+                "ms": "Mengantuk",
+                "phraseTh": "ฉันรู้สึกง่วงนอน",
+                "phraseMs": "Saya rasa mengantuk",
+                "img": "/static/images/ฉันรู้สึกง่วงนอน.png"
+            },
+            {
+                "th": "หนาว",
+                "ms": "Sejuk",
+                "phraseTh": "ฉันรู้สึกหนาว",
+                "phraseMs": "Saya rasa sejuk",
+                "img": "/static/images/ฉันรู้สึกหนาว.png"
+            },
+            {
+                "th": "ร้อน",
+                "ms": "Panas",
+                "phraseTh": "ฉันรู้สึกร้อน",
+                "phraseMs": "Saya rasa panas",
+                "img": "/static/images/ฉันรู้สึกร้อน.png"
+            },
+            {
+                "th": "เหนื่อย",
+                "ms": "Letih",
+                "phraseTh": "ฉันรู้สึกเหนื่อย",
+                "phraseMs": "Saya rasa letih",
+                "img": "/static/images/ฉันรู้สึกหายใจเหนื่อย.png"
+            },
+            {
+                "th": "นอนไม่หลับ",
+                "ms": "Susah Tidur",
+                "phraseTh": "ฉันรู้สึกนอนไม่หลับ",
+                "phraseMs": "Saya rasa susah tidur",
+                "img": "/static/images/ฉันรู้สึกนอนไม่หลับ.png"
+            },
+            {
+                "th": "หิว",
+                "ms": "Lapar",
+                "phraseTh": "ฉันรู้สึกหิว",
+                "phraseMs": "Saya rasa lapar",
+                "img": "/static/images/ฉันรู้สึกหิว.png"
             }
         ],
         "emotions": [
             {
                 "th": "เครียด",
                 "ms": "Stres",
-                "img": "",
+                "img": "/static/images/symptoms.png",
                 "icon": "♡",
                 "phraseTh": "ฉันรู้สึกเครียด",
                 "phraseMs": "Saya rasa stres"
@@ -531,7 +431,7 @@
             {
                 "th": "ดีใจ",
                 "ms": "Gembira",
-                "img": "",
+                "img": "/static/images/ดีใจ.png",
                 "icon": "♡",
                 "phraseTh": "ฉันรู้สึกดีใจ",
                 "phraseMs": "Saya rasa gembira"
@@ -539,122 +439,99 @@
             {
                 "th": "โกรธ",
                 "ms": "Marah",
-                "img": "",
+                "img": "/static/images/โกรธ.png",
                 "icon": "♡",
                 "phraseTh": "ฉันรู้สึกโกรธ",
                 "phraseMs": "Saya rasa marah"
             },
             {
-                "th": "คิดถึง",
-                "ms": "Rindu",
-                "img": "",
-                "icon": "♡",
-                "tone": "tone-rose",
-                "subTh": "เลือกคนที่คิดถึง",
-                "subMs": "Pilih orang yang dirindui",
-                "children": [
-                    {
-                        "th": "พ่อ",
-                        "ms": "Ayah",
-                        "img": "",
-                        "icon": "♡",
-                        "phraseTh": "ฉันคิดถึงพ่อ",
-                        "phraseMs": "Saya rindu ayah"
-                    },
-                    {
-                        "th": "แม่",
-                        "ms": "Ibu",
-                        "img": "",
-                        "icon": "♡",
-                        "phraseTh": "ฉันคิดถึงแม่",
-                        "phraseMs": "Saya rindu ibu"
-                    },
-                    {
-                        "th": "ลูก",
-                        "ms": "Anak",
-                        "img": "",
-                        "icon": "♡",
-                        "phraseTh": "ฉันคิดถึงลูก",
-                        "phraseMs": "Saya rindu anak"
-                    },
-                    {
-                        "th": "หลาน",
-                        "ms": "Cucu",
-                        "img": "",
-                        "icon": "♡",
-                        "phraseTh": "ฉันคิดถึงหลาน",
-                        "phraseMs": "Saya rindu cucu"
-                    },
-                    {
-                        "th": "พี่น้อง",
-                        "ms": "Saudara-Mara",
-                        "img": "",
-                        "icon": "♡",
-                        "phraseTh": "ฉันคิดถึงพี่น้อง",
-                        "phraseMs": "Saya rindu saudara-mara"
-                    },
-                    {
-                        "th": "ลุง",
-                        "ms": "Pakcik",
-                        "img": "",
-                        "icon": "♡",
-                        "phraseTh": "ฉันคิดถึงลุง",
-                        "phraseMs": "Saya rindu pakcik"
-                    },
-                    {
-                        "th": "น้า",
-                        "ms": "Makcik",
-                        "img": "",
-                        "icon": "♡",
-                        "phraseTh": "ฉันคิดถึงน้า",
-                        "phraseMs": "Saya rindu makcik"
-                    },
-                    {
-                        "th": "สามี",
-                        "ms": "Suami",
-                        "img": "",
-                        "icon": "♡",
-                        "phraseTh": "ฉันคิดถึงสามี",
-                        "phraseMs": "Saya rindu suami"
-                    },
-                    {
-                        "th": "ภรรยา",
-                        "ms": "Isteri",
-                        "img": "",
-                        "icon": "♡",
-                        "phraseTh": "ฉันคิดถึงภรรยา",
-                        "phraseMs": "Saya rindu isteri"
-                    },
-                    {
-                        "th": "ปู่/ตา",
-                        "ms": "Datuk",
-                        "img": "",
-                        "icon": "♡",
-                        "phraseTh": "ฉันคิดถึงปู่/ตา",
-                        "phraseMs": "Saya rindu datuk"
-                    },
-                    {
-                        "th": "ย่า/ยาย",
-                        "ms": "Nenek",
-                        "img": "",
-                        "icon": "♡",
-                        "phraseTh": "ฉันคิดถึงย่า/ยาย",
-                        "phraseMs": "Saya rindu nenek"
-                    },
-                    {
-                        "th": "เพื่อน",
-                        "ms": "Kawan",
-                        "img": "",
-                        "icon": "♡",
-                        "phraseTh": "ฉันคิดถึงเพื่อน",
-                        "phraseMs": "Saya rindu kawan"
-                    }
-                ]
+                "th": "คิดถึงพ่อ",
+                "ms": "Ayah",
+                "phraseTh": "ฉันคิดถึงพ่อ",
+                "phraseMs": "Saya rindu ayah",
+                "img": "/static/images/คิดถึงพ่อ.png"
+            },
+            {
+                "th": "คิดถึงแม่",
+                "ms": "Ibu",
+                "phraseTh": "ฉันคิดถึงแม่",
+                "phraseMs": "Saya rindu ibu",
+                "img": "/static/images/คิดถึงแม่.png"
+            },
+            {
+                "th": "คิดถึงลูก",
+                "ms": "Anak",
+                "phraseTh": "ฉันคิดถึงลูก",
+                "phraseMs": "Saya rindu anak",
+                "img": "/static/images/คิดถึงลูก.png"
+            },
+            {
+                "th": "คิดถึงหลาน",
+                "ms": "Cucu",
+                "phraseTh": "ฉันคิดถึงหลาน",
+                "phraseMs": "Saya rindu cucu",
+                "img": "/static/images/คิดถึงหลาน.png"
+            },
+            {
+                "th": "คิดถึงพี่น้อง",
+                "ms": "Saudara-Mara",
+                "phraseTh": "ฉันคิดถึงพี่น้อง",
+                "phraseMs": "Saya rindu saudara-mara",
+                "img": "/static/images/พี่น้อง.png"
+            },
+            {
+                "th": "คิดถึงลุง",
+                "ms": "Pakcik",
+                "phraseTh": "ฉันคิดถึงลุง",
+                "phraseMs": "Saya rindu pakcik",
+                "img": "https://export-download.canva.com/mgL48/DAHIzZmgL48/89/0/0001-1736639990054758472.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQYCGKMUH5AO7UJ26%2F20260505%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260505T150537Z&X-Amz-Expires=60631&X-Amz-Signature=d050597083e50f9f9f33467f0be5b0a6a229ff1ade6c35c1b1258abcf735669a&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3DUTF-8%27%27%25E0%25B8%25AA%25E0%25B8%25A3%25E0%25B9%2589%25E0%25B8%25B2%25E0%25B8%2587%25E0%25B8%25A3%25E0%25B8%25B9%25E0%25B8%259B%2520%25E0%25B8%258A%25E0%25B8%25B2%25E0%25B8%258B%25E0%25B8%25B5%25E0%25B8%2581%25E0%25B8%258B%25E0%25B9%2589%25E0%25B8%25B2%25E0%25B8%25A2%2520%2520%2520.png&response-expires=Wed%2C%2006%20May%202026%2007%3A56%3A08%20GMT"
+            },
+            {
+                "th": "คิดถึงน้า",
+                "ms": "Makcik",
+                "phraseTh": "ฉันคิดถึงน้า",
+                "phraseMs": "Saya rindu makcik",
+                "img": "https://export-download.canva.com/mgL48/DAHIzZmgL48/91/0/0001-5725703359500681852.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQYCGKMUH5AO7UJ26%2F20260505%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260505T223021Z&X-Amz-Expires=31610&X-Amz-Signature=8c839989c1f80c8ee5333d41321798c67402197d889f1dc31d88aa5252783482&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3DUTF-8%27%27%25E0%25B8%25AA%25E0%25B8%25A3%25E0%25B9%2589%25E0%25B8%25B2%25E0%25B8%2587%25E0%25B8%25A3%25E0%25B8%25B9%25E0%25B8%259B%2520%25E0%25B8%258A%25E0%25B8%25B2%25E0%25B8%258B%25E0%25B8%25B5%25E0%25B8%2581%25E0%25B8%258B%25E0%25B9%2589%25E0%25B8%25B2%25E0%25B8%25A2%2520%2520%2520.png&response-expires=Wed%2C%2006%20May%202026%2007%3A17%3A11%20GMT"
+            },
+            {
+                "th": "คิดถึงสามี",
+                "ms": "Suami",
+                "phraseTh": "ฉันคิดถึงสามี",
+                "phraseMs": "Saya rindu suami",
+                "img": "/static/images/สามี.png"
+            },
+            {
+                "th": "คิดถึงภรรยา",
+                "ms": "Isteri",
+                "phraseTh": "ฉันคิดถึงภรรยา",
+                "phraseMs": "Saya rindu isteri",
+                "img": "/static/images/คิดถึงแม่.png"
+            },
+            {
+                "th": "คิดถึงปู่/ตา",
+                "ms": "Datuk",
+                "phraseTh": "ฉันคิดถึงปู่/ตา",
+                "phraseMs": "Saya rindu datuk",
+                "img": "/static/images/ปู่.png"
+            },
+            {
+                "th": "คิดถึงย่า/ยาย",
+                "ms": "Nenek",
+                "phraseTh": "ฉันคิดถึงย่า/ยาย",
+                "phraseMs": "Saya rindu nenek",
+                "img": "/static/images/ย่า.png"
+            },
+            {
+                "th": "คิดถึงเพื่อน",
+                "ms": "Kawan",
+                "phraseTh": "ฉันคิดถึงเพื่อน",
+                "phraseMs": "Saya rindu kawan",
+                "img": "/static/images/เพื่อน.png"
             },
             {
                 "th": "เหงา",
                 "ms": "Sunyi",
-                "img": "",
+                "img": "/static/images/เหงา.png",
                 "icon": "♡",
                 "phraseTh": "ฉันรู้สึกเหงา",
                 "phraseMs": "Saya rasa sunyi"
@@ -662,7 +539,7 @@
             {
                 "th": "เศร้า",
                 "ms": "Sedih",
-                "img": "",
+                "img": "/static/images/เศร้า.png",
                 "icon": "♡",
                 "phraseTh": "ฉันรู้สึกเศร้า",
                 "phraseMs": "Saya rasa sedih"
@@ -670,7 +547,7 @@
             {
                 "th": "หมดกำลังใจ",
                 "ms": "Hilang Semangat",
-                "img": "",
+                "img": "/static/images/หมดกำหลังใจ.png",
                 "icon": "♡",
                 "phraseTh": "ฉันรู้สึกหมดกำลังใจ",
                 "phraseMs": "Saya rasa hilang semangat"
@@ -683,9 +560,8 @@
                 "id": "food_drink",
                 "th": "อาหาร/เครื่องดื่ม",
                 "ms": "Makanan/Minuman",
-                "icon": "◐",
                 "tone": "tone-gold",
-                "img": ""
+                "img": "/static/images/การอาหาร_เครื่องดื่ม.png"
             },
             {
                 "id": "entertainment",
@@ -693,7 +569,7 @@
                 "ms": "Hiburan",
                 "icon": "▶",
                 "tone": "tone-lilac",
-                "img": ""
+                "img": "/static/images/ปก ความบันเทิง.png"
             },
             {
                 "id": "people",
@@ -701,7 +577,7 @@
                 "ms": "Jumpa",
                 "icon": "♡",
                 "tone": "tone-rose",
-                "img": ""
+                "img": "/static/images/ปก พบเจอ.png"
             },
             {
                 "id": "places",
@@ -709,7 +585,7 @@
                 "ms": "Pergi Ke",
                 "icon": "⌂",
                 "tone": "tone-teal",
-                "img": ""
+                "img": "/static/images/ปก ไปที่.png"
             },
             {
                 "id": "personal",
@@ -717,14 +593,14 @@
                 "ms": "Urusan Diri",
                 "icon": "✓",
                 "tone": "tone-cream",
-                "img": ""
+                "img": "/static/images/ปก ธุระส่วนตัว.png"
             }
         ],
         "food_drink": [
             {
                 "th": "อาหาร",
                 "ms": "Makanan",
-                "img": "",
+                "img": "/static/images/การอาหาร_เครื่องดื่ม.png",
                 "icon": "◐",
                 "tone": "tone-gold",
                 "subTh": "เลือกอาหาร",
@@ -733,185 +609,185 @@
                     {
                         "th": "ข้าวผัด",
                         "ms": "Nasi Goreng",
-                        "img": "",
+                        "img": "/static/images/ข้าวผัด.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการข้าวผัด",
+                        "phraseTh": "ฉันต้องการทานข้าวผัด",
                         "phraseMs": "Saya nak nasi goreng"
                     },
                     {
                         "th": "ข้าวยำ",
                         "ms": "Nasi Kerabu",
-                        "img": "",
+                        "img": "/static/images/ข้าวยำ.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการข้าวยำ",
+                        "phraseTh": "ฉันต้องการทานข้าวยำ",
                         "phraseMs": "Saya nak nasi kerabu"
                     },
                     {
                         "th": "ข้าวบูดู",
                         "ms": "Nasi Budu",
-                        "img": "",
+                        "img": "/static/images/ข้าวบูดู.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการข้าวบูดู",
+                        "phraseTh": "ฉันต้องการทานข้าวบูดู",
                         "phraseMs": "Saya nak nasi budu"
                     },
                     {
                         "th": "ข้าวต้ม",
                         "ms": "Bubur",
-                        "img": "",
+                        "img": "/static/images/ข้าวต้ม.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการข้าวต้ม",
+                        "phraseTh": "ฉันต้องการทานข้าวต้ม",
                         "phraseMs": "Saya nak bubur"
                     },
                     {
                         "th": "ปลาย่าง",
                         "ms": "Ikan Bakar",
-                        "img": "",
+                        "img": "/static/images/ปลาย่าง.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการปลาย่าง",
+                        "phraseTh": "ฉันต้องการทานปลาย่าง",
                         "phraseMs": "Saya nak ikan bakar"
                     },
                     {
                         "th": "เนื้อย่าง",
                         "ms": "Daging Bakar",
-                        "img": "",
+                        "img": "/static/images/เนื้อย่าง.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการเนื้อย่าง",
+                        "phraseTh": "ฉันต้องการทานเนื้อย่าง",
                         "phraseMs": "Saya nak daging bakar"
                     },
                     {
                         "th": "ข้าวหมก",
                         "ms": "Nasi Briyani",
-                        "img": "",
+                        "img": "/static/images/ข้าวหมกไก่.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการข้าวหมก",
+                        "phraseTh": "ฉันต้องการทานข้าวหมก",
                         "phraseMs": "Saya nak nasi briyani"
                     },
                     {
                         "th": "ข้าวมัน",
                         "ms": "Nasi Lemak",
-                        "img": "",
+                        "img": "/static/images/ข้าวมันไก่.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการข้าวมัน",
+                        "phraseTh": "ฉันต้องการทานข้าวมัน",
                         "phraseMs": "Saya nak nasi lemak"
                     },
                     {
                         "th": "ไข่เจียว",
                         "ms": "Telur Dada",
-                        "img": "",
+                        "img": "/static/images/ไข่เจียว.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการไข่เจียว",
+                        "phraseTh": "ฉันต้องการทานไข่เจียว",
                         "phraseMs": "Saya nak telur dada"
                     },
                     {
                         "th": "ปลาทอด",
                         "ms": "Ikan Goreng",
-                        "img": "",
+                        "img": "/static/images/ปลาทอด.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการปลาทอด",
+                        "phraseTh": "ฉันต้องการทานปลาทอด",
                         "phraseMs": "Saya nak ikan goreng"
                     },
                     {
                         "th": "เนื้อทอด",
                         "ms": "Daging Goreng",
-                        "img": "",
+                        "img": "/static/images/เนื้อทอด.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการเนื้อทอด",
+                        "phraseTh": "ฉันต้องการทานเนื้อทอด",
                         "phraseMs": "Saya nak daging goreng"
                     },
                     {
                         "th": "ซุป",
                         "ms": "Sup",
-                        "img": "",
+                        "img": "/static/images/ซุป.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการซุป",
+                        "phraseTh": "ฉันต้องการทานซุป",
                         "phraseMs": "Saya nak sup"
                     },
                     {
                         "th": "แกงส้ม",
                         "ms": "Gulai Masam",
-                        "img": "",
+                        "img": "/static/images/แกงส้ม.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการแกงส้ม",
+                        "phraseTh": "ฉันต้องการทานแกงส้ม",
                         "phraseMs": "Saya nak gulai masam"
                     },
                     {
                         "th": "ต้มยำ",
                         "ms": "Tomyam",
-                        "img": "",
+                        "img": "/static/images/ต้มยำ.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการต้มยำ",
+                        "phraseTh": "ฉันต้องการทานต้มยำ",
                         "phraseMs": "Saya nak tomyam"
                     },
                     {
                         "th": "ขนมจีน",
                         "ms": "Laksa",
-                        "img": "",
+                        "img": "/static/images/ขนมจีน.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการขนมจีน",
+                        "phraseTh": "ฉันต้องการทานขนมจีน",
                         "phraseMs": "Saya nak laksa"
                     },
                     {
                         "th": "ยำ",
                         "ms": "Kerabu",
-                        "img": "",
+                        "img": "/static/images/ยำ.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการยำ",
+                        "phraseTh": "ฉันต้องการทานยำ",
                         "phraseMs": "Saya nak kerabu"
                     },
                     {
                         "th": "แกงเขียวหวาน",
                         "ms": "Gulai Hijau Thai",
-                        "img": "",
+                        "img": "/static/images/แกงเขียวหวาน.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการแกงเขียวหวาน",
+                        "phraseTh": "ฉันต้องการทานแกงเขียวหวาน",
                         "phraseMs": "Saya nak gulai hijau thai"
                     },
                     {
                         "th": "ผัดไทย",
                         "ms": "Pad Thai",
-                        "img": "",
+                        "img": "/static/images/ผัดไทย.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการผัดไทย",
+                        "phraseTh": "ฉันต้องการทานผัดไทย",
                         "phraseMs": "Saya nak pad thai"
                     },
                     {
                         "th": "ข้าวแกง",
                         "ms": "Gulai",
-                        "img": "",
+                        "img": "/static/images/ข้าวแกง.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการข้าวแกง",
+                        "phraseTh": "ฉันต้องการทานข้าวแกง",
                         "phraseMs": "Saya nak gulai"
                     },
                     {
                         "th": "ผัดซีอิ๊ว",
                         "ms": "Mee Goreng",
-                        "img": "",
+                        "img": "/static/images/ผัดชีอิ้ว.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการผัดซีอิ๊ว",
+                        "phraseTh": "ฉันต้องการทานผัดซีอิ๊ว",
                         "phraseMs": "Saya nak mee goreng"
                     },
                     {
                         "th": "ต้มส้มปลา",
                         "ms": "Ikan Singgang",
-                        "img": "",
+                        "img": "/static/images/ต้มส้มปลา.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการต้มส้มปลา",
+                        "phraseTh": "ฉันต้องการทานต้มส้มปลา",
                         "phraseMs": "Saya nak ikan singgang"
                     },
                     {
                         "th": "เบอร์เกอร์",
                         "ms": "Burger",
-                        "img": "",
+                        "img": "/static/images/เบอร์เกอร์.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการเบอร์เกอร์",
+                        "phraseTh": "ฉันต้องการทานเบอร์เกอร์",
                         "phraseMs": "Saya nak burger"
                     },
                     {
                         "th": "ผักลวก",
                         "ms": "Sayur Celur",
-                        "img": "",
+                        "img": "/static/images/ผักลวก.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการผักลวก",
+                        "phraseTh": "ฉันต้องการทานผักลวก",
                         "phraseMs": "Saya nak sayur celur"
                     }
                 ]
@@ -919,7 +795,7 @@
             {
                 "th": "เครื่องดื่ม",
                 "ms": "Minuman",
-                "img": "",
+                "img": "/static/images/ปก เครื่องดื่ม.png",
                 "icon": "∪",
                 "tone": "tone-sky",
                 "subTh": "เลือกเครื่องดื่ม",
@@ -928,15 +804,15 @@
                     {
                         "th": "น้ำเปล่า",
                         "ms": "Air Kosong",
-                        "img": "",
+                        "img": "/static/images/น้ำเปล่า.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการน้ำเปล่า",
+                        "phraseTh": "ฉันต้องการดื่มน้ำเปล่า",
                         "phraseMs": "Saya nak air kosong"
                     },
                     {
                         "th": "น้ำอุ่น",
                         "ms": "Air Suam",
-                        "img": "",
+                        "img": "/static/images/น้ำอุ่น.png",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการน้ำอุ่น",
                         "phraseMs": "Saya nak air suam"
@@ -944,7 +820,7 @@
                     {
                         "th": "น้ำร้อน",
                         "ms": "Air Panas",
-                        "img": "",
+                        "img": "/static/images/น้ำร้อน.png",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการน้ำร้อน",
                         "phraseMs": "Saya nak air panas"
@@ -952,79 +828,79 @@
                     {
                         "th": "น้ำมะพร้าว",
                         "ms": "Air Kelapa",
-                        "img": "",
+                        "img": "/static/images/ออกกำลังกาย.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการน้ำมะพร้าว",
+                        "phraseTh": "ฉันต้องการดื่มน้ำมะพร้าว",
                         "phraseMs": "Saya nak air kelapa"
                     },
                     {
                         "th": "น้ำหวาน",
                         "ms": "Air Manis",
-                        "img": "",
+                        "img": "/static/images/น้ำหวาน.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการน้ำหวาน",
+                        "phraseTh": "ฉันต้องการดื่มน้ำหวาน",
                         "phraseMs": "Saya nak air manis"
                     },
                     {
                         "th": "น้ำเต้าหู้",
                         "ms": "Susu Soya",
-                        "img": "",
+                        "img": "/static/images/น้ำเต้าหู้.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการน้ำเต้าหู้",
+                        "phraseTh": "ฉันต้องการดื่มน้ำเต้าหู้",
                         "phraseMs": "Saya nak susu soya"
                     },
                     {
                         "th": "น้ำอัดลม",
                         "ms": "Minuman Bergas",
-                        "img": "",
+                        "img": "/static/images/น้ำอัดลม.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการน้ำอัดลม",
+                        "phraseTh": "ฉันต้องการดื่มน้ำอัดลม",
                         "phraseMs": "Saya nak minuman bergas"
                     },
                     {
                         "th": "น้ำอ้อย",
                         "ms": "Air Tebu",
-                        "img": "",
+                        "img": "/static/images/น้ำอ้อยสด.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการน้ำอ้อย",
+                        "phraseTh": "ฉันต้องการดื่มน้ำอ้อย",
                         "phraseMs": "Saya nak air tebu"
                     },
                     {
                         "th": "น้ำผลไม้",
                         "ms": "Jus",
-                        "img": "",
+                        "img": "/static/images/น้ำผลไม้.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการน้ำผลไม้",
+                        "phraseTh": "ฉันต้องการดื่มน้ำผลไม้",
                         "phraseMs": "Saya nak jus"
                     },
                     {
                         "th": "นม",
                         "ms": "Susu",
-                        "img": "",
+                        "img": "/static/images/นม.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการนม",
+                        "phraseTh": "ฉันต้องการดื่มนม",
                         "phraseMs": "Saya nak susu"
                     },
                     {
                         "th": "ชา",
                         "ms": "Teh",
-                        "img": "",
+                        "img": "/static/images/ชา.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการชา",
+                        "phraseTh": "ฉันต้องการน้ำชา",
                         "phraseMs": "Saya nak teh"
                     },
                     {
                         "th": "กาแฟ",
                         "ms": "Kopi",
-                        "img": "",
+                        "img": "/static/images/กาแฟ.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการกาแฟ",
+                        "phraseTh": "ฉันต้องการทานกาแฟ",
                         "phraseMs": "Saya nak kopi"
                     },
                     {
                         "th": "ชาเขียว",
                         "ms": "Teh Hijau",
-                        "img": "",
+                        "img": "/static/images/ชาเขียว.png",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการชาเขียว",
                         "phraseMs": "Saya nak teh hijau"
@@ -1032,7 +908,7 @@
                     {
                         "th": "ชาเย็น",
                         "ms": "Teh Ais",
-                        "img": "",
+                        "img": "/static/images/ชาเย็น.png",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการชาเย็น",
                         "phraseMs": "Saya nak teh ais"
@@ -1042,7 +918,7 @@
             {
                 "th": "ผลไม้",
                 "ms": "Buah-Buahan",
-                "img": "",
+                "img": "/static/images/ปก ผลไม้.png",
                 "icon": "●",
                 "tone": "tone-mint",
                 "subTh": "เลือกผลไม้",
@@ -1051,137 +927,137 @@
                     {
                         "th": "กล้วย",
                         "ms": "Pisang",
-                        "img": "",
+                        "img": "/static/images/กล้วย.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการกล้วย",
+                        "phraseTh": "ฉันต้องการทานกล้วย",
                         "phraseMs": "Saya nak pisang"
                     },
                     {
                         "th": "ส้ม",
                         "ms": "Oren",
-                        "img": "",
+                        "img": "/static/images/ส้ม.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการส้ม",
+                        "phraseTh": "ฉันต้องการทานส้ม",
                         "phraseMs": "Saya nak oren"
                     },
                     {
                         "th": "ทุเรียน",
                         "ms": "Durian",
-                        "img": "",
+                        "img": "/static/images/ืทุเรียน.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการทุเรียน",
+                        "phraseTh": "ฉันต้องการทานทุเรียน",
                         "phraseMs": "Saya nak durian"
                     },
                     {
                         "th": "มะม่วง",
                         "ms": "Mangga",
-                        "img": "",
+                        "img": "/static/images/มะม่วง.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการมะม่วง",
+                        "phraseTh": "ฉันต้องการทานมะม่วง",
                         "phraseMs": "Saya nak mangga"
                     },
                     {
                         "th": "มะละกอ",
                         "ms": "Betik",
-                        "img": "",
+                        "img": "/static/images/มะละกอ.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการมะละกอ",
+                        "phraseTh": "ฉันต้องการทานมะละกอ",
                         "phraseMs": "Saya nak betik"
                     },
                     {
                         "th": "มังคุด",
                         "ms": "Manggis",
-                        "img": "",
+                        "img": "/static/images/มังคุด.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการมังคุด",
+                        "phraseTh": "ฉันต้องการทานมังคุด",
                         "phraseMs": "Saya nak manggis"
                     },
                     {
                         "th": "เงาะ",
                         "ms": "Rambutan",
-                        "img": "",
+                        "img": "/static/images/เงาะ.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการเงาะ",
+                        "phraseTh": "ฉันต้องการทานเงาะ",
                         "phraseMs": "Saya nak rambutan"
                     },
                     {
                         "th": "ลองกอง",
                         "ms": "Langsat",
-                        "img": "",
+                        "img": "/static/images/ลองกอง.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการลองกอง",
+                        "phraseTh": "ฉันต้องการทานลองกอง",
                         "phraseMs": "Saya nak langsat"
                     },
                     {
                         "th": "ลำไย",
                         "ms": "Longan",
-                        "img": "",
+                        "img": "/static/images/ลำไย.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการลำไย",
+                        "phraseTh": "ฉันต้องการทานลำไย",
                         "phraseMs": "Saya nak longan"
                     },
                     {
                         "th": "องุ่น",
                         "ms": "Anggur",
-                        "img": "",
+                        "img": "/static/images/องุ่น.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการองุ่น",
+                        "phraseTh": "ฉันต้องการทานองุ่น",
                         "phraseMs": "Saya nak anggur"
                     },
                     {
                         "th": "ส้มโอ",
                         "ms": "Limau Bali",
-                        "img": "",
+                        "img": "/static/images/ส้มโอ.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการส้มโอ",
+                        "phraseTh": "ฉันต้องการทานส้มโอ",
                         "phraseMs": "Saya nak limau bali"
                     },
                     {
                         "th": "ชมพู่",
                         "ms": "Jambu Air",
-                        "img": "",
+                        "img": "/static/images/ชมพู่.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการชมพู่",
+                        "phraseTh": "ฉันต้องการทานชมพู่",
                         "phraseMs": "Saya nak jambu air"
                     },
                     {
                         "th": "ทับทิม",
                         "ms": "Delima",
-                        "img": "",
+                        "img": "/static/images/ทับทิม.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการทับทิม",
+                        "phraseTh": "ฉันต้องการทานทับทิม",
                         "phraseMs": "Saya nak delima"
                     },
                     {
                         "th": "ขนุน",
                         "ms": "Nangka",
-                        "img": "",
+                        "img": "/static/images/ขนุน.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการขนุน",
+                        "phraseTh": "ฉันต้องการทานขนุน",
                         "phraseMs": "Saya nak nangka"
                     },
                     {
                         "th": "สตรอเบอรี่",
                         "ms": "Strawberi",
-                        "img": "",
+                        "img": "/static/images/สตรอเบอรี่.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการสตรอเบอรี่",
+                        "phraseTh": "ฉันต้องการทานสตรอเบอรี่",
                         "phraseMs": "Saya nak strawberi"
                     },
                     {
                         "th": "แตงโม",
                         "ms": "Tembikai",
-                        "img": "",
+                        "img": "/static/images/แตงโม.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการแตงโม",
+                        "phraseTh": "ฉันต้องการทานแตงโม",
                         "phraseMs": "Saya nak tembikai"
                     },
                     {
                         "th": "ลิ้นจี่",
                         "ms": "Laici",
-                        "img": "",
+                        "img": "/static/images/ลิ้นจี่.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการลิ้นจี่",
+                        "phraseTh": "ฉันต้องการทานลิ้นจี่",
                         "phraseMs": "Saya nak laici"
                     }
                 ]
@@ -1189,7 +1065,7 @@
             {
                 "th": "ขนม",
                 "ms": "Kuih",
-                "img": "",
+                "img": "/static/images/ปก ขนม.png",
                 "icon": "◇",
                 "tone": "tone-peach",
                 "subTh": "เลือกขนม",
@@ -1198,145 +1074,145 @@
                     {
                         "th": "เค้ก",
                         "ms": "Kek",
-                        "img": "",
+                        "img": "/static/images/เค้ก.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการเค้ก",
+                        "phraseTh": "ฉันต้องการทานเค้ก",
                         "phraseMs": "Saya nak kek"
                     },
                     {
                         "th": "คุกกี้",
                         "ms": "Kuki",
-                        "img": "",
+                        "img": "/static/images/คุกกีี้.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการคุกกี้",
+                        "phraseTh": "ฉันต้องการทานคุกกี้",
                         "phraseMs": "Saya nak kuki"
                     },
                     {
                         "th": "โดนัท",
                         "ms": "Donat",
-                        "img": "",
+                        "img": "/static/images/โดนัท.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการโดนัท",
+                        "phraseTh": "ฉันต้องการทานโดนัท",
                         "phraseMs": "Saya nak donat"
                     },
                     {
                         "th": "วุ้น",
                         "ms": "Agar-Agar",
-                        "img": "",
+                        "img": "/static/images/วุ้น.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการวุ้น",
+                        "phraseTh": "ฉันต้องการทานวุ้น",
                         "phraseMs": "Saya nak agar-agar"
                     },
                     {
                         "th": "ขนมชั้น",
                         "ms": "Kuih Lapis",
-                        "img": "",
+                        "img": "/static/images/ขนมชั้น.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการขนมชั้น",
+                        "phraseTh": "ฉันต้องการทานขนมชั้น",
                         "phraseMs": "Saya nak kuih lapis"
                     },
                     {
                         "th": "บัวลอย",
                         "ms": "Bebola Pulut",
-                        "img": "",
+                        "img": "/static/images/บัวลอย.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการบัวลอย",
+                        "phraseTh": "ฉันต้องการทานบัวลอย",
                         "phraseMs": "Saya nak bebola pulut"
                     },
                     {
                         "th": "ข้าวเหนียวมะม่วง",
                         "ms": "Pulut Mangga",
-                        "img": "",
+                        "img": "/static/images/ข้าวเหนียวมะม่วง.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการข้าวเหนียวมะม่วง",
+                        "phraseTh": "ฉันต้องการทานข้าวเหนียวมะม่วง",
                         "phraseMs": "Saya nak pulut mangga"
                     },
                     {
                         "th": "ขนมใส่ไส้",
                         "ms": "Kuih Koci",
-                        "img": "",
+                        "img": "/static/images/ขนมใส่ใส้.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการขนมใส่ไส้",
+                        "phraseTh": "ฉันต้องการทานขนมใส่ไส้",
                         "phraseMs": "Saya nak kuih koci"
                     },
                     {
                         "th": "ลอดช่อง",
                         "ms": "Cendol",
-                        "img": "",
+                        "img": "/static/images/ลอดช่อง.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการลอดช่อง",
+                        "phraseTh": "ฉันต้องการทานลอดช่อง",
                         "phraseMs": "Saya nak cendol"
                     },
                     {
                         "th": "ข้าวเหนียวดำ",
                         "ms": "Pulut Hitam",
-                        "img": "",
+                        "img": "/static/images/ข้าวเหนียวดำ.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการข้าวเหนียวดำ",
+                        "phraseTh": "ฉันต้องการทานข้าวเหนียวดำ",
                         "phraseMs": "Saya nak pulut hitam"
                     },
                     {
                         "th": "วาฟเฟิล",
                         "ms": "Wafel",
-                        "img": "",
+                        "img": "/static/images/วาฟเฟิล.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการวาฟเฟิล",
+                        "phraseTh": "ฉันต้องการทานวาฟเฟิล",
                         "phraseMs": "Saya nak wafel"
                     },
                     {
                         "th": "กล้วยทอด",
                         "ms": "Pisang Goreng",
-                        "img": "",
+                        "img": "/static/images/กล้วยทอด.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการกล้วยทอด",
+                        "phraseTh": "ฉันต้องการทานกล้วยทอด",
                         "phraseMs": "Saya nak pisang goreng"
                     },
                     {
                         "th": "ปอเป๊ยะทอด",
                         "ms": "Popia Goreng",
-                        "img": "",
+                        "img": "/static/images/ปอเป๊ยะทอด.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการปอเป๊ยะทอด",
+                        "phraseTh": "ฉันต้องการทานปอเป๊ยะทอด",
                         "phraseMs": "Saya nak popia goreng"
                     },
                     {
                         "th": "กล้วยบวชชี",
                         "ms": "Pisang Santan",
-                        "img": "",
+                        "img": "/static/images/กล้วยบวชชี.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการกล้วยบวชชี",
+                        "phraseTh": "ฉันต้องการทานกล้วยบวชชี",
                         "phraseMs": "Saya nak pisang santan"
                     },
                     {
                         "th": "ทับทิมกรอบ",
                         "ms": "Delima Ais",
-                        "img": "",
+                        "img": "/static/images/ทับทิมกรอบ.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการทับทิมกรอบ",
+                        "phraseTh": "ฉันต้องการทานทับทิมกรอบ",
                         "phraseMs": "Saya nak delima ais"
                     },
                     {
                         "th": "สาคูเปียก",
                         "ms": "Sagu Manis",
-                        "img": "",
+                        "img": "/static/images/สาคูเปียก.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการสาคูเปียก",
+                        "phraseTh": "ฉันต้องการทานสาคูเปียก",
                         "phraseMs": "Saya nak sagu manis"
                     },
                     {
                         "th": "ทาร์ตไข่",
                         "ms": "Tart Telur",
-                        "img": "",
+                        "img": "/static/images/ทาร์ตไข่.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการทาร์ตไข่",
+                        "phraseTh": "ฉันต้องการทานทาร์ตไข่",
                         "phraseMs": "Saya nak tart telur"
                     },
                     {
                         "th": "ข้าวเหนียวหน้ากะทิ",
                         "ms": "Pulut Santan",
-                        "img": "",
+                        "img": "/static/images/ข้าวเหนียวหน้ากะทิ.png",
                         "icon": "○",
-                        "phraseTh": "ฉันต้องการข้าวเหนียวหน้ากะทิ",
+                        "phraseTh": "ฉันต้องการทานข้าวเหนียวหน้ากะทิ",
                         "phraseMs": "Saya nak pulut santan"
                     }
                 ]
@@ -1346,7 +1222,7 @@
             {
                 "th": "ดูทีวี",
                 "ms": "Tengok TV",
-                "img": "",
+                "img": "/static/images/ทีวี.png",
                 "icon": "▶",
                 "phraseTh": "ฉันต้องการดูทีวี",
                 "phraseMs": "Saya nak tengok tv"
@@ -1354,7 +1230,7 @@
             {
                 "th": "ฟังเพลง",
                 "ms": "Dengar Lagu",
-                "img": "",
+                "img": "/static/images/ฟังเพลง.png",
                 "icon": "▶",
                 "phraseTh": "ฉันต้องการฟังเพลง",
                 "phraseMs": "Saya nak dengar lagu"
@@ -1362,7 +1238,7 @@
             {
                 "th": "อ่านหนังสือ",
                 "ms": "Baca Buku",
-                "img": "",
+                "img": "/static/images/อ่านหนังสื่อ.png",
                 "icon": "▶",
                 "phraseTh": "ฉันต้องการอ่านหนังสือ",
                 "phraseMs": "Saya nak baca buku"
@@ -1370,7 +1246,7 @@
             {
                 "th": "เล่นเกมส์",
                 "ms": "Main Permainan",
-                "img": "",
+                "img": "/static/images/เล่นเกม.png",
                 "icon": "▶",
                 "phraseTh": "ฉันต้องการเล่นเกมส์",
                 "phraseMs": "Saya nak main permainan"
@@ -1378,7 +1254,7 @@
             {
                 "th": "ทำอาหาร",
                 "ms": "Masak",
-                "img": "",
+                "img": "/static/images/ทำอาหาร.png",
                 "icon": "▶",
                 "phraseTh": "ฉันต้องการทำอาหาร",
                 "phraseMs": "Saya nak masak"
@@ -1386,7 +1262,7 @@
             {
                 "th": "ออกกำลังกาย",
                 "ms": "Bersenam",
-                "img": "",
+                "img": "/static/images/ออกกำลังกาย.png",
                 "icon": "▶",
                 "phraseTh": "ฉันต้องการออกกำลังกาย",
                 "phraseMs": "Saya nak bersenam"
@@ -1396,7 +1272,7 @@
             {
                 "th": "พ่อ",
                 "ms": "Ayah",
-                "img": "",
+                "img": "/static/images/คิดถึงพ่อ.png",
                 "icon": "♡",
                 "phraseTh": "ฉันต้องการพบพ่อ",
                 "phraseMs": "Saya nak jumpa ayah"
@@ -1404,7 +1280,7 @@
             {
                 "th": "แม่",
                 "ms": "Ibu",
-                "img": "",
+                "img": "/static/images/คิดถึงแม่.png",
                 "icon": "♡",
                 "phraseTh": "ฉันต้องการพบแม่",
                 "phraseMs": "Saya nak jumpa ibu"
@@ -1412,7 +1288,7 @@
             {
                 "th": "ลูก",
                 "ms": "Anak",
-                "img": "",
+                "img": "/static/images/คิดถึงลูก.png",
                 "icon": "♡",
                 "phraseTh": "ฉันต้องการพบลูก",
                 "phraseMs": "Saya nak jumpa anak"
@@ -1420,7 +1296,7 @@
             {
                 "th": "หลาน",
                 "ms": "Cucu",
-                "img": "",
+                "img": "/static/images/คิดถึงหลาน.png",
                 "icon": "♡",
                 "phraseTh": "ฉันต้องการพบหลาน",
                 "phraseMs": "Saya nak jumpa cucu"
@@ -1428,7 +1304,7 @@
             {
                 "th": "พี่น้อง",
                 "ms": "Saudara-Mara",
-                "img": "",
+                "img": "/static/images/พี่น้อง.png",
                 "icon": "♡",
                 "phraseTh": "ฉันต้องการพบพี่น้อง",
                 "phraseMs": "Saya nak jumpa saudara-mara"
@@ -1436,7 +1312,7 @@
             {
                 "th": "ลุง",
                 "ms": "Pakcik",
-                "img": "",
+                "img": "/static/images/ลุง.png",
                 "icon": "♡",
                 "phraseTh": "ฉันต้องการพบลุง",
                 "phraseMs": "Saya nak jumpa pakcik"
@@ -1444,7 +1320,7 @@
             {
                 "th": "น้า",
                 "ms": "Makcik",
-                "img": "",
+                "img": "/static/images/น้า.png",
                 "icon": "♡",
                 "phraseTh": "ฉันต้องการพบน้า",
                 "phraseMs": "Saya nak jumpa makcik"
@@ -1452,7 +1328,7 @@
             {
                 "th": "สามี",
                 "ms": "Suami",
-                "img": "",
+                "img": "/static/images/สามี.png",
                 "icon": "♡",
                 "phraseTh": "ฉันต้องการพบสามี",
                 "phraseMs": "Saya nak jumpa suami"
@@ -1460,7 +1336,7 @@
             {
                 "th": "ภรรยา",
                 "ms": "Isteri",
-                "img": "",
+                "img": "/static/images/ภรรยา.png",
                 "icon": "♡",
                 "phraseTh": "ฉันต้องการพบภรรยา",
                 "phraseMs": "Saya nak jumpa isteri"
@@ -1468,7 +1344,7 @@
             {
                 "th": "ปู่/ตา",
                 "ms": "Datuk",
-                "img": "",
+                "img": "/static/images/ปู่.png",
                 "icon": "♡",
                 "phraseTh": "ฉันต้องการพบปู่/ตา",
                 "phraseMs": "Saya nak jumpa datuk"
@@ -1476,7 +1352,7 @@
             {
                 "th": "ย่า/ยาย",
                 "ms": "Nenek",
-                "img": "",
+                "img": "/static/images/ย่า.png",
                 "icon": "♡",
                 "phraseTh": "ฉันต้องการพบย่า/ยาย",
                 "phraseMs": "Saya nak jumpa nenek"
@@ -1484,7 +1360,7 @@
             {
                 "th": "หมอ",
                 "ms": "Doktor",
-                "img": "",
+                "img": "/static/images/หมอ.png",
                 "icon": "♡",
                 "phraseTh": "ฉันต้องการพบหมอ",
                 "phraseMs": "Saya nak jumpa doktor"
@@ -1492,7 +1368,7 @@
             {
                 "th": "พยาบาล",
                 "ms": "Jururawat",
-                "img": "",
+                "img": "/static/images/พยาบาล.png",
                 "icon": "♡",
                 "phraseTh": "ฉันต้องการพบพยาบาล",
                 "phraseMs": "Saya nak jumpa jururawat"
@@ -1500,7 +1376,7 @@
             {
                 "th": "เพื่อน",
                 "ms": "Kawan",
-                "img": "",
+                "img": "/static/images/เพื่อน.png",
                 "icon": "♡",
                 "phraseTh": "ฉันต้องการพบเพื่อน",
                 "phraseMs": "Saya nak jumpa kawan"
@@ -1510,7 +1386,7 @@
             {
                 "th": "ธนาคาร",
                 "ms": "Bank",
-                "img": "",
+                "img": "/static/images/ธนาคาร.png",
                 "icon": "⌂",
                 "phraseTh": "ฉันต้องการไปที่ธนาคาร",
                 "phraseMs": "Saya nak pergi ke bank"
@@ -1518,7 +1394,7 @@
             {
                 "th": "สถานีตำรวจ",
                 "ms": "Balai Polis",
-                "img": "",
+                "img": "/static/images/สถานีตำรวจ.png",
                 "icon": "⌂",
                 "phraseTh": "ฉันต้องการไปที่สถานีตำรวจ",
                 "phraseMs": "Saya nak pergi ke balai polis"
@@ -1526,7 +1402,7 @@
             {
                 "th": "โรงพยาบาล",
                 "ms": "Hospital",
-                "img": "",
+                "img": "/static/images/โรงพยาบาล.png",
                 "icon": "✚",
                 "phraseTh": "ฉันต้องการไปที่โรงพยาบาล",
                 "phraseMs": "Saya nak pergi ke hospital"
@@ -1534,7 +1410,7 @@
             {
                 "th": "ตลาด",
                 "ms": "Pasar",
-                "img": "",
+                "img": "/static/images/ตลาด.png",
                 "icon": "⌂",
                 "phraseTh": "ฉันต้องการไปที่ตลาด",
                 "phraseMs": "Saya nak pergi ke pasar"
@@ -1542,7 +1418,7 @@
             {
                 "th": "มัสยิด",
                 "ms": "Masjid",
-                "img": "",
+                "img": "/static/images/มัสยิด.png",
                 "icon": "⌂",
                 "phraseTh": "ฉันต้องการไปที่มัสยิด",
                 "phraseMs": "Saya nak pergi ke masjid"
@@ -1550,7 +1426,7 @@
             {
                 "th": "วัด",
                 "ms": "Kuil",
-                "img": "",
+                "img": "/static/images/วัด.png",
                 "icon": "⌂",
                 "phraseTh": "ฉันต้องการไปที่วัด",
                 "phraseMs": "Saya nak pergi ke kuil"
@@ -1558,7 +1434,7 @@
             {
                 "th": "บ้าน",
                 "ms": "Rumah",
-                "img": "",
+                "img": "/static/images/บ้าน.png",
                 "icon": "⌂",
                 "phraseTh": "ฉันต้องการไปที่บ้าน",
                 "phraseMs": "Saya nak pergi ke rumah"
@@ -1566,7 +1442,7 @@
             {
                 "th": "ร้านอาหาร",
                 "ms": "Restoran",
-                "img": "",
+                "img": "/static/images/ร้านอาหาร.png",
                 "icon": "⌂",
                 "phraseTh": "ฉันต้องการไปที่ร้านอาหาร",
                 "phraseMs": "Saya nak pergi ke restoran"
@@ -1574,7 +1450,7 @@
             {
                 "th": "ห้องน้ำ",
                 "ms": "Tandas",
-                "img": "",
+                "img": "/static/images/ห้องน้ำ.png",
                 "icon": "⌂",
                 "phraseTh": "ฉันต้องการไปที่ห้องน้ำ",
                 "phraseMs": "Saya nak pergi ke tandas"
@@ -1582,7 +1458,7 @@
             {
                 "th": "เที่ยว",
                 "ms": "Jalan-Jalan",
-                "img": "",
+                "img": "/static/images/เที่ยว.png",
                 "icon": "⌂",
                 "phraseTh": "ฉันต้องการไปเที่ยว",
                 "phraseMs": "Saya nak jalan-jalan"
@@ -1590,7 +1466,7 @@
             {
                 "th": "สวนสาธารณะ",
                 "ms": "Taman",
-                "img": "",
+                "img": "/static/images/สวนสาธารณะ.png",
                 "icon": "⌂",
                 "phraseTh": "ฉันต้องการไปที่สวนสาธารณะ",
                 "phraseMs": "Saya nak pergi ke taman"
@@ -1598,7 +1474,7 @@
             {
                 "th": "ทะเล",
                 "ms": "Pantai",
-                "img": "",
+                "img": "/static/images/ทะเล.png",
                 "icon": "⌂",
                 "phraseTh": "ฉันต้องการไปที่ทะเล",
                 "phraseMs": "Saya nak pergi ke pantai"
@@ -1608,7 +1484,7 @@
             {
                 "th": "ปัสสาวะ",
                 "ms": "Buang Air Kecil",
-                "img": "",
+                "img": "/static/images/ปัสสาวะ.png",
                 "icon": "✓",
                 "phraseTh": "ฉันต้องการปัสสาวะ",
                 "phraseMs": "Saya nak buang air kecil"
@@ -1616,7 +1492,7 @@
             {
                 "th": "อุจจาระ",
                 "ms": "Buang Air Besar",
-                "img": "",
+                "img": "/static/images/อุจจาระ.png",
                 "icon": "✓",
                 "phraseTh": "ฉันต้องการอุจจาระ",
                 "phraseMs": "Saya nak buang air besar"
@@ -1624,7 +1500,7 @@
             {
                 "th": "ไปห้องน้ำ",
                 "ms": "Ke Tandas",
-                "img": "",
+                "img": "/static/images/ห้องน้ำ.png",
                 "icon": "✓",
                 "phraseTh": "ฉันต้องการไปห้องน้ำ",
                 "phraseMs": "Saya nak ke tandas"
@@ -1632,7 +1508,7 @@
             {
                 "th": "อาบน้ำ",
                 "ms": "Mandi",
-                "img": "",
+                "img": "/static/images/อาบน้ำ.png",
                 "icon": "✓",
                 "phraseTh": "ฉันต้องการอาบน้ำ",
                 "phraseMs": "Saya nak mandi"
@@ -1640,7 +1516,7 @@
             {
                 "th": "แปรงฟัน",
                 "ms": "Gosok Gigi",
-                "img": "",
+                "img": "/static/images/แปรงฟัน.png",
                 "icon": "✓",
                 "phraseTh": "ฉันต้องการแปรงฟัน",
                 "phraseMs": "Saya nak gosok gigi"
@@ -1648,7 +1524,7 @@
             {
                 "th": "ละหมาด",
                 "ms": "Solat",
-                "img": "",
+                "img": "/static/images/ละหมาด.png",
                 "icon": "✓",
                 "phraseTh": "ฉันต้องการละหมาด",
                 "phraseMs": "Saya nak solat"
@@ -1656,7 +1532,7 @@
             {
                 "th": "เปลี่ยนเสื้อผ้า",
                 "ms": "Tukar Baju",
-                "img": "",
+                "img": "/static/images/เปลี่ยนเสื้อผ้า.png",
                 "icon": "✓",
                 "phraseTh": "ฉันต้องการเปลี่ยนเสื้อผ้า",
                 "phraseMs": "Saya nak tukar baju"
@@ -1664,7 +1540,7 @@
             {
                 "th": "สวดมนต์",
                 "ms": "Berdoa",
-                "img": "",
+                "img": "/static/images/สวดมนต์.png",
                 "icon": "✓",
                 "phraseTh": "ฉันต้องการสวดมนต์",
                 "phraseMs": "Saya nak berdoa"

@@ -295,12 +295,12 @@ main {
 
 .menu-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-    gap: 14px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
 }
 
 .card-btn {
-    min-height: clamp(160px, 20vw, 220px);
+    min-height: clamp(220px, 25vw, 300px);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -319,6 +319,8 @@ main {
 
 .card-btn.photo-card {
     background: #ffffff;
+    min-height: clamp(240px, 27vw, 330px);
+    padding: 8px;
 }
 
 .card-btn:focus-visible,
@@ -326,7 +328,8 @@ main {
 .icon-btn:focus-visible,
 .tab-btn:focus-visible,
 .play-btn:focus-visible,
-.clear-btn:focus-visible {
+.clear-btn:focus-visible,
+.small-tool-btn:focus-visible {
     outline: 4px solid rgba(247, 189, 34, 0.42);
     outline-offset: 2px;
 }
@@ -348,6 +351,19 @@ main {
 .tone-lilac { background: var(--gray-50); }
 .tone-sky { background: var(--gray-200); }
 .tone-cream { background: #fff2b8; }
+.tone-sos {
+    background: #d82121;
+    color: #ffffff;
+}
+
+.tone-sos .card-icon-wrap {
+    background: rgba(255, 255, 255, 0.96);
+    color: #d82121;
+}
+
+.tone-sos .card-subtext {
+    color: rgba(255, 255, 255, 0.86);
+}
 
 .card-icon-wrap {
     width: 100%;
@@ -369,7 +385,7 @@ main {
 .card-image-wrap {
     width: 100%;
     height: auto;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 1 / 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -389,7 +405,7 @@ main {
 .card-image-wrap.photo {
     width: 100%;
     height: auto;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 1 / 1;
     border-radius: var(--radius);
     background: #ffffff;
     box-shadow: none;
@@ -443,7 +459,7 @@ main {
 
 .text-input-container {
     display: grid;
-    gap: 14px;
+    gap: 16px;
     max-width: 1120px;
 }
 
@@ -466,6 +482,55 @@ main {
     border-color: var(--gold-strong);
 }
 
+.draw-panel {
+    display: grid;
+    gap: 12px;
+    padding: 14px;
+    border: 2px solid var(--line);
+    border-radius: var(--radius);
+    background: #ffffff;
+    box-shadow: var(--shadow);
+}
+
+.draw-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.draw-header h2 {
+    font-size: clamp(24px, 2.6vw, 34px);
+    line-height: 1.2;
+    font-weight: 900;
+}
+
+.draw-canvas {
+    width: 100%;
+    height: clamp(260px, 42vw, 430px);
+    display: block;
+    border: 3px dashed var(--gold-strong);
+    border-radius: var(--radius);
+    background: #ffffff;
+    touch-action: none;
+}
+
+.small-tool-btn {
+    min-height: 64px;
+    display: grid;
+    place-items: center;
+    padding: 12px 16px;
+    border-radius: var(--radius);
+    font-size: clamp(20px, 2.2vw, 28px);
+    font-weight: 900;
+    box-shadow: var(--shadow);
+}
+
+.small-tool-btn {
+    background: var(--gray-700);
+    color: #ffffff;
+}
+
 .action-buttons {
     display: grid;
     grid-template-columns: 1fr 132px;
@@ -473,10 +538,10 @@ main {
 }
 
 .play-btn,
-.clear-btn {
+.clear-btn,
+.small-tool-btn {
     min-height: 76px;
     border-radius: var(--radius);
-    color: white;
     font-size: clamp(24px, 2.5vw, 32px);
     font-weight: 900;
     box-shadow: var(--shadow);
@@ -489,6 +554,7 @@ main {
 
 .clear-btn {
     background: var(--gray-700);
+    color: #ffffff;
 }
 
 .loading-state,
@@ -549,7 +615,7 @@ main {
     }
 
     .menu-grid {
-        grid-template-columns: repeat(5, minmax(0, 1fr));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 
     .bottom-tabs {
@@ -559,7 +625,7 @@ main {
 
 @media (min-width: 1400px) {
     .menu-grid {
-        grid-template-columns: repeat(6, minmax(0, 1fr));
+        grid-template-columns: repeat(5, minmax(0, 1fr));
     }
 }
 
@@ -636,8 +702,13 @@ main {
     }
 
     .card-btn {
-        min-height: 148px;
+        min-height: 186px;
         padding: 16px 10px;
+    }
+
+    .card-btn.photo-card {
+        min-height: 210px;
+        padding: 8px;
     }
 
     .card-text {
@@ -680,7 +751,11 @@ main {
     }
 
     .card-btn {
-        min-height: 134px;
+        min-height: 168px;
+    }
+
+    .card-btn.photo-card {
+        min-height: 190px;
     }
 
     .card-text {

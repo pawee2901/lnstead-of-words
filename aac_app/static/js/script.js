@@ -256,6 +256,49 @@ function playBrowserSpeech(text) {
     window.speechSynthesis.speak(utterance);
 }
 
+function playEmergencyTone() {
+    const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+    if (!AudioContextClass) return false;
+
+    const audioCtx = new AudioContextClass();
+    const now = audioCtx.currentTime;
+    const masterGain = audioCtx.createGain();
+    masterGain.gain.setValueAtTime(0.0001, now);
+    masterGain.gain.exponentialRampToValueAtTime(0.32, now + 0.02);
+    masterGain.gain.exponentialRampToValueAtTime(0.0001, now + 3.2);
+    masterGain.connect(audioCtx.destination);
+
+    for (let i = 0; i < 6; i += 1) {
+        const start = now + (i * 0.5);
+        const osc = audioCtx.createOscillator();
+        const toneGain = audioCtx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(880, start);
+        osc.frequency.setValueAtTime(1180, start + 0.18);
+        toneGain.gain.setValueAtTime(0.0001, start);
+        toneGain.gain.exponentialRampToValueAtTime(1, start + 0.025);
+        toneGain.gain.exponentialRampToValueAtTime(0.0001, start + 0.34);
+        osc.connect(toneGain);
+        toneGain.connect(masterGain);
+        osc.start(start);
+        osc.stop(start + 0.36);
+    }
+
+    window.setTimeout(() => audioCtx.close().catch(() => {}), 3600);
+    return true;
+}
+
+function playSos() {
+    const text = currentLang === 'th'
+        ? 'สัญญาณฉุกเฉิน'
+        : 'Isyarat kecemasan';
+    lastSpokenSummary = text;
+    updateSpokenSummary(text);
+    if (!playEmergencyTone()) {
+        playAudio(text);
+    }
+}
+
 function updateSpokenSummary(text) {
     const content = document.getElementById('app-content');
     let summary = content.querySelector('.spoken-summary');
@@ -372,7 +415,8 @@ function renderHome(replace = false) {
     content.appendChild(renderGrid([
         { th: 'ฉันรู้สึก', ms: 'Saya rasa', icon: '♡', tone: 'tone-rose', subTh: 'อารมณ์ / ความรู้สึก', subMs: 'Gejala / Perasaan', onClick: () => renderFeelingsCategory() },
         { th: 'ฉันต้องการ', ms: 'Saya nak', icon: '＋', tone: 'tone-teal', subTh: 'อาหาร / คน / สถานที่', subMs: 'Makanan / Orang / Tempat', onClick: () => renderNeedsCategory() },
-        { th: 'เขียนข้อความ', ms: 'Tulis mesej', icon: '✎', tone: 'tone-gold', subTh: 'พิมพ์แล้วอ่านเสียง', subMs: 'Taip dan main suara', onClick: () => renderTextInput() }
+        { th: 'เขียนข้อความ', ms: 'Tulis mesej', icon: '✎', tone: 'tone-gold', subTh: 'พิมพ์ / วาด', subMs: 'Taip / Lukis', onClick: () => renderTextInput() },
+        { th: 'SOS', ms: 'SOS', icon: '!', tone: 'tone-sos', subTh: 'ขอความช่วยเหลือด่วน', subMs: 'Bantuan segera', speak: false, onClick: () => playSos() }
     ]));
 }
 
@@ -383,10 +427,15 @@ function renderFeelingsCategory(replace = false) {
     remember(renderFeelingsCategory, replace);
 
     const content = setContent(renderSummary() + hero(t('categories'), t('feel'), currentLang === 'th' ? 'แตะหมวด แล้วเลือกคำที่ต้องการพูด' : 'Tekan kategori, kemudian pilih perkataan', 'rose'));
-    content.appendChild(renderGrid([
-        { th: 'อาการเจ็บป่วย', ms: 'Gejala penyakit', icon: '✚', tone: 'tone-rose', onClick: () => renderItems('feelings', 'symptoms') },
-        { th: 'อารมณ์ความรู้สึก', ms: 'Perasaan', icon: '♡', tone: 'tone-lilac', onClick: () => renderItems('feelings', 'emotions') }
-    ]));
+    const categories = vocabularyData.feelings?.categories || [];
+    content.appendChild(renderGrid(categories.map(category => ({
+        th: category.th,
+        ms: category.ms,
+        img: category.img,
+        icon: category.icon,
+        tone: category.tone,
+        onClick: () => renderItems('feelings', category.id)
+    }))));
 }
 
 function renderNeedsCategory(replace = false) {
@@ -463,19 +512,109 @@ function renderChildItems(group, categoryId, parentItem, replace = false) {
     content.appendChild(grid);
 }
 
+function setupDrawingBoard(canvas) {
+    const ctx = canvas.getContext('2d');
+    let drawing = false;
+    let hasDrawing = false;
+
+    const resizeCanvas = () => {
+        const ratio = window.devicePixelRatio || 1;
+        const rect = canvas.getBoundingClientRect();
+        const snapshot = hasDrawing ? canvas.toDataURL('image/png') : '';
+        canvas.width = Math.max(1, Math.floor(rect.width * ratio));
+        canvas.height = Math.max(1, Math.floor(rect.height * ratio));
+        ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
+        ctx.lineWidth = 9;
+        ctx.strokeStyle = '#111111';
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(0, 0, rect.width, rect.height);
+
+        if (snapshot) {
+            const img = new Image();
+            img.onload = () => ctx.drawImage(img, 0, 0, rect.width, rect.height);
+            img.src = snapshot;
+        }
+    };
+
+    const point = (event) => {
+        const rect = canvas.getBoundingClientRect();
+        return {
+            x: event.clientX - rect.left,
+            y: event.clientY - rect.top
+        };
+    };
+
+    const start = (event) => {
+        event.preventDefault();
+        drawing = true;
+        hasDrawing = true;
+        const p = point(event);
+        ctx.beginPath();
+        ctx.moveTo(p.x, p.y);
+        canvas.setPointerCapture?.(event.pointerId);
+    };
+
+    const move = (event) => {
+        if (!drawing) return;
+        event.preventDefault();
+        const p = point(event);
+        ctx.lineTo(p.x, p.y);
+        ctx.stroke();
+    };
+
+    const stop = (event) => {
+        if (!drawing) return;
+        event.preventDefault();
+        drawing = false;
+        ctx.closePath();
+    };
+
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+    canvas.addEventListener('pointerdown', start);
+    canvas.addEventListener('pointermove', move);
+    canvas.addEventListener('pointerup', stop);
+    canvas.addEventListener('pointercancel', stop);
+    canvas.addEventListener('pointerleave', stop);
+
+    return {
+        clear() {
+            const rect = canvas.getBoundingClientRect();
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(0, 0, rect.width, rect.height);
+            hasDrawing = false;
+        },
+        hasDrawing() {
+            return hasDrawing;
+        }
+    };
+}
+
 function renderTextInput(replace = false) {
     updateNav(true, true, false);
     setTab('write');
-    setHeader(t('write'), currentLang === 'th' ? 'พิมพ์ข้อความแล้วเปิดเสียง' : 'Taip mesej dan main suara');
+    setHeader(t('write'), currentLang === 'th' ? 'พิมพ์หรือวาดเพื่อสื่อสาร' : 'Taip atau lukis');
     remember(renderTextInput, replace);
 
-    const content = setContent(hero(t('write'), currentLang === 'th' ? 'พิมพ์ประโยคของคุณ' : 'Taip ayat anda', currentLang === 'th' ? 'เหมาะสำหรับคำที่ไม่มีในปุ่มลัด' : 'Untuk perkataan yang tiada dalam butang', 'teal'));
+    const content = setContent(hero(t('write'), currentLang === 'th' ? 'สื่อสารด้วยข้อความหรือภาพวาด' : 'Berkomunikasi dengan teks atau lukisan', currentLang === 'th' ? 'เหมาะสำหรับผู้ที่พิมพ์ไม่ถนัด' : 'Sesuai untuk pengguna yang sukar menaip', 'teal'));
     const container = document.createElement('section');
     container.className = 'text-input-container';
 
     const textarea = document.createElement('textarea');
     textarea.className = 'text-area';
     textarea.placeholder = t('placeholder');
+
+    const drawPanel = document.createElement('section');
+    drawPanel.className = 'draw-panel';
+    drawPanel.innerHTML = `
+        <div class="draw-header">
+            <h2>${currentLang === 'th' ? 'วาดแทนคำพูด' : 'Lukis mesej'}</h2>
+            <button type="button" class="small-tool-btn" id="clear-drawing-btn">${currentLang === 'th' ? 'ลบภาพวาด' : 'Padam lukisan'}</button>
+        </div>
+        <canvas class="draw-canvas" id="message-drawing" aria-label="${currentLang === 'th' ? 'พื้นที่วาดภาพ' : 'Ruang melukis'}"></canvas>
+    `;
 
     const actions = document.createElement('div');
     actions.className = 'action-buttons';
@@ -484,30 +623,39 @@ function renderTextInput(replace = false) {
     playBtn.type = 'button';
     playBtn.className = 'play-btn';
     playBtn.innerText = t('play');
-    playBtn.onclick = () => {
-        const text = textarea.value.trim();
-        if (!text) {
-            textarea.focus();
-            updateSpokenSummary(currentLang === 'th' ? 'กรุณาพิมพ์ข้อความก่อนเปิดเสียง' : 'Sila taip mesej dahulu');
-            return;
-        }
-
-        lastSpokenSummary = text;
-        updateSpokenSummary(text);
-        playAudio(text);
-    };
 
     const clearBtn = document.createElement('button');
     clearBtn.type = 'button';
     clearBtn.className = 'clear-btn';
     clearBtn.innerText = t('clear');
+
+    actions.append(playBtn, clearBtn);
+    container.append(textarea, drawPanel, actions);
+    content.appendChild(container);
+
+    const drawing = setupDrawingBoard(container.querySelector('#message-drawing'));
+
+    playBtn.onclick = () => {
+        const text = textarea.value.trim();
+        const spokenText = text;
+
+        if (!spokenText) {
+            textarea.focus();
+            updateSpokenSummary(currentLang === 'th' ? 'กรุณาพิมพ์ข้อความในช่องด้านบนก่อนเปิดเสียง' : 'Sila taip mesej dahulu sebelum main suara');
+            return;
+        }
+
+        lastSpokenSummary = spokenText;
+        updateSpokenSummary(spokenText);
+        playAudio(spokenText);
+    };
+
     clearBtn.onclick = () => {
         textarea.value = '';
+        drawing.clear();
         textarea.focus();
     };
 
-    actions.append(playBtn, clearBtn);
-    container.append(textarea, actions);
-    content.appendChild(container);
+    container.querySelector('#clear-drawing-btn').onclick = () => drawing.clear();
 }
 
