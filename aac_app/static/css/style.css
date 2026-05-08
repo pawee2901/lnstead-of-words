@@ -482,6 +482,7 @@ main {
     border-color: var(--gold-strong);
 }
 
+.write-panel,
 .draw-panel {
     display: grid;
     gap: 12px;
@@ -492,6 +493,7 @@ main {
     box-shadow: var(--shadow);
 }
 
+.write-header,
 .draw-header {
     display: flex;
     align-items: center;
@@ -499,10 +501,19 @@ main {
     gap: 12px;
 }
 
+.write-header h2,
 .draw-header h2 {
     font-size: clamp(24px, 2.6vw, 34px);
     line-height: 1.2;
     font-weight: 900;
+}
+
+.write-tools,
+.draw-tools {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 .draw-canvas {
@@ -529,6 +540,16 @@ main {
 .small-tool-btn {
     background: var(--gray-700);
     color: #ffffff;
+}
+
+.play-writing-btn {
+    background: var(--gold-strong);
+    color: #111111;
+}
+
+.small-tool-btn:disabled {
+    cursor: wait;
+    opacity: 0.68;
 }
 
 .action-buttons {
@@ -760,6 +781,22 @@ main {
 
     .card-text {
         font-size: 21px;
+    }
+
+    .write-header,
+    .draw-header {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .write-tools,
+    .draw-tools {
+        justify-content: stretch;
+    }
+
+    .write-tools .small-tool-btn,
+    .draw-tools .small-tool-btn {
+        flex: 1 1 180px;
     }
 
     .action-buttons {

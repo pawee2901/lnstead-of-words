@@ -264,27 +264,32 @@ function playEmergencyTone() {
     const now = audioCtx.currentTime;
     const masterGain = audioCtx.createGain();
     masterGain.gain.setValueAtTime(0.0001, now);
-    masterGain.gain.exponentialRampToValueAtTime(0.32, now + 0.02);
-    masterGain.gain.exponentialRampToValueAtTime(0.0001, now + 3.2);
+    masterGain.gain.exponentialRampToValueAtTime(0.28, now + 0.04);
+    masterGain.gain.exponentialRampToValueAtTime(0.0001, now + 4.15);
     masterGain.connect(audioCtx.destination);
 
-    for (let i = 0; i < 6; i += 1) {
-        const start = now + (i * 0.5);
+    const playTone = (start, frequency, duration = 0.18) => {
         const osc = audioCtx.createOscillator();
         const toneGain = audioCtx.createGain();
         osc.type = 'sine';
-        osc.frequency.setValueAtTime(880, start);
-        osc.frequency.setValueAtTime(1180, start + 0.18);
+        osc.frequency.setValueAtTime(frequency, start);
         toneGain.gain.setValueAtTime(0.0001, start);
         toneGain.gain.exponentialRampToValueAtTime(1, start + 0.025);
-        toneGain.gain.exponentialRampToValueAtTime(0.0001, start + 0.34);
+        toneGain.gain.setValueAtTime(1, start + duration - 0.045);
+        toneGain.gain.exponentialRampToValueAtTime(0.0001, start + duration);
         osc.connect(toneGain);
         toneGain.connect(masterGain);
         osc.start(start);
-        osc.stop(start + 0.36);
+        osc.stop(start + duration + 0.02);
+    };
+
+    for (let cycle = 0; cycle < 4; cycle += 1) {
+        const start = now + (cycle * 0.9);
+        playTone(start, 740);
+        playTone(start + 0.24, 980);
     }
 
-    window.setTimeout(() => audioCtx.close().catch(() => {}), 3600);
+    window.setTimeout(() => audioCtx.close().catch(() => {}), 4500);
     return true;
 }
 
@@ -592,6 +597,13 @@ function setupDrawingBoard(canvas) {
     };
 }
 
+function getWritePageSpeechText(textarea) {
+    const text = textarea.value.trim();
+    if (text) return text;
+
+    return '';
+}
+
 function renderTextInput(replace = false) {
     updateNav(true, true, false);
     setTab('write');
@@ -602,46 +614,45 @@ function renderTextInput(replace = false) {
     const container = document.createElement('section');
     container.className = 'text-input-container';
 
+    const writePanel = document.createElement('section');
+    writePanel.className = 'write-panel';
+    writePanel.innerHTML = `
+        <div class="write-header">
+            <h2>${currentLang === 'th' ? 'เขียนข้อความ' : 'Tulis mesej'}</h2>
+            <div class="write-tools">
+                <button type="button" class="small-tool-btn play-writing-btn" id="play-writing-btn">${currentLang === 'th' ? 'อ่านที่เขียน' : 'Baca tulisan'}</button>
+                <button type="button" class="small-tool-btn" id="clear-writing-btn">${currentLang === 'th' ? 'ลบข้อความ' : 'Padam teks'}</button>
+            </div>
+        </div>
+    `;
+
     const textarea = document.createElement('textarea');
     textarea.className = 'text-area';
     textarea.placeholder = t('placeholder');
+    writePanel.appendChild(textarea);
 
     const drawPanel = document.createElement('section');
     drawPanel.className = 'draw-panel';
     drawPanel.innerHTML = `
         <div class="draw-header">
             <h2>${currentLang === 'th' ? 'วาดแทนคำพูด' : 'Lukis mesej'}</h2>
-            <button type="button" class="small-tool-btn" id="clear-drawing-btn">${currentLang === 'th' ? 'ลบภาพวาด' : 'Padam lukisan'}</button>
+            <div class="draw-tools">
+                <button type="button" class="small-tool-btn" id="clear-drawing-btn">${currentLang === 'th' ? 'ลบภาพวาด' : 'Padam lukisan'}</button>
+            </div>
         </div>
         <canvas class="draw-canvas" id="message-drawing" aria-label="${currentLang === 'th' ? 'พื้นที่วาดภาพ' : 'Ruang melukis'}"></canvas>
     `;
 
-    const actions = document.createElement('div');
-    actions.className = 'action-buttons';
-
-    const playBtn = document.createElement('button');
-    playBtn.type = 'button';
-    playBtn.className = 'play-btn';
-    playBtn.innerText = t('play');
-
-    const clearBtn = document.createElement('button');
-    clearBtn.type = 'button';
-    clearBtn.className = 'clear-btn';
-    clearBtn.innerText = t('clear');
-
-    actions.append(playBtn, clearBtn);
-    container.append(textarea, drawPanel, actions);
+    container.append(writePanel, drawPanel);
     content.appendChild(container);
 
     const drawing = setupDrawingBoard(container.querySelector('#message-drawing'));
 
-    playBtn.onclick = () => {
-        const text = textarea.value.trim();
-        const spokenText = text;
-
+    const speakWrittenText = () => {
+        const spokenText = getWritePageSpeechText(textarea);
         if (!spokenText) {
             textarea.focus();
-            updateSpokenSummary(currentLang === 'th' ? 'กรุณาพิมพ์ข้อความในช่องด้านบนก่อนเปิดเสียง' : 'Sila taip mesej dahulu sebelum main suara');
+            updateSpokenSummary(currentLang === 'th' ? 'กรุณาเขียนข้อความก่อนเปิดเสียง' : 'Sila tulis mesej dahulu sebelum main suara');
             return;
         }
 
@@ -650,9 +661,9 @@ function renderTextInput(replace = false) {
         playAudio(spokenText);
     };
 
-    clearBtn.onclick = () => {
+    container.querySelector('#play-writing-btn').onclick = speakWrittenText;
+    container.querySelector('#clear-writing-btn').onclick = () => {
         textarea.value = '';
-        drawing.clear();
         textarea.focus();
     };
 

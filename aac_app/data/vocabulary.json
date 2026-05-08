@@ -407,7 +407,7 @@
             {
                 "th": "นอนไม่หลับ",
                 "ms": "Susah Tidur",
-                "phraseTh": "ฉันรู้สึกนอนไม่หลับ",
+                "phraseTh": "ฉันมีอาการนอนไม่หลับ",
                 "phraseMs": "Saya rasa susah tidur",
                 "img": "/static/images/ฉันรู้สึกนอนไม่หลับ.png"
             },
@@ -423,7 +423,7 @@
             {
                 "th": "เครียด",
                 "ms": "Stres",
-                "img": "/static/images/symptoms.png",
+                "img": "/static/images/เครียด.png",
                 "icon": "♡",
                 "phraseTh": "ฉันรู้สึกเครียด",
                 "phraseMs": "Saya rasa stres"
@@ -505,7 +505,7 @@
                 "ms": "Isteri",
                 "phraseTh": "ฉันคิดถึงภรรยา",
                 "phraseMs": "Saya rindu isteri",
-                "img": "/static/images/คิดถึงแม่.png"
+                "img": "/static/images/คิดถึงภรรยา.png"
             },
             {
                 "th": "คิดถึงปู่/ตา",
