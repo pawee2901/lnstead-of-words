@@ -4,9 +4,9 @@
     --line: #e2e2e2;
     --page: #f5f5f5;
     --panel: #ffffff;
-    --gold: #ffdb3d;
-    --gold-soft: #ffeaa3;
-    --gold-strong: #f7bd22;
+    --gold: #f6e596;
+    --gold-soft: #fff0b8;
+    --gold-strong: #d8b84b;
     --gray-25: #fbfbfb;
     --gray-50: #f1f1f1;
     --gray-100: #e7e7e7;
@@ -32,7 +32,7 @@ body {
 }
 
 body {
-    background: var(--gray-100);
+    background: #f4f1ea;
     color: var(--ink);
     font-family: "Sarabun", "Noto Sans Thai", "Tahoma", system-ui, sans-serif;
 }
@@ -57,10 +57,11 @@ button {
 }
 
 .app-header {
-    background: var(--gold);
+    background: #f7e7a0;
     border-bottom: 1px solid var(--gold-strong);
     padding: 14px clamp(16px, 3vw, 48px) 18px;
     flex: 0 0 auto;
+    box-shadow: 0 8px 28px rgba(150, 108, 0, 0.12);
 }
 
 .brand-row {
@@ -168,9 +169,7 @@ main {
     display: grid;
     place-items: center;
     padding: 40px 24px;
-    background:
-        linear-gradient(180deg, rgba(255, 219, 61, 0.22) 0%, rgba(255, 255, 255, 0) 48%),
-        var(--gray-100);
+    background: var(--gray-100);
     overflow-y: auto;
 }
 
@@ -296,22 +295,23 @@ main {
 .menu-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 16px;
+    gap: clamp(16px, 1.8vw, 22px);
 }
 
 .card-btn {
     min-height: clamp(220px, 25vw, 300px);
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 12px;
-    padding: 10px;
-    border-radius: var(--radius);
+    gap: 13px;
+    padding: 12px;
+    border-radius: 12px;
     color: #1b1b1d;
     background: var(--panel);
-    box-shadow: var(--shadow);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 12px 26px rgba(28, 36, 46, 0.11);
+    border: 1px solid rgba(0, 0, 0, 0.08);
     text-align: center;
     transition: 0.14s ease;
     overflow: hidden;
@@ -320,7 +320,7 @@ main {
 .card-btn.photo-card {
     background: #ffffff;
     min-height: clamp(240px, 27vw, 330px);
-    padding: 8px;
+    padding: 10px 10px 13px;
 }
 
 .card-btn:focus-visible,
@@ -336,24 +336,83 @@ main {
 
 .card-btn:hover {
     filter: brightness(1.02);
-    box-shadow: 0 14px 30px rgba(28, 36, 46, 0.13);
+    transform: translateY(-2px);
+    box-shadow: 0 16px 30px rgba(28, 36, 46, 0.14);
 }
 
 .card-btn:active {
     box-shadow: 0 4px 12px rgba(28, 36, 46, 0.16);
 }
 
-.tone-gold { background: var(--gold); }
-.tone-teal { background: var(--gray-200); }
-.tone-rose { background: var(--gold-soft); }
-.tone-mint { background: var(--gray-100); }
-.tone-peach { background: #f4d887; }
-.tone-lilac { background: var(--gray-50); }
-.tone-sky { background: var(--gray-200); }
-.tone-cream { background: #fff2b8; }
+.tone-gold {
+    background: #fff0b8;
+    border-color: #d9bb52;
+}
+
+.tone-teal {
+    background: #e7c6a0;
+    border-color: #d4aa7f;
+}
+
+.tone-rose {
+    background: #eeb0aa;
+    border-color: #dc9991;
+}
+
+.tone-mint {
+    background: #b8c58d;
+    border-color: #87945f;
+}
+
+.tone-peach {
+    background: #e4b889;
+    border-color: #cf9f70;
+}
+
+.tone-lilac {
+    background: #e5a8b4;
+    border-color: #d28e9c;
+}
+
+.tone-sky {
+    background: #e9c79e;
+    border-color: #d3a979;
+}
+
+.tone-cream {
+    background: #f3df88;
+    border-color: #d8bf5e;
+}
+
+.tone-coral {
+    background: #efb19e;
+    border-color: #d39480;
+}
+
+.tone-lemon {
+    background: #f6ed9f;
+    border-color: #d9ca68;
+}
+
+.tone-sage {
+    background: #c7cf9a;
+    border-color: #a7b178;
+}
+
+.tone-blush {
+    background: #efc4cb;
+    border-color: #d9a2ad;
+}
+
+.tone-apricot {
+    background: #f0c99d;
+    border-color: #d7a974;
+}
+
 .tone-sos {
     background: #d82121;
     color: #ffffff;
+    border-color: #bc1717;
 }
 
 .tone-sos .card-icon-wrap {
@@ -372,8 +431,10 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: calc(var(--radius) - 4px);
+    border-radius: 10px;
     background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.72);
+    box-shadow: none;
     flex-shrink: 0;
 }
 
@@ -390,8 +451,10 @@ main {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    border-radius: calc(var(--radius) - 4px);
+    border-radius: 10px;
     background: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.74);
+    box-shadow: none;
     flex-shrink: 0;
 }
 
@@ -406,7 +469,7 @@ main {
     width: 100%;
     height: auto;
     aspect-ratio: 1 / 1;
-    border-radius: var(--radius);
+    border-radius: 10px;
     background: #ffffff;
     box-shadow: none;
 }
@@ -425,11 +488,12 @@ main {
     font-weight: 900;
     letter-spacing: 0;
     overflow-wrap: anywhere;
+    text-shadow: none;
 }
 
 .card-subtext {
     margin-top: -5px;
-    color: rgba(23, 23, 23, 0.66);
+    color: rgba(23, 23, 23, 0.70);
     font-size: clamp(14px, 1.3vw, 18px);
     font-weight: 900;
     line-height: 1.22;
@@ -446,15 +510,15 @@ main {
     width: 100%;
     margin: 0 0 18px;
     padding: 14px 18px;
-    border: 2px solid rgba(247, 189, 34, 0.34);
-    border-radius: var(--radius);
-    background: #fff6c8;
+    border: 2px solid rgba(216, 184, 75, 0.42);
+    border-radius: 12px;
+    background: #fff5cf;
     color: #111111;
     font-size: clamp(22px, 2.4vw, 30px);
     font-weight: 900;
     line-height: 1.24;
     text-align: left;
-    box-shadow: var(--shadow);
+    box-shadow: 0 8px 18px rgba(28, 36, 46, 0.08);
 }
 
 .text-input-container {
@@ -543,7 +607,7 @@ main {
 }
 
 .play-writing-btn {
-    background: var(--gold-strong);
+    background: #d8b84b;
     color: #111111;
 }
 
@@ -569,7 +633,7 @@ main {
 }
 
 .play-btn {
-    background: var(--gold-strong);
+    background: #d8b84b;
     color: #111111;
 }
 
@@ -598,7 +662,7 @@ main {
     grid-template-columns: repeat(4, 1fr);
     gap: 4px;
     padding: 9px clamp(10px, 2vw, 24px) 14px;
-    background: var(--gold);
+    background: #f7e7a0;
     border-top: 1px solid var(--gold-strong);
     box-shadow: 0 -10px 28px rgba(23, 33, 43, 0.08);
     z-index: 20;
@@ -628,7 +692,7 @@ main {
 
 @media (min-width: 900px) {
     body {
-        background: linear-gradient(180deg, #ffffff 0%, #eeeeee 100%);
+        background: #eeeeee;
     }
 
     .phone-shell {

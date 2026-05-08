@@ -8,7 +8,7 @@ let currentAudio = null;
 
 const uiText = {
     th: {
-        appName: 'พูดแทนใจ',
+        appName: 'Thai-Malayu For Aphasia',
         appSub: 'ไทย - มลายู สำหรับผู้สูงอายุ',
         homeHero: 'แตะภาพเพื่อพูดแทนใจ',
         homeCopy: 'ปุ่มใหญ่ สีชัด เสียงอ่านไทยและมลายู',
@@ -24,7 +24,7 @@ const uiText = {
         clear: 'ล้าง'
     },
     ms: {
-        appName: 'Suara Hati',
+        appName: 'Thai-Malayu For Aphasia',
         appSub: 'Thai - Melayu untuk warga emas',
         homeHero: 'Tekan gambar untuk bercakap',
         homeCopy: 'Butang besar, warna jelas, suara Thai dan Melayu',
@@ -41,7 +41,20 @@ const uiText = {
     }
 };
 
-const tones = ['tone-gold', 'tone-teal', 'tone-rose', 'tone-mint', 'tone-peach', 'tone-lilac', 'tone-sky', 'tone-cream'];
+const tones = [
+    'tone-rose',
+    'tone-gold',
+    'tone-peach',
+    'tone-lilac',
+    'tone-mint',
+    'tone-sky',
+    'tone-coral',
+    'tone-lemon',
+    'tone-sage',
+    'tone-blush',
+    'tone-apricot',
+    'tone-cream'
+];
 
 document.addEventListener('DOMContentLoaded', () => {
     renderLanguageSelect();
@@ -264,18 +277,17 @@ function playEmergencyTone() {
     const now = audioCtx.currentTime;
     const masterGain = audioCtx.createGain();
     masterGain.gain.setValueAtTime(0.0001, now);
-    masterGain.gain.exponentialRampToValueAtTime(0.28, now + 0.04);
-    masterGain.gain.exponentialRampToValueAtTime(0.0001, now + 4.15);
+    masterGain.gain.exponentialRampToValueAtTime(0.34, now + 0.04);
     masterGain.connect(audioCtx.destination);
 
-    const playTone = (start, frequency, duration = 0.18) => {
+    const playTone = (start, duration) => {
         const osc = audioCtx.createOscillator();
         const toneGain = audioCtx.createGain();
         osc.type = 'sine';
-        osc.frequency.setValueAtTime(frequency, start);
+        osc.frequency.setValueAtTime(880, start);
         toneGain.gain.setValueAtTime(0.0001, start);
-        toneGain.gain.exponentialRampToValueAtTime(1, start + 0.025);
-        toneGain.gain.setValueAtTime(1, start + duration - 0.045);
+        toneGain.gain.exponentialRampToValueAtTime(1, start + 0.02);
+        toneGain.gain.setValueAtTime(1, start + duration - 0.03);
         toneGain.gain.exponentialRampToValueAtTime(0.0001, start + duration);
         osc.connect(toneGain);
         toneGain.connect(masterGain);
@@ -283,13 +295,28 @@ function playEmergencyTone() {
         osc.stop(start + duration + 0.02);
     };
 
-    for (let cycle = 0; cycle < 4; cycle += 1) {
-        const start = now + (cycle * 0.9);
-        playTone(start, 740);
-        playTone(start + 0.24, 980);
-    }
+    const shortTone = 0.18;
+    const longTone = 0.54;
+    const gap = 0.14;
+    const letterGap = 0.32;
+    let cursor = now + 0.08;
 
-    window.setTimeout(() => audioCtx.close().catch(() => {}), 4500);
+    const playGroup = (durations) => {
+        durations.forEach(duration => {
+            playTone(cursor, duration);
+            cursor += duration + gap;
+        });
+        cursor += letterGap;
+    };
+
+    playGroup([shortTone, shortTone, shortTone]);
+    playGroup([longTone, longTone, longTone]);
+    playGroup([shortTone, shortTone, shortTone]);
+
+    masterGain.gain.setValueAtTime(0.34, cursor);
+    masterGain.gain.exponentialRampToValueAtTime(0.0001, cursor + 0.2);
+
+    window.setTimeout(() => audioCtx.close().catch(() => {}), Math.ceil((cursor - now + 0.4) * 1000));
     return true;
 }
 
@@ -486,6 +513,7 @@ function renderItems(group, categoryId, replace = false) {
         tone: item.tone || tones[index % tones.length],
         subTh: item.subTh,
         subMs: item.subMs,
+        speak: item.speak !== false,
         onClick: item.children ? () => renderChildItems(group, categoryId, item) : null
     })));
     content.appendChild(grid);
@@ -512,6 +540,7 @@ function renderChildItems(group, categoryId, parentItem, replace = false) {
         tone: item.tone || parentItem.tone || tones[index % tones.length],
         subTh: item.subTh,
         subMs: item.subMs,
+        speak: item.speak !== false,
         onClick: item.children ? () => renderChildItems(group, categoryId, item) : null
     })));
     content.appendChild(grid);
