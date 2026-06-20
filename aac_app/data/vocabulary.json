@@ -1,4 +1,8 @@
 {
+    "site_title_th": "Thai-Malayu For Aphasia",
+    "site_subtitle_th": "ไทย - มลายู สำหรับผู้สูงอายุ",
+    "site_title_ms": "Thai-Malayu For Aphasia",
+    "site_subtitle_ms": "Thai - Melayu untuk warga emas",
     "feelings": {
         "categories": [
             {
@@ -23,7 +27,7 @@
                 "th": "ปวด",
                 "ms": "Sakit",
                 "phraseTh": "ฉันรู้สึกปวด",
-                "phraseMs": "Saya rasa sakit",
+                "phraseMs": "Saya rasa Sakit",
                 "speak": false,
                 "children": [
                     {
@@ -111,7 +115,7 @@
                         "img": "/static/images/knee.png"
                     }
                 ],
-                "img": "/static/images/head.png",
+                "img": "/static/images/uploaded_1781952258_Screenshot_2026-06-19_160123.png",
                 "icon": "✚",
                 "subTh": "เลือกตำแหน่งที่ปวด",
                 "subMs": "Pilih bahagian sakit"

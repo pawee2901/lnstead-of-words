@@ -76,12 +76,22 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function t(key) {
+    if (key === 'appName') {
+        if (currentLang === 'th' && vocabularyData.site_title_th) return vocabularyData.site_title_th;
+        if (currentLang === 'ms' && vocabularyData.site_title_ms) return vocabularyData.site_title_ms;
+    }
+    if (key === 'appSub') {
+        if (currentLang === 'th' && vocabularyData.site_subtitle_th) return vocabularyData.site_subtitle_th;
+        if (currentLang === 'ms' && vocabularyData.site_subtitle_ms) return vocabularyData.site_subtitle_ms;
+    }
     return uiText[currentLang][key];
 }
 
 function setHeader(title, subtitle) {
     document.getElementById('screen-title').innerText = title;
     document.getElementById('screen-subtitle').innerText = subtitle;
+    // Update browser tab title
+    document.title = t('appName');
 }
 
 function setContent(markup = '') {

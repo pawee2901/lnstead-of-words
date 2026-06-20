@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบหลังบ้านแอดมิน - Thai-Malayu AAC</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css', v='1.2') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;800&family=Outfit:wght@400;600;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Header -->
+        <header class="admin-header">
+            <div class="header-content">
+                <div class="header-title-block">
+                    <h1>ระบบจัดการคำศัพท์</h1>
+                    <p>ปรับเปลี่ยนภาพ ชื่อ และชื่อเว็บหลักของระบบภาษาไทย-มลายู</p>
+                </div>
+                <a href="/" class="back-home-btn">‹ กลับไปยังหน้าหลักผู้ใช้</a>
+            </div>
+        </header>
+
+        <!-- Breadcrumbs Navigation -->
+        <nav class="admin-breadcrumbs" id="breadcrumbs-nav" aria-label="แถบนำทางตำแหน่งปัจจุบัน">
+            <span class="crumb active" data-level="home">หน้าหลักแอดมิน</span>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="admin-main">
+            <!-- Settings Pane (Visible when editing site metadata) -->
+            <section id="pane-settings" class="admin-pane" style="display: none;">
+                <div class="panel-header">
+                    <h2>⚙ ตั้งค่าชื่อและรายละเอียดเว็บไซต์</h2>
+                    <p class="section-desc">ชื่อนี้จะปรากฏที่หัวเว็บไซต์และแถบเบราว์เซอร์จริง</p>
+                </div>
+                <form id="settings-form" class="settings-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="site-title-th">ชื่อเว็บไซต์ (ภาษาไทย)</label>
+                            <input type="text" id="site-title-th" name="site_title_th" placeholder="เช่น Thai-Malayu For Aphasia" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="site-subtitle-th">คำอธิบายย่อย (ภาษาไทย)</label>
+                            <input type="text" id="site-subtitle-th" name="site_subtitle_th" placeholder="เช่น ไทย - มลายู สำหรับผู้สูงอายุ" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="site-title-ms">ชื่อเว็บไซต์ (ภาษามลายู)</label>
+                            <input type="text" id="site-title-ms" name="site_title_ms" placeholder="เช่น Thai-Malayu For Aphasia" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="site-subtitle-ms">คำอธิบายย่อย (ภาษามลายู)</label>
+                            <input type="text" id="site-subtitle-ms" name="site_subtitle_ms" placeholder="เช่น Thai - Melayu untuk warga emas" required>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn" id="save-settings-btn">บันทึกตั้งค่าเว็บ</button>
+                        <span id="settings-status" class="status-msg"></span>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Vocabulary Navigation & Grid Pane -->
+            <section id="pane-vocab" class="admin-pane active">
+                <div class="panel-header-row" id="vocab-header-row" style="display: none;">
+                    <div>
+                        <h2 id="current-section-title">หมวดหมู่คำศัพท์</h2>
+                        <p id="current-section-desc" class="section-desc">คำอธิบายหมวดหมู่</p>
+                    </div>
+                    <div class="search-box">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" id="vocab-search" placeholder="ค้นหาในหมวดนี้... / Cari...">
+                    </div>
+                </div>
+                
+                <div id="vocab-grid" class="vocab-grid">
+                    <div class="loading">กำลังโหลดข้อมูลคำศัพท์...</div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Edit Modal Dialog -->
+    <div class="modal-overlay" id="edit-modal" style="display: none;">
+        <div class="modal-window">
+            <button class="modal-close-btn" id="modal-close-btn" aria-label="ปิดหน้าต่าง">×</button>
+            <h3 id="modal-title">แก้ไขรายการคำศัพท์</h3>
+            
+            <form id="edit-form">
+                <!-- Image section -->
+                <div class="modal-media-section">
+                    <div class="modal-img-container" id="modal-img-container">
+                        <!-- image preview will be rendered here -->
+                    </div>
+                    <div class="modal-media-controls">
+                        <label class="media-label">รูปภาพแสดงผล (Image)</label>
+                        <div class="upload-btn-wrapper">
+                            <button type="button" class="btn-upload">เลือกรูปภาพ / Choose File</button>
+                            <input type="file" id="modal-file-input" accept="image/*">
+                        </div>
+                        <input type="text" id="modal-url-input" class="url-input" placeholder="หรือระบุ URL รูปภาพเช่น http://...">
+                    </div>
+                </div>
+
+                <!-- Input fields -->
+                <div class="modal-fields">
+                    <div class="field-group">
+                        <label for="modal-th-input">ชื่อคำศัพท์ภาษาไทย (Thai)</label>
+                        <input type="text" id="modal-th-input" required placeholder="เช่น ปวดฟัน, ข้าวผัด">
+                    </div>
+                    <div class="field-group">
+                        <label for="modal-ms-input">ชื่อคำศัพท์ภาษามลายู (Malay)</label>
+                        <input type="text" id="modal-ms-input" placeholder="เช่น Gigi Sakit, Nasi Goreng">
+                    </div>
+                </div>
+
+                <!-- Actions -->
+                <div class="modal-actions">
+                    <button type="submit" class="submit-btn" id="modal-submit-btn">บันทึกข้อมูล / Save</button>
+                    <span id="modal-status" class="status-msg"></span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="{{ url_for('static', filename='js/admin.js', v='1.2') }}"></script>
+</body>
+</html>

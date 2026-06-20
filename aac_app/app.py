@@ -3,8 +3,12 @@ from gtts import gTTS
 import os
 import json
 import hashlib
+import re
+import time
+from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
+app.config['TEMPLATES_AUTO_RELOAD'] = True
 
 # Set paths
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -74,6 +78,132 @@ def speak():
         print(f"TTS Error: {str(e)}")
         return jsonify({"error": f"TTS generation error: {str(e)}"}), 500
 
+@app.route('/admin')
+def admin():
+    return render_template('admin.html')
+
+@app.route('/api/settings', methods=['POST'])
+def save_settings():
+    try:
+        data_req = request.get_json() or {}
+        
+        # Load existing vocabulary.json
+        if not os.path.exists(DATA_FILE):
+            return jsonify({"error": "Data file not found"}), 404
+            
+        with open(DATA_FILE, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            
+        # Update settings
+        data['site_title_th'] = data_req.get('site_title_th', data.get('site_title_th', ''))
+        data['site_subtitle_th'] = data_req.get('site_subtitle_th', data.get('site_subtitle_th', ''))
+        data['site_title_ms'] = data_req.get('site_title_ms', data.get('site_title_ms', ''))
+        data['site_subtitle_ms'] = data_req.get('site_subtitle_ms', data.get('site_subtitle_ms', ''))
+        
+        # Save back to file
+        with open(DATA_FILE, 'w', encoding='utf-8') as f:
+            json.dump(data, f, ensure_ascii=False, indent=4)
+            
+        return jsonify({"status": "success"})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+@app.route('/api/update-item', methods=['POST'])
+def update_item():
+    try:
+        path = request.form.get('path', '').strip()
+        new_th = request.form.get('th', '').strip()
+        new_ms = request.form.get('ms', '').strip()
+        img_url = request.form.get('img_url', '').strip()
+        
+        if not path:
+            return jsonify({"error": "Path is required"}), 400
+            
+        if not os.path.exists(DATA_FILE):
+            return jsonify({"error": "Data file not found"}), 404
+            
+        with open(DATA_FILE, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            
+        # Walk to find item
+        parts = path.split('.')
+        item = data
+        for part in parts:
+            if isinstance(item, list):
+                try:
+                    item = item[int(part)]
+                except (ValueError, IndexError):
+                    return jsonify({"error": f"Invalid list index in path at {part}"}), 400
+            elif isinstance(item, dict):
+                if part in item:
+                    item = item[part]
+                else:
+                    return jsonify({"error": f"Key {part} not found in path"}), 400
+            else:
+                return jsonify({"error": "Invalid path structure"}), 400
+                
+        if not isinstance(item, dict):
+            return jsonify({"error": "Item is not a dictionary"}), 400
+            
+        # Keep track of old names to update TTS phrases if needed
+        old_th = item.get('th')
+        old_ms = item.get('ms')
+        
+        # Determine group (feelings or needs) based on path prefix
+        group = 'feelings' if path.startswith('feelings') else 'needs'
+        
+        # Update text labels
+        if new_th:
+            item['th'] = new_th
+        if new_ms:
+            item['ms'] = new_ms
+            
+        # Update phraseTh / phraseMs automatically to match new name
+        if new_th and old_th:
+            if 'phraseTh' in item:
+                if old_th in item['phraseTh']:
+                    item['phraseTh'] = item['phraseTh'].replace(old_th, new_th)
+                else:
+                    item['phraseTh'] = f"ฉันรู้สึก{new_th}" if group == 'feelings' else f"ฉันต้องการ{new_th}"
+            
+        if new_ms and old_ms:
+            if 'phraseMs' in item:
+                if old_ms.lower() in item['phraseMs'].lower():
+                    pattern = re.compile(re.escape(old_ms), re.IGNORECASE)
+                    item['phraseMs'] = pattern.sub(new_ms, item['phraseMs'])
+                else:
+                    ms_prefix = "Saya rasa" if group == 'feelings' else "Saya nak"
+                    item['phraseMs'] = f"{ms_prefix} {new_ms.lower()}"
+                    
+        # Handle image upload
+        uploaded_file = request.files.get('img_file')
+        if uploaded_file and uploaded_file.filename:
+            filename_orig = secure_filename(uploaded_file.filename)
+            filename = f"uploaded_{int(time.time())}_{filename_orig}"
+            
+            images_dir = os.path.join(BASE_DIR, 'static', 'images')
+            os.makedirs(images_dir, exist_ok=True)
+            save_path = os.path.join(images_dir, filename)
+            
+            uploaded_file.save(save_path)
+            item['img'] = f"/static/images/{filename}"
+        elif img_url:
+            item['img'] = img_url
+            
+        with open(DATA_FILE, 'w', encoding='utf-8') as f:
+            json.dump(data, f, ensure_ascii=False, indent=4)
+            
+        return jsonify({
+            "status": "success",
+            "img": item.get('img', ''),
+            "th": item.get('th'),
+            "ms": item.get('ms')
+        })
+        
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
     app.run(debug=False, host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
