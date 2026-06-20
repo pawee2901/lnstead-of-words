@@ -79,14 +79,19 @@ button {
     flex: 1;
 }
 
+.app-title-block > div {
+    min-width: 0;
+    flex: 1;
+}
+
 #screen-title {
     font-size: clamp(30px, 3.8vw, 45px);
     line-height: 1.12;
     font-weight: 900;
-    letter-spacing: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    letter-spacing: -0.5px;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: keep-all;
 }
 
 #screen-subtitle {
@@ -94,6 +99,9 @@ button {
     font-size: clamp(17px, 1.7vw, 24px);
     line-height: 1.32;
     margin-top: 4px;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: keep-all;
 }
 
 .icon-btn {
