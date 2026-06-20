@@ -79,6 +79,11 @@ def speak():
         return jsonify({"error": f"TTS generation error: {str(e)}"}), 500
 
 @app.route('/admin')
+@app.route('/admin/')
+@app.route('/Admin')
+@app.route('/Admin/')
+@app.route('/ADMIN')
+@app.route('/ADMIN/')
 def admin():
     return render_template('admin.html')
 
