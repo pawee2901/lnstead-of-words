@@ -5,6 +5,8 @@ import json
 import hashlib
 import re
 import time
+import subprocess
+import threading
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
@@ -17,6 +19,61 @@ AUDIO_DIR = os.path.join(BASE_DIR, 'static', 'audio')
 
 # Ensure audio directory exists
 os.makedirs(AUDIO_DIR, exist_ok=True)
+
+git_lock = threading.Lock()
+
+def push_changes_to_github():
+    def _push():
+        with git_lock:
+            try:
+                pat = os.environ.get('GITHUB_PAT')
+                if not pat:
+                    print("No GITHUB_PAT env var found. Skipping git push.")
+                    return
+                
+                print("GITHUB_PAT found. Preparing to push changes to GitHub...")
+                # Get the current repo path (owner/repo)
+                repo_path = "pawee2901/lnstead-of-words"
+                try:
+                    res = subprocess.run(["git", "remote", "get-url", "origin"], capture_output=True, text=True, check=True, cwd=BASE_DIR)
+                    url = res.stdout.strip()
+                    match = re.search(r'github\.com[:/]([^/]+/[^/]+?)(?:\.git)?$', url)
+                    if match:
+                        repo_path = match.group(1)
+                except Exception as ex:
+                    print(f"Error getting remote URL: {str(ex)}")
+
+                # Configure git user
+                subprocess.run(["git", "config", "user.name", "Render Admin Bot"], cwd=BASE_DIR, check=True)
+                subprocess.run(["git", "config", "user.email", "bot@render.com"], cwd=BASE_DIR, check=True)
+                
+                # Change remote origin URL to use token
+                repo_url = f"https://{pat}@github.com/{repo_path}.git"
+                subprocess.run(["git", "remote", "set-url", "origin", repo_url], cwd=BASE_DIR, check=True)
+                
+                # Pull remote changes first to avoid fast-forward conflicts, using rebase
+                # Also disable git interactive prompts
+                env = os.environ.copy()
+                env["GIT_TERMINAL_PROMPT"] = "0"
+                
+                subprocess.run(["git", "pull", "origin", "main", "--rebase"], cwd=BASE_DIR, env=env, check=True)
+                
+                # Stage files
+                subprocess.run(["git", "add", "data/vocabulary.json"], cwd=BASE_DIR, check=True)
+                subprocess.run(["git", "add", "static/images/"], cwd=BASE_DIR, check=True)
+                
+                # Check status
+                status = subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True, cwd=BASE_DIR, check=True)
+                if status.stdout.strip():
+                    subprocess.run(["git", "commit", "-m", "admin: update vocabulary from dashboard [skip render]"], cwd=BASE_DIR, check=True)
+                    subprocess.run(["git", "push", "origin", "main"], cwd=BASE_DIR, env=env, check=True)
+                    print("Successfully pushed updates to GitHub!")
+                else:
+                    print("No updates to commit.")
+            except Exception as e:
+                print(f"Error pushing to GitHub: {str(e)}")
+
+    threading.Thread(target=_push).start()
 
 @app.route('/')
 def index():
@@ -109,6 +166,8 @@ def save_settings():
         with open(DATA_FILE, 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=4)
             
+        push_changes_to_github()
+            
         return jsonify({"status": "success"})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
@@ -197,6 +256,8 @@ def update_item():
             
         with open(DATA_FILE, 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=4)
+            
+        push_changes_to_github()
             
         return jsonify({
             "status": "success",
