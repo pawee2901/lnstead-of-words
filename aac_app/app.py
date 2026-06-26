@@ -7,6 +7,9 @@ import re
 import time
 import subprocess
 import threading
+import base64
+import urllib.request
+import urllib.error
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
@@ -20,58 +23,105 @@ AUDIO_DIR = os.path.join(BASE_DIR, 'static', 'audio')
 # Ensure audio directory exists
 os.makedirs(AUDIO_DIR, exist_ok=True)
 
+def upload_file_to_github(repo_path, file_path_in_repo, local_file_path, pat, message):
+    try:
+        # Read local file content and encode to base64
+        with open(local_file_path, "rb") as f:
+            file_data = f.read()
+        encoded_content = base64.b64encode(file_data).decode("utf-8")
+        
+        # API URL
+        api_url = f"https://api.github.com/repos/{repo_path}/contents/{file_path_in_repo}"
+        
+        # Check if file already exists to get its SHA (needed for updates)
+        sha = None
+        req_get = urllib.request.Request(api_url)
+        req_get.add_header("Authorization", f"token {pat}")
+        req_get.add_header("Accept", "application/vnd.github.v3+json")
+        req_get.add_header("User-Agent", "Flask-App")
+        try:
+            with urllib.request.urlopen(req_get) as response:
+                res_data = json.loads(response.read().decode("utf-8"))
+                sha = res_data.get("sha")
+        except urllib.error.HTTPError as e:
+            if e.code != 404: # 404 means file doesn't exist yet, which is fine
+                raise e
+        
+        # Prepare PUT request payload
+        payload = {
+            "message": message,
+            "content": encoded_content,
+            "branch": "main"
+        }
+        if sha:
+            payload["sha"] = sha
+            
+        data_json = json.dumps(payload).encode("utf-8")
+        
+        req_put = urllib.request.Request(api_url, data=data_json, method="PUT")
+        req_put.add_header("Authorization", f"token {pat}")
+        req_put.add_header("Accept", "application/vnd.github.v3+json")
+        req_put.add_header("Content-Type", "application/json")
+        req_put.add_header("User-Agent", "Flask-App")
+        
+        with urllib.request.urlopen(req_put) as response:
+            print(f"Successfully uploaded {file_path_in_repo} to GitHub! Status: {response.status}")
+            return True
+    except Exception as e:
+        print(f"Failed to upload {file_path_in_repo} to GitHub: {str(e)}")
+        return False
+
 git_lock = threading.Lock()
 
-def push_changes_to_github():
+def push_changes_to_github(local_image_path=None):
     def _push():
         with git_lock:
             try:
                 pat = os.environ.get('GITHUB_PAT')
                 if not pat:
-                    print("No GITHUB_PAT env var found. Skipping git push.")
+                    print("No GITHUB_PAT env var found. Skipping GitHub API sync.")
                     return
                 
-                print("GITHUB_PAT found. Preparing to push changes to GitHub...")
+                print("GITHUB_PAT found. Preparing to sync changes via GitHub API...")
+                
                 # Get the current repo path (owner/repo)
-                repo_path = "pawee2901/lnstead-of-words"
+                repo_path = "pawee2901/lnstead-of-words" # default fallback
                 try:
-                    res = subprocess.run(["git", "remote", "get-url", "origin"], capture_output=True, text=True, check=True, cwd=BASE_DIR)
-                    url = res.stdout.strip()
-                    match = re.search(r'github\.com[:/]([^/]+/[^/]+?)(?:\.git)?$', url)
-                    if match:
-                        repo_path = match.group(1)
+                    res = subprocess.run(["git", "remote", "get-url", "origin"], capture_output=True, text=True, cwd=BASE_DIR)
+                    if res.returncode == 0:
+                        url = res.stdout.strip()
+                        match = re.search(r'github\.com[:/]([^/]+/[^/]+?)(?:\.git)?$', url)
+                        if match:
+                            repo_path = match.group(1)
                 except Exception as ex:
                     print(f"Error getting remote URL: {str(ex)}")
 
-                # Configure git user
-                subprocess.run(["git", "config", "user.name", "Render Admin Bot"], cwd=BASE_DIR, check=True)
-                subprocess.run(["git", "config", "user.email", "bot@render.com"], cwd=BASE_DIR, check=True)
+                # 1. If there's an image, upload it first
+                if local_image_path and os.path.exists(local_image_path):
+                    filename = os.path.basename(local_image_path)
+                    repo_img_path = f"aac_app/static/images/{filename}"
+                    print(f"Uploading image {filename} to GitHub...")
+                    upload_file_to_github(
+                        repo_path=repo_path,
+                        file_path_in_repo=repo_img_path,
+                        local_file_path=local_image_path,
+                        pat=pat,
+                        message=f"admin: upload image {filename} [skip render]"
+                    )
                 
-                # Change remote origin URL to use token
-                repo_url = f"https://{pat}@github.com/{repo_path}.git"
-                subprocess.run(["git", "remote", "set-url", "origin", repo_url], cwd=BASE_DIR, check=True)
-                
-                # Pull remote changes first to avoid fast-forward conflicts, using rebase
-                # Also disable git interactive prompts
-                env = os.environ.copy()
-                env["GIT_TERMINAL_PROMPT"] = "0"
-                
-                subprocess.run(["git", "pull", "origin", "main", "--rebase"], cwd=BASE_DIR, env=env, check=True)
-                
-                # Stage files
-                subprocess.run(["git", "add", "data/vocabulary.json"], cwd=BASE_DIR, check=True)
-                subprocess.run(["git", "add", "static/images/"], cwd=BASE_DIR, check=True)
-                
-                # Check status
-                status = subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True, cwd=BASE_DIR, check=True)
-                if status.stdout.strip():
-                    subprocess.run(["git", "commit", "-m", "admin: update vocabulary from dashboard [skip render]"], cwd=BASE_DIR, check=True)
-                    subprocess.run(["git", "push", "origin", "main"], cwd=BASE_DIR, env=env, check=True)
-                    print("Successfully pushed updates to GitHub!")
-                else:
-                    print("No updates to commit.")
+                # 2. Upload vocabulary.json
+                print("Uploading vocabulary.json to GitHub...")
+                repo_vocab_path = "aac_app/data/vocabulary.json"
+                upload_file_to_github(
+                    repo_path=repo_path,
+                    file_path_in_repo=repo_vocab_path,
+                    local_file_path=DATA_FILE,
+                    pat=pat,
+                    message="admin: update vocabulary.json [skip render]"
+                )
+                print("GitHub API sync completed!")
             except Exception as e:
-                print(f"Error pushing to GitHub: {str(e)}")
+                print(f"Error in push_changes_to_github: {str(e)}")
 
     threading.Thread(target=_push).start()
 
@@ -241,6 +291,7 @@ def update_item():
                     
         # Handle image upload
         uploaded_file = request.files.get('img_file')
+        save_path = None
         if uploaded_file and uploaded_file.filename:
             filename_orig = secure_filename(uploaded_file.filename)
             filename = f"uploaded_{int(time.time())}_{filename_orig}"
@@ -257,7 +308,7 @@ def update_item():
         with open(DATA_FILE, 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=4)
             
-        push_changes_to_github()
+        push_changes_to_github(local_image_path=save_path)
             
         return jsonify({
             "status": "success",
