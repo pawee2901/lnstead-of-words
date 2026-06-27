@@ -790,10 +790,10 @@
                     {
                         "th": "ขนมจีน",
                         "ms": "Laksa",
-                        "img": "/static/images/ขนมจีน.png",
+                        "img": "https://raw.githubusercontent.com/pawee2901/imgbucket/main/uploaded_1782578821717829340_73caa693b301158887373c0484f63586.jpeg",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการทานขนมจีน",
-                        "phraseMs": "Saya nak laksa"
+                        "phraseMs": "Saya nak Laksa"
                     },
                     {
                         "th": "ยำ",
