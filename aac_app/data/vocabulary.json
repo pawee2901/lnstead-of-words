@@ -443,8 +443,8 @@
                 "th": "หนาว",
                 "ms": "Sejuk",
                 "phraseTh": "ฉันรู้สึกหนาว",
-                "phraseMs": "Saya rasa sejuk",
-                "img": "/static/images/ฉันรู้สึกหนาว.png"
+                "phraseMs": "Saya rasa Sejuk",
+                "img": "https://raw.githubusercontent.com/pawee2901/imgbucket/main/uploaded_1782552046_IMG_2270.png"
             },
             {
                 "th": "ร้อน",
