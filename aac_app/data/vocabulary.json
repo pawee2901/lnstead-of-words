@@ -179,7 +179,7 @@
                 "th": "ชา",
                 "ms": "Kebas",
                 "phraseTh": "ฉันรู้สึกชา",
-                "phraseMs": "Saya rasa kebas",
+                "phraseMs": "Saya rasa Kebas",
                 "speak": false,
                 "children": [
                     {
@@ -232,7 +232,7 @@
                         "img": "/static/images/ฉันรู้สึกชาซีขวา.png"
                     }
                 ],
-                "img": "/static/images/ชาที่ใบหน้า.png",
+                "img": "https://raw.githubusercontent.com/pawee2901/imgbucket/main/uploaded_1782577788203060320_9271A758-7F42-4174-B82E-7D522BA1F4F7.png",
                 "icon": "✚",
                 "subTh": "เลือกตำแหน่งที่ชา",
                 "subMs": "Pilih bahagian kebas"
