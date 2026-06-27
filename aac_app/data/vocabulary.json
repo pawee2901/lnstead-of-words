@@ -854,10 +854,10 @@
                     {
                         "th": "ผักลวก",
                         "ms": "Sayur Celur",
-                        "img": "/static/images/ผักลวก.png",
+                        "img": "https://raw.githubusercontent.com/pawee2901/imgbucket/main/uploaded_1782578862972578640_30ba594d51486eb031f7d5f06e6af093.jpeg",
                         "icon": "○",
                         "phraseTh": "ฉันต้องการทานผักลวก",
-                        "phraseMs": "Saya nak sayur celur"
+                        "phraseMs": "Saya nak Sayur Celur"
                     }
                 ]
             },
