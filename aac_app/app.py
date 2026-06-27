@@ -222,6 +222,37 @@ def admin():
 def sync_status():
     return jsonify(last_sync_status)
 
+@app.route('/api/test-github')
+def test_github():
+    """Test GitHub connection and PAT validity"""
+    pat = os.environ.get('GITHUB_PAT')
+    if not pat:
+        return jsonify({"ok": False, "error": "ไม่พบ GITHUB_PAT ใน Environment Variables ของ Render เลย\nวิธีแก้: ไปที่ Render > เลือก Service > Environment > เพิ่ม GITHUB_PAT"})
+    try:
+        # Test PAT validity
+        req = urllib.request.Request("https://api.github.com/user")
+        req.add_header("Authorization", f"token {pat}")
+        req.add_header("User-Agent", "Flask-App")
+        with urllib.request.urlopen(req) as resp:
+            user_data = json.loads(resp.read().decode("utf-8"))
+            username = user_data.get("login", "unknown")
+        
+        # Test imgbucket repo access
+        req2 = urllib.request.Request("https://api.github.com/repos/pawee2901/imgbucket")
+        req2.add_header("Authorization", f"token {pat}")
+        req2.add_header("User-Agent", "Flask-App")
+        try:
+            with urllib.request.urlopen(req2) as resp2:
+                repo_data = json.loads(resp2.read().decode("utf-8"))
+                repo_name = repo_data.get("full_name", "?")
+            return jsonify({"ok": True, "message": f"เชื่อมต่อสำเร็จ! ล็อกอินเป็น: {username} | เข้าถึงคลัง: {repo_name}"})
+        except urllib.error.HTTPError as e2:
+            return jsonify({"ok": False, "error": f"PAT ถูกต้อง (ล็อกอินเป็น {username}) แต่เข้าคลัง imgbucket ไม่ได้: HTTP {e2.code} - อาจสร้างคลังยังไม่เสร็จ หรือ PAT ไม่มีสิทธิ์ repo"})
+    except urllib.error.HTTPError as e:
+        return jsonify({"ok": False, "error": f"GITHUB_PAT ไม่ถูกต้องหรือหมดอายุแล้ว: HTTP {e.code}"})
+    except Exception as ex:
+        return jsonify({"ok": False, "error": f"เกิดข้อผิดพลาด: {str(ex)}"})
+
 @app.route('/api/settings', methods=['POST'])
 def save_settings():
     try:

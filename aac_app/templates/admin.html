@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ระบบหลังบ้านแอดมิน - Thai-Malayu AAC</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css', v='1.2') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}?v=1.5">
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;800&family=Outfit:wght@400;600;900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -24,6 +24,7 @@
         <div id="sync-status-banner" class="sync-banner status-idle">
             <span class="sync-icon">☁</span>
             <span id="sync-status-text" class="sync-text">กำลังโหลดสถานะการสำรองข้อมูล...</span>
+            <button onclick="testGithubConnection()" style="margin-left:auto;padding:6px 14px;background:#4a90d9;color:#fff;border:none;border-radius:20px;font-size:13px;font-weight:700;cursor:pointer;">🔗 ทดสอบการเชื่อมต่อ</button>
         </div>
 
         <!-- Breadcrumbs Navigation -->
@@ -129,6 +130,6 @@
     </div>
 
     <!-- Script -->
-    <script src="{{ url_for('static', filename='js/admin.js', v='1.2') }}"></script>
+    <script src="{{ url_for('static', filename='js/admin.js') }}?v=1.5"></script>
 </body>
 </html>
