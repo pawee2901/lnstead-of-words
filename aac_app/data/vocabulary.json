@@ -32,84 +32,84 @@
                 "children": [
                     {
                         "th": "ปวดฟัน",
-                        "ms": "Sakit Gigi",
+                        "ms": "Gigi",
                         "phraseTh": "ฉันรู้สึกปวดฟัน",
                         "phraseMs": "Saya rasa sakit gigi",
                         "img": "/static/images/tooth.png"
                     },
                     {
                         "th": "ปวดตา",
-                        "ms": "Sakit Mata",
+                        "ms": "Mata",
                         "phraseTh": "ฉันรู้สึกปวดตา",
                         "phraseMs": "Saya rasa sakit mata",
                         "img": "/static/images/eye.png"
                     },
                     {
                         "th": "ปวดขา",
-                        "ms": "Sakit Kaki",
+                        "ms": "Kaki",
                         "phraseTh": "ฉันรู้สึกปวดขา",
                         "phraseMs": "Saya rasa sakit kaki",
                         "img": "/static/images/leg.png"
                     },
                     {
                         "th": "ปวดแขน",
-                        "ms": "Sakit Tangan",
+                        "ms": "Tangan",
                         "phraseTh": "ฉันรู้สึกปวดแขน",
                         "phraseMs": "Saya rasa sakit tangan",
                         "img": "/static/images/arm.png"
                     },
                     {
                         "th": "ปวดหลัง",
-                        "ms": "Sakit Belakang",
+                        "ms": "Belakang",
                         "phraseTh": "ฉันรู้สึกปวดหลัง",
                         "phraseMs": "Saya rasa sakit belakang",
                         "img": "/static/images/back.png"
                     },
                     {
                         "th": "ปวดไหล่",
-                        "ms": "Sakit Bahu",
+                        "ms": "Bahu",
                         "phraseTh": "ฉันรู้สึกปวดไหล่",
                         "phraseMs": "Saya rasa sakit bahu",
                         "img": "/static/images/shoulder.png"
                     },
                     {
                         "th": "ปวดหัว",
-                        "ms": "Sakit Kepala",
+                        "ms": "Kepala",
                         "phraseTh": "ฉันรู้สึกปวดหัว",
                         "phraseMs": "Saya rasa sakit kepala",
                         "img": "/static/images/head.png"
                     },
                     {
                         "th": "ปวดคอ",
-                        "ms": "Sakit Leher",
+                        "ms": "Leher",
                         "phraseTh": "ฉันรู้สึกปวดคอ",
                         "phraseMs": "Saya rasa sakit leher",
                         "img": "/static/images/neck.png"
                     },
                     {
                         "th": "ปวดเอว",
-                        "ms": "Sakit Pinggang",
+                        "ms": "Pinggang",
                         "phraseTh": "ฉันรู้สึกปวดเอว",
                         "phraseMs": "Saya rasa sakit pinggang",
                         "img": "/static/images/waist.png"
                     },
                     {
                         "th": "ปวดท้อง",
-                        "ms": "Sakit Perut",
+                        "ms": "Perut",
                         "phraseTh": "ฉันรู้สึกปวดท้อง",
                         "phraseMs": "Saya rasa sakit perut",
                         "img": "/static/images/stomach.png"
                     },
                     {
                         "th": "ปวดข้อ",
-                        "ms": "Sakit Sendi",
+                        "ms": "Sendi",
                         "phraseTh": "ฉันรู้สึกปวดข้อ",
                         "phraseMs": "Saya rasa sakit sendi",
                         "img": "/static/images/joint.png"
                     },
                     {
                         "th": "ปวดเข่า",
-                        "ms": "Sakit Lutut",
+                        "ms": "Lutut",
                         "phraseTh": "ฉันรู้สึกปวดเข่า",
                         "phraseMs": "Saya rasa sakit lutut",
                         "img": "/static/images/knee.png"
@@ -129,42 +129,42 @@
                 "children": [
                     {
                         "th": "เมื่อยแขน",
-                        "ms": "Lenguh Lengan",
+                        "ms": "Lengan",
                         "phraseTh": "ฉันรู้สึกเมื่อยแขน",
                         "phraseMs": "Saya rasa lenguh tangan",
                         "img": "/static/images/arm.png"
                     },
                     {
                         "th": "เมื่อยขา",
-                        "ms": "Lenguh Kaki",
+                        "ms": "Kaki",
                         "phraseTh": "ฉันรู้สึกเมื่อยขา",
                         "phraseMs": "Saya rasa lenguh kaki",
                         "img": "/static/images/leg.png"
                     },
                     {
                         "th": "เมื่อยหลัง",
-                        "ms": "Lenguh Belakang",
+                        "ms": "Belakang",
                         "phraseTh": "ฉันรู้สึกเมื่อยหลัง",
                         "phraseMs": "Saya rasa lenguh belakang",
                         "img": "/static/images/back.png"
                     },
                     {
                         "th": "เมื่อยเอว",
-                        "ms": "Lenguh Pinggang",
+                        "ms": "Pinggang",
                         "phraseTh": "ฉันรู้สึกเมื่อยเอว",
                         "phraseMs": "Saya rasa lenguh pinggang",
                         "img": "/static/images/waist.png"
                     },
                     {
                         "th": "เมื่อยไหล่",
-                        "ms": "Lenguh Bahu",
+                        "ms": "Bahu",
                         "phraseTh": "ฉันรู้สึกเมื่อยไหล่",
                         "phraseMs": "Saya rasa lenguh bahu",
                         "img": "/static/images/shoulder.png"
                     },
                     {
                         "th": "เมื่อยคอ",
-                        "ms": "Lenguh Leher",
+                        "ms": "Leher",
                         "phraseTh": "ฉันรู้สึกเมื่อยคอ",
                         "phraseMs": "Saya rasa lenguh leher",
                         "img": "/static/images/neck.png"
@@ -184,49 +184,49 @@
                 "children": [
                     {
                         "th": "ชาใบหน้า",
-                        "ms": "Kebas Muka",
+                        "ms": "Muka",
                         "phraseTh": "ฉันรู้สึกชาใบหน้า",
                         "phraseMs": "Saya rasa kebas muka",
                         "img": "/static/images/ชาที่ใบหน้า.png"
                     },
                     {
                         "th": "ชาปาก",
-                        "ms": "Kebas Mulut",
+                        "ms": "Mulut",
                         "phraseTh": "ฉันรู้สึกชาปาก",
                         "phraseMs": "Saya rasa kebas mulut",
                         "img": "/static/images/ปาก.png"
                     },
                     {
                         "th": "ชาลิ้น",
-                        "ms": "Kebas Lidah",
+                        "ms": "Lidah",
                         "phraseTh": "ฉันรู้สึกชาลิ้น",
                         "phraseMs": "Saya rasa kebas lidah",
                         "img": "/static/images/ลิ้น.png"
                     },
                     {
                         "th": "ชาแขน",
-                        "ms": "Kebas Tangan",
+                        "ms": "Tangan",
                         "phraseTh": "ฉันรู้สึกชาแขน",
                         "phraseMs": "Saya rasa kebas tangan",
                         "img": "/static/images/arm.png"
                     },
                     {
                         "th": "ชาขา",
-                        "ms": "Kebas Kaki",
+                        "ms": "Kaki",
                         "phraseTh": "ฉันรู้สึกชาขา",
                         "phraseMs": "Saya rasa kebas kaki",
                         "img": "/static/images/leg.png"
                     },
                     {
                         "th": "ชาซีกซ้าย",
-                        "ms": "Kebas Sebelah Kiri",
+                        "ms": "Sebelah Kiri",
                         "phraseTh": "ฉันรู้สึกชาซีกซ้าย",
                         "phraseMs": "Saya rasa kebas sebelah kiri",
                         "img": "/static/images/สึกชาซีกซ้าย.png"
                     },
                     {
                         "th": "ชาซีกขวา",
-                        "ms": "Kebas Sebelah Kanan",
+                        "ms": "Sebelah Kanan",
                         "phraseTh": "ฉันรู้สึกชาซีกขวา",
                         "phraseMs": "Saya rasa kebas sebelah kanan",
                         "img": "/static/images/ฉันรู้สึกชาซีขวา.png"
