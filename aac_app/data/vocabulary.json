@@ -2,7 +2,7 @@
     "site_title_th": "Thai-Malayu For Aphasia",
     "site_subtitle_th": ".",
     "site_title_ms": "Thai-Malayu For Aphasia",
-    "site_subtitle_ms": ".",
+    "site_subtitle_ms": "Thai - Melayu untuk warga emas",
     "feelings": {
         "categories": [
             {
@@ -124,7 +124,7 @@
                 "th": "เมื่อย",
                 "ms": "Lenguh",
                 "phraseTh": "ฉันรู้สึกเมื่อย",
-                "phraseMs": "Saya rasa Lenguh",
+                "phraseMs": "Saya rasa lenguh",
                 "speak": false,
                 "children": [
                     {
@@ -170,7 +170,7 @@
                         "img": "/static/images/neck.png"
                     }
                 ],
-                "img": "https://raw.githubusercontent.com/pawee2901/imgbucket/main/uploaded_1782540846_S__4956172.jpg",
+                "img": "/static/images/back.png",
                 "icon": "✚",
                 "subTh": "เลือกตำแหน่งที่เมื่อย",
                 "subMs": "Pilih bahagian lenguh"
