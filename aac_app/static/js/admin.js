@@ -15,6 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
             initSearch();
             initModal();
             renderCurrentLevel();
+            
+            // Sync status polling
+            updateSyncStatus();
+            setInterval(updateSyncStatus, 3000);
         })
         .catch(err => {
             console.error('Error loading vocabulary:', err);
@@ -24,6 +28,22 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 });
+
+function updateSyncStatus() {
+    fetch('/api/sync-status')
+        .then(res => res.json())
+        .then(data => {
+            const banner = document.getElementById('sync-status-banner');
+            const text = document.getElementById('sync-status-text');
+            if (banner && text) {
+                banner.className = 'sync-banner ' + 'status-' + data.status;
+                text.innerText = data.message;
+            }
+        })
+        .catch(err => {
+            console.error('Error fetching sync status:', err);
+        });
+}
 
 function initSettingsForm() {
     document.getElementById('site-title-th').value = vocabularyData.site_title_th || '';

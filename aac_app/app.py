@@ -73,13 +73,27 @@ def upload_file_to_github(repo_path, file_path_in_repo, local_file_path, pat, me
 
 git_lock = threading.Lock()
 
+last_sync_status = {
+    "status": "idle",
+    "message": "ยังไม่มีการเริ่มอัปโหลดสำรองข้อมูล",
+    "timestamp": 0
+}
+
 def push_changes_to_github(local_image_path=None):
     def _push():
+        global last_sync_status
         with git_lock:
             try:
+                last_sync_status["status"] = "syncing"
+                last_sync_status["message"] = "กำลังส่งข้อมูลรูปภาพและไฟล์ไปที่ GitHub..."
+                last_sync_status["timestamp"] = int(time.time())
+                
                 pat = os.environ.get('GITHUB_PAT')
                 if not pat:
-                    print("No GITHUB_PAT env var found. Skipping GitHub API sync.")
+                    msg = "ไม่พบตัวแปร GITHUB_PAT ในการตั้งค่า (Environment Variable) ข้อมูลจะบันทึกชั่วคราวเท่านั้นและจะหายไปเมื่อเซิร์ฟเวอร์หลับหรือเริ่มทำงานใหม่"
+                    print(msg)
+                    last_sync_status["status"] = "warning"
+                    last_sync_status["message"] = msg
                     return
                 
                 print("GITHUB_PAT found. Preparing to sync changes via GitHub API...")
@@ -97,11 +111,12 @@ def push_changes_to_github(local_image_path=None):
                     print(f"Error getting remote URL: {str(ex)}")
 
                 # 1. If there's an image, upload it first
+                img_ok = True
                 if local_image_path and os.path.exists(local_image_path):
                     filename = os.path.basename(local_image_path)
                     repo_img_path = f"aac_app/static/images/{filename}"
                     print(f"Uploading image {filename} to GitHub...")
-                    upload_file_to_github(
+                    img_ok = upload_file_to_github(
                         repo_path=repo_path,
                         file_path_in_repo=repo_img_path,
                         local_file_path=local_image_path,
@@ -112,16 +127,26 @@ def push_changes_to_github(local_image_path=None):
                 # 2. Upload vocabulary.json
                 print("Uploading vocabulary.json to GitHub...")
                 repo_vocab_path = "aac_app/data/vocabulary.json"
-                upload_file_to_github(
+                vocab_ok = upload_file_to_github(
                     repo_path=repo_path,
                     file_path_in_repo=repo_vocab_path,
                     local_file_path=DATA_FILE,
                     pat=pat,
                     message="admin: update vocabulary.json [skip render]"
                 )
-                print("GitHub API sync completed!")
+                
+                if img_ok and vocab_ok:
+                    print("GitHub API sync completed!")
+                    last_sync_status["status"] = "success"
+                    last_sync_status["message"] = "สำรองและบันทึกข้อมูลรูปภาพบน GitHub เรียบร้อยแล้ว (ถาวร)"
+                else:
+                    last_sync_status["status"] = "error"
+                    last_sync_status["message"] = "อัปโหลดข้อมูลล้มเหลว: การตอบกลับจากเซิร์ฟเวอร์ GitHub ผิดพลาด โปรดตรวจสอบสิทธิ์ของรหัสสิทธิ์ GITHUB_PAT"
             except Exception as e:
-                print(f"Error in push_changes_to_github: {str(e)}")
+                err_msg = f"เกิดข้อผิดพลาดในการเชื่อมต่อ: {str(e)}"
+                print(err_msg)
+                last_sync_status["status"] = "error"
+                last_sync_status["message"] = err_msg
 
     threading.Thread(target=_push).start()
 
@@ -193,6 +218,10 @@ def speak():
 @app.route('/ADMIN/')
 def admin():
     return render_template('admin.html')
+
+@app.route('/api/sync-status')
+def sync_status():
+    return jsonify(last_sync_status)
 
 @app.route('/api/settings', methods=['POST'])
 def save_settings():
