@@ -114,14 +114,13 @@ def push_changes_to_github(local_image_path=None):
                 img_ok = True
                 if local_image_path and os.path.exists(local_image_path):
                     filename = os.path.basename(local_image_path)
-                    repo_img_path = f"aac_app/static/images/{filename}"
-                    print(f"Uploading image {filename} to GitHub...")
+                    print(f"Uploading image {filename} to GitHub repo pawee2901/imgbucket...")
                     img_ok = upload_file_to_github(
-                        repo_path=repo_path,
-                        file_path_in_repo=repo_img_path,
+                        repo_path="pawee2901/imgbucket",
+                        file_path_in_repo=filename,
                         local_file_path=local_image_path,
                         pat=pat,
-                        message=f"admin: upload image {filename} [skip render]"
+                        message=f"upload image {filename}"
                     )
                 
                 # 2. Upload vocabulary.json
@@ -330,7 +329,7 @@ def update_item():
             save_path = os.path.join(images_dir, filename)
             
             uploaded_file.save(save_path)
-            item['img'] = f"/static/images/{filename}"
+            item['img'] = f"https://raw.githubusercontent.com/pawee2901/imgbucket/main/{filename}"
         elif img_url:
             item['img'] = img_url
             
