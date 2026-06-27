@@ -35,7 +35,8 @@ class GitHubUploadError(RuntimeError):
 
 def _github_request(url, pat, data=None, method=None):
     req = urllib.request.Request(url, data=data, method=method)
-    req.add_header('Authorization', f'Bearer {pat}')
+    if pat:
+        req.add_header('Authorization', f'Bearer {pat}')
     req.add_header('Accept', 'application/vnd.github+json')
     req.add_header('X-GitHub-Api-Version', GITHUB_API_VERSION)
     req.add_header('Content-Type', 'application/json')
@@ -95,6 +96,45 @@ def upload_file_to_github(repo_path, file_path_in_repo, local_file_path, pat, me
         raise GitHubUploadError(
             f'เชื่อมต่อ GitHub เพื่อบันทึก {repo_path}/{file_path_in_repo} ไม่สำเร็จ: {e}'
         ) from e
+
+
+def refresh_data_from_github():
+    """Restore the latest vocabulary when an ephemeral Render instance starts."""
+    pat = os.environ.get('GITHUB_PAT', '').strip()
+    encoded_path = urllib.parse.quote(GITHUB_DATA_PATH.strip('/'), safe='/')
+    encoded_branch = urllib.parse.quote(GITHUB_BRANCH, safe='')
+    api_url = (
+        f'https://api.github.com/repos/{GITHUB_DATA_REPO}/contents/'
+        f'{encoded_path}?ref={encoded_branch}'
+    )
+
+    try:
+        with urllib.request.urlopen(_github_request(api_url, pat), timeout=20) as response:
+            response_data = json.loads(response.read().decode('utf-8'))
+
+        encoded_content = response_data.get('content', '').replace('\n', '')
+        if not encoded_content:
+            raise ValueError('GitHub response does not contain vocabulary data')
+
+        file_content = base64.b64decode(encoded_content)
+        json.loads(file_content.decode('utf-8'))
+
+        temp_file = f'{DATA_FILE}.{os.getpid()}.tmp'
+        with open(temp_file, 'wb') as handle:
+            handle.write(file_content)
+        os.replace(temp_file, DATA_FILE)
+        print(f'Loaded latest vocabulary from GitHub: {GITHUB_DATA_REPO}/{GITHUB_DATA_PATH}')
+        return True
+    except Exception as error:
+        print(f'Could not refresh vocabulary from GitHub; using bundled data: {error}')
+        return False
+
+
+sync_on_startup = os.environ.get(
+    'GITHUB_SYNC_ON_STARTUP', os.environ.get('RENDER', '')
+).strip().lower() in {'1', 'true', 'yes'}
+if sync_on_startup:
+    refresh_data_from_github()
 
 git_lock = threading.Lock()
 

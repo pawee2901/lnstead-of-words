@@ -87,3 +87,4 @@ aac_app/
 > **ข้อจำกัดของระดับบริการฟรีบน Render (Render Free Tier Warning):**
 > - **ข้อมูลใน filesystem ของ Render เป็นแบบชั่วคราว:** ไฟล์ที่บันทึกเฉพาะในเครื่อง Render จะหายเมื่อ service restart หรือ deploy ใหม่
 > - หน้าแอดมินจึงบันทึกรูปไปที่ `imgbucket` และบันทึก `data/vocabulary.json` กลับไปที่ `lnstead-of-words` ผ่าน GitHub API หาก GitHub ปฏิเสธการบันทึก หน้าแอดมินจะแสดง error และจะไม่แจ้งว่าสำเร็จ
+> - ทุกครั้งที่ instance ของ Render เริ่มทำงาน แอปจะโหลด `vocabulary.json` รุ่นล่าสุดจาก GitHub อัตโนมัติ จึงไม่ย้อนกลับไปใช้รูปจาก deploy เก่า
