@@ -658,7 +658,7 @@
             },
             {
                 "id": "personal",
-                "th": "ธุระส่วนตัว",
+                "th": "ทำธุระส่วนตัว",
                 "ms": "Urusan Diri",
                 "icon": "✓",
                 "tone": "tone-mint",
