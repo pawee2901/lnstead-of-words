@@ -124,7 +124,7 @@
                 "th": "เมื่อย",
                 "ms": "Lenguh",
                 "phraseTh": "ฉันรู้สึกเมื่อย",
-                "phraseMs": "Saya rasa lenguh",
+                "phraseMs": "Saya rasa Lenguh",
                 "speak": false,
                 "children": [
                     {
@@ -170,7 +170,7 @@
                         "img": "/static/images/neck.png"
                     }
                 ],
-                "img": "/static/images/back.png",
+                "img": "https://raw.githubusercontent.com/pawee2901/imgbucket/main/uploaded_1782578588314911138_D3A6E7B9-1081-4BFC-A096-D5AF35905524.png",
                 "icon": "✚",
                 "subTh": "เลือกตำแหน่งที่เมื่อย",
                 "subMs": "Pilih bahagian lenguh"
