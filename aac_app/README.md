@@ -73,11 +73,17 @@ aac_app/
    - **Build Command**: พิมพ์ `pip install -r requirements.txt`
    - **Start Command**: พิมพ์ `gunicorn app:app`
    - **Instance Type**: เลือกเป็นแบบ **Free**
-4. **คลิก Create Web Service**:
+4. **ตั้งค่า GitHub token สำหรับหน้าแอดมิน**:
+   - สร้าง Fine-grained personal access token ใน GitHub
+   - เลือก repository `lnstead-of-words` และ `imgbucket`
+   - กำหนด Repository permission > **Contents: Read and write**
+   - ใน Render ไปที่ **Environment** แล้วเพิ่ม `GITHUB_PAT` โดยใส่ token นี้เป็นค่า
+   - หากใช้ token คนละตัวสำหรับคลังรูป ให้เพิ่ม `GITHUB_IMAGE_PAT` สำหรับ `imgbucket`
+   - ห้ามเขียน token ลงในไฟล์หรือ commit ขึ้น GitHub
+5. **คลิก Create Web Service**:
    - ระบบจะใช้เวลาติดตั้งประมาณ 2-3 นาที และจะให้ลิงก์สีฟ้าสำหรับเปิดใช้งานเว็บของคุณ เช่น `https://thai-malayu-aac.onrender.com`
 
 > [!CAUTION]
 > **ข้อจำกัดของระดับบริการฟรีบน Render (Render Free Tier Warning):**
-> - **ข้อมูลจะถูกรีเซ็ตเมื่อเซิร์ฟเวอร์พักการทำงาน (Ephemeral Storage):** เนื่องจากบริการแบบฟรีของ Render ไม่มีฮาร์ดดิสก์แบบถาวร (Persistent Disk) ข้อมูลการแก้ไขชื่อเว็บ หรือรูปภาพที่อัปโหลดผ่านหน้าแอดมินบนหน้าเว็บออนไลน์ จะหายไปเมื่อเซิร์ฟเวอร์ Sleep (เกิดจากการไม่มีคนเข้าใช้งานเกิน 15 นาที) หรือเซิร์ฟเวอร์รีสตาร์ทประจำวัน
-> - **แนวทางปฏิบัติแนะนำ (Recommended Workflow):** แนะนำให้กดตั้งค่า อัปโหลดรูปภาพ หรือแก้ไขข้อมูลคำศัพท์บนเครื่องคอมพิวเตอร์ของคุณในหน้าแอดมินท้องถิ่น (`http://127.0.0.1:5000/admin`) ให้เรียบร้อยก่อน จากนั้นทำการ **Commit และ Push** โค้ดขึ้น GitHub เมื่อ GitHub อัปเดต Render จะดึงข้อมูลคำศัพท์และรูปภาพตัวล่าสุดของคุณไปแสดงผลออนไลน์อย่างถาวรและไม่มีวันหายครับ!
-
+> - **ข้อมูลใน filesystem ของ Render เป็นแบบชั่วคราว:** ไฟล์ที่บันทึกเฉพาะในเครื่อง Render จะหายเมื่อ service restart หรือ deploy ใหม่
+> - หน้าแอดมินจึงบันทึกรูปไปที่ `imgbucket` และบันทึก `data/vocabulary.json` กลับไปที่ `lnstead-of-words` ผ่าน GitHub API หาก GitHub ปฏิเสธการบันทึก หน้าแอดมินจะแสดง error และจะไม่แจ้งว่าสำเร็จ

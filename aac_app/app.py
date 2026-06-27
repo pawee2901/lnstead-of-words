@@ -5,11 +5,11 @@ import json
 import hashlib
 import re
 import time
-import subprocess
 import threading
 import base64
 import urllib.request
 import urllib.error
+import urllib.parse
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
@@ -20,8 +20,28 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_FILE = os.path.join(BASE_DIR, 'data', 'vocabulary.json')
 AUDIO_DIR = os.path.join(BASE_DIR, 'static', 'audio')
 
+GITHUB_API_VERSION = '2022-11-28'
+GITHUB_DATA_REPO = os.environ.get('GITHUB_DATA_REPO', 'pawee2901/lnstead-of-words')
+GITHUB_IMAGE_REPO = os.environ.get('GITHUB_IMAGE_REPO', 'pawee2901/imgbucket')
+GITHUB_BRANCH = os.environ.get('GITHUB_BRANCH', 'main')
+GITHUB_DATA_PATH = os.environ.get('GITHUB_DATA_PATH', 'aac_app/data/vocabulary.json')
+
 # Ensure audio directory exists
 os.makedirs(AUDIO_DIR, exist_ok=True)
+
+class GitHubUploadError(RuntimeError):
+    pass
+
+
+def _github_request(url, pat, data=None, method=None):
+    req = urllib.request.Request(url, data=data, method=method)
+    req.add_header('Authorization', f'Bearer {pat}')
+    req.add_header('Accept', 'application/vnd.github+json')
+    req.add_header('X-GitHub-Api-Version', GITHUB_API_VERSION)
+    req.add_header('Content-Type', 'application/json')
+    req.add_header('User-Agent', 'AAC-App')
+    return req
+
 
 def upload_file_to_github(repo_path, file_path_in_repo, local_file_path, pat, message):
     try:
@@ -31,14 +51,12 @@ def upload_file_to_github(repo_path, file_path_in_repo, local_file_path, pat, me
         encoded_content = base64.b64encode(file_data).decode("utf-8")
         
         # API URL
-        api_url = f"https://api.github.com/repos/{repo_path}/contents/{file_path_in_repo}"
+        encoded_path = urllib.parse.quote(file_path_in_repo.strip('/'), safe='/')
+        api_url = f'https://api.github.com/repos/{repo_path}/contents/{encoded_path}'
         
         # Check if file already exists to get its SHA (needed for updates)
         sha = None
-        req_get = urllib.request.Request(api_url)
-        req_get.add_header("Authorization", f"token {pat}")
-        req_get.add_header("Accept", "application/vnd.github.v3+json")
-        req_get.add_header("User-Agent", "Flask-App")
+        req_get = _github_request(api_url, pat)
         try:
             with urllib.request.urlopen(req_get) as response:
                 res_data = json.loads(response.read().decode("utf-8"))
@@ -51,25 +69,32 @@ def upload_file_to_github(repo_path, file_path_in_repo, local_file_path, pat, me
         payload = {
             "message": message,
             "content": encoded_content,
-            "branch": "main"
+            "branch": GITHUB_BRANCH
         }
         if sha:
             payload["sha"] = sha
             
         data_json = json.dumps(payload).encode("utf-8")
         
-        req_put = urllib.request.Request(api_url, data=data_json, method="PUT")
-        req_put.add_header("Authorization", f"token {pat}")
-        req_put.add_header("Accept", "application/vnd.github.v3+json")
-        req_put.add_header("Content-Type", "application/json")
-        req_put.add_header("User-Agent", "Flask-App")
+        req_put = _github_request(api_url, pat, data=data_json, method='PUT')
         
         with urllib.request.urlopen(req_put) as response:
             print(f"Successfully uploaded {file_path_in_repo} to GitHub! Status: {response.status}")
             return True
+    except urllib.error.HTTPError as e:
+        try:
+            response_body = json.loads(e.read().decode('utf-8'))
+            detail = response_body.get('message', str(e))
+        except Exception:
+            detail = str(e)
+        raise GitHubUploadError(
+            f'GitHub ปฏิเสธการบันทึก {repo_path}/{file_path_in_repo} '
+            f'(HTTP {e.code}: {detail})'
+        ) from e
     except Exception as e:
-        print(f"Failed to upload {file_path_in_repo} to GitHub: {str(e)}")
-        return False
+        raise GitHubUploadError(
+            f'เชื่อมต่อ GitHub เพื่อบันทึก {repo_path}/{file_path_in_repo} ไม่สำเร็จ: {e}'
+        ) from e
 
 git_lock = threading.Lock()
 
@@ -80,74 +105,51 @@ last_sync_status = {
 }
 
 def push_changes_to_github(local_image_path=None):
-    def _push():
-        global last_sync_status
-        with git_lock:
-            try:
-                last_sync_status["status"] = "syncing"
-                last_sync_status["message"] = "กำลังส่งข้อมูลรูปภาพและไฟล์ไปที่ GitHub..."
-                last_sync_status["timestamp"] = int(time.time())
-                
-                pat = os.environ.get('GITHUB_PAT')
-                if not pat:
-                    msg = "ไม่พบตัวแปร GITHUB_PAT ในการตั้งค่า (Environment Variable) ข้อมูลจะบันทึกชั่วคราวเท่านั้นและจะหายไปเมื่อเซิร์ฟเวอร์หลับหรือเริ่มทำงานใหม่"
-                    print(msg)
-                    last_sync_status["status"] = "warning"
-                    last_sync_status["message"] = msg
-                    return
-                
-                print("GITHUB_PAT found. Preparing to sync changes via GitHub API...")
-                
-                # Get the current repo path (owner/repo)
-                repo_path = "pawee2901/lnstead-of-words" # default fallback
-                try:
-                    res = subprocess.run(["git", "remote", "get-url", "origin"], capture_output=True, text=True, cwd=BASE_DIR)
-                    if res.returncode == 0:
-                        url = res.stdout.strip()
-                        match = re.search(r'github\.com[:/]([^/]+/[^/]+?)(?:\.git)?$', url)
-                        if match:
-                            repo_path = match.group(1)
-                except Exception as ex:
-                    print(f"Error getting remote URL: {str(ex)}")
+    global last_sync_status
+    with git_lock:
+        try:
+            last_sync_status['status'] = 'syncing'
+            last_sync_status['message'] = 'กำลังส่งข้อมูลรูปภาพและไฟล์ไปที่ GitHub...'
+            last_sync_status['timestamp'] = int(time.time())
 
-                # 1. If there's an image, upload it first
-                img_ok = True
-                if local_image_path and os.path.exists(local_image_path):
-                    filename = os.path.basename(local_image_path)
-                    print(f"Uploading image {filename} to GitHub repo pawee2901/imgbucket...")
-                    img_ok = upload_file_to_github(
-                        repo_path="pawee2901/imgbucket",
-                        file_path_in_repo=filename,
-                        local_file_path=local_image_path,
-                        pat=pat,
-                        message=f"upload image {filename}"
-                    )
-                
-                # 2. Upload vocabulary.json
-                print("Uploading vocabulary.json to GitHub...")
-                repo_vocab_path = "aac_app/data/vocabulary.json"
-                vocab_ok = upload_file_to_github(
-                    repo_path=repo_path,
-                    file_path_in_repo=repo_vocab_path,
-                    local_file_path=DATA_FILE,
-                    pat=pat,
-                    message="admin: update vocabulary.json [skip render]"
+            pat = os.environ.get('GITHUB_PAT', '').strip()
+            if not pat:
+                raise GitHubUploadError(
+                    'ไม่พบ GITHUB_PAT ใน Environment Variables ของ Render; '
+                    'ยังไม่ได้บันทึกข้อมูลแบบถาวร'
                 )
-                
-                if img_ok and vocab_ok:
-                    print("GitHub API sync completed!")
-                    last_sync_status["status"] = "success"
-                    last_sync_status["message"] = "สำรองและบันทึกข้อมูลรูปภาพบน GitHub เรียบร้อยแล้ว (ถาวร)"
-                else:
-                    last_sync_status["status"] = "error"
-                    last_sync_status["message"] = "อัปโหลดข้อมูลล้มเหลว: การตอบกลับจากเซิร์ฟเวอร์ GitHub ผิดพลาด โปรดตรวจสอบสิทธิ์ของรหัสสิทธิ์ GITHUB_PAT"
-            except Exception as e:
-                err_msg = f"เกิดข้อผิดพลาดในการเชื่อมต่อ: {str(e)}"
-                print(err_msg)
-                last_sync_status["status"] = "error"
-                last_sync_status["message"] = err_msg
+            image_pat = os.environ.get('GITHUB_IMAGE_PAT', '').strip() or pat
 
-    threading.Thread(target=_push).start()
+            if local_image_path and os.path.exists(local_image_path):
+                filename = os.path.basename(local_image_path)
+                print(f'Uploading image {filename} to GitHub repo {GITHUB_IMAGE_REPO}...')
+                upload_file_to_github(
+                    repo_path=GITHUB_IMAGE_REPO,
+                    file_path_in_repo=filename,
+                    local_file_path=local_image_path,
+                    pat=image_pat,
+                    message=f'upload image {filename}'
+                )
+
+            print('Uploading vocabulary.json to GitHub...')
+            upload_file_to_github(
+                repo_path=GITHUB_DATA_REPO,
+                file_path_in_repo=GITHUB_DATA_PATH,
+                local_file_path=DATA_FILE,
+                pat=pat,
+                message='admin: update vocabulary.json'
+            )
+
+            print('GitHub API sync completed!')
+            last_sync_status['status'] = 'success'
+            last_sync_status['message'] = 'สำรองและบันทึกข้อมูลรูปภาพบน GitHub เรียบร้อยแล้ว (ถาวร)'
+            return True, last_sync_status['message']
+        except Exception as e:
+            err_msg = f'บันทึกไป GitHub ไม่สำเร็จ: {e}'
+            print(err_msg)
+            last_sync_status['status'] = 'error'
+            last_sync_status['message'] = err_msg
+            return False, err_msg
 
 @app.route('/')
 def index():
@@ -224,34 +226,46 @@ def sync_status():
 
 @app.route('/api/test-github')
 def test_github():
-    """Test GitHub connection and PAT validity"""
-    pat = os.environ.get('GITHUB_PAT')
+    """Test token validity and actual write access to both repositories."""
+    pat = os.environ.get('GITHUB_PAT', '').strip()
     if not pat:
-        return jsonify({"ok": False, "error": "ไม่พบ GITHUB_PAT ใน Environment Variables ของ Render เลย\nวิธีแก้: ไปที่ Render > เลือก Service > Environment > เพิ่ม GITHUB_PAT"})
+        return jsonify({'ok': False, 'error': 'ไม่พบ GITHUB_PAT ใน Environment Variables ของ Render'})
+
+    image_pat = os.environ.get('GITHUB_IMAGE_PAT', '').strip() or pat
+
+    def get_repo(repo_path, token):
+        url = f'https://api.github.com/repos/{repo_path}'
+        with urllib.request.urlopen(_github_request(url, token)) as response:
+            return json.loads(response.read().decode('utf-8'))
+
     try:
-        # Test PAT validity
-        req = urllib.request.Request("https://api.github.com/user")
-        req.add_header("Authorization", f"token {pat}")
-        req.add_header("User-Agent", "Flask-App")
-        with urllib.request.urlopen(req) as resp:
-            user_data = json.loads(resp.read().decode("utf-8"))
-            username = user_data.get("login", "unknown")
-        
-        # Test imgbucket repo access
-        req2 = urllib.request.Request("https://api.github.com/repos/pawee2901/imgbucket")
-        req2.add_header("Authorization", f"token {pat}")
-        req2.add_header("User-Agent", "Flask-App")
-        try:
-            with urllib.request.urlopen(req2) as resp2:
-                repo_data = json.loads(resp2.read().decode("utf-8"))
-                repo_name = repo_data.get("full_name", "?")
-            return jsonify({"ok": True, "message": f"เชื่อมต่อสำเร็จ! ล็อกอินเป็น: {username} | เข้าถึงคลัง: {repo_name}"})
-        except urllib.error.HTTPError as e2:
-            return jsonify({"ok": False, "error": f"PAT ถูกต้อง (ล็อกอินเป็น {username}) แต่เข้าคลัง imgbucket ไม่ได้: HTTP {e2.code} - อาจสร้างคลังยังไม่เสร็จ หรือ PAT ไม่มีสิทธิ์ repo"})
+        with urllib.request.urlopen(_github_request('https://api.github.com/user', pat)) as response:
+            user_data = json.loads(response.read().decode('utf-8'))
+            username = user_data.get('login', 'unknown')
+
+        data_repo = get_repo(GITHUB_DATA_REPO, pat)
+        image_repo = get_repo(GITHUB_IMAGE_REPO, image_pat)
+        missing_write = []
+        if not data_repo.get('permissions', {}).get('push', False):
+            missing_write.append(GITHUB_DATA_REPO)
+        if not image_repo.get('permissions', {}).get('push', False):
+            missing_write.append(GITHUB_IMAGE_REPO)
+        if missing_write:
+            return jsonify({
+                'ok': False,
+                'error': (
+                    'Token อ่าน repo ได้ แต่ไม่มีสิทธิ์เขียน Contents: '
+                    + ', '.join(missing_write)
+                )
+            })
+        return jsonify({
+            'ok': True,
+            'message': f'เชื่อมต่อสำเร็จในชื่อ {username} และเขียนได้ทั้ง 2 repositories'
+        })
     except urllib.error.HTTPError as e:
-        return jsonify({"ok": False, "error": f"GITHUB_PAT ไม่ถูกต้องหรือหมดอายุแล้ว: HTTP {e.code}"})
+        return jsonify({'ok': False, 'error': f'Token หรือสิทธิ์ repository ไม่ถูกต้อง: HTTP {e.code}'})
     except Exception as ex:
-        return jsonify({"ok": False, "error": f"เกิดข้อผิดพลาด: {str(ex)}"})
+        return jsonify({'ok': False, 'error': f'เกิดข้อผิดพลาด: {ex}'})
 
 @app.route('/api/settings', methods=['POST'])
 def save_settings():
@@ -275,7 +289,9 @@ def save_settings():
         with open(DATA_FILE, 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=4)
             
-        push_changes_to_github()
+        synced, sync_message = push_changes_to_github()
+        if not synced:
+            return jsonify({'error': sync_message}), 502
             
         return jsonify({"status": "success"})
     except Exception as e:
@@ -352,22 +368,28 @@ def update_item():
         uploaded_file = request.files.get('img_file')
         save_path = None
         if uploaded_file and uploaded_file.filename:
-            filename_orig = secure_filename(uploaded_file.filename)
-            filename = f"uploaded_{int(time.time())}_{filename_orig}"
+            filename_orig = secure_filename(uploaded_file.filename) or 'image'
+            filename = f'uploaded_{time.time_ns()}_{filename_orig}'
             
             images_dir = os.path.join(BASE_DIR, 'static', 'images')
             os.makedirs(images_dir, exist_ok=True)
             save_path = os.path.join(images_dir, filename)
             
             uploaded_file.save(save_path)
-            item['img'] = f"https://raw.githubusercontent.com/pawee2901/imgbucket/main/{filename}"
+            raw_filename = urllib.parse.quote(filename)
+            item['img'] = (
+                f'https://raw.githubusercontent.com/{GITHUB_IMAGE_REPO}/'
+                f'{GITHUB_BRANCH}/{raw_filename}'
+            )
         elif img_url:
             item['img'] = img_url
             
         with open(DATA_FILE, 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=4)
             
-        push_changes_to_github(local_image_path=save_path)
+        synced, sync_message = push_changes_to_github(local_image_path=save_path)
+        if not synced:
+            return jsonify({'error': sync_message}), 502
             
         return jsonify({
             "status": "success",
